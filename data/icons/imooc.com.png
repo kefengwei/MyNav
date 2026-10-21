@@ -1,0 +1,1 @@
+<body><form action="/404" method="post" style="display:none"> <input type="text" name="back_url" value="www.imooc.com/apple-touch-icon.png" /><br /><input type="submit"  id="notfoundform"><br /></form></body><br /><script>(function (){document.getElementById("notfoundform").click();})()</script>
