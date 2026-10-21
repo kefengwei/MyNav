@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: 20
 
-      # GitHub 的构建机在海外，Google / DuckDuckGo 的图标源都通，成功率比本地高。
       # 只处理「没有 icon 字段」的链接，所以这一步是幂等的：全都补齐后什么都不做。
+      # 用 favicon.im 兜底而不是 Google，构建期访问一次，抓到就落盘，运行时零外部请求。
       - name: Fetch missing icons
         timeout-minutes: 8
         continue-on-error: true
@@ -63,6 +63,11 @@ jobs:
           cp -r assets _site/
           cp -r data _site/
           cp .nojekyll _site/ 2>/dev/null || true
+          # GitHub Pages 给所有文件都返回 Cache-Control: max-age=600。发版后 10 分钟内，
+          # 浏览器可能已经拉到新 index.html、却还在用旧的 app.js（或反之），出现
+          # 「点编辑毫无反应」这种新旧混搭：旧 app.js 上没有 window.MyNavApp，
+          # editor.js 一进场就静默退出了。给资源链接加 ?v=<commit sha> 强制换新。
+          node tools/stamp-assets.mjs _site
           ls -la _site
 
       - name: Configure Pages
