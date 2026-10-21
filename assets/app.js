@@ -15,6 +15,10 @@
     search: document.getElementById('search'),
     themeBtn: document.getElementById('theme-toggle'),
     catnav: document.getElementById('catnav'),
+    catnavBar: document.getElementById('catnav-bar'),
+    sidebar: document.getElementById('sidebar'),
+    catnavPrev: document.getElementById('catnav-prev'),
+    catnavNext: document.getElementById('catnav-next'),
     content: document.getElementById('content'),
     empty: document.getElementById('empty'),
     footerMeta: document.getElementById('footer-meta'),
@@ -27,7 +31,10 @@
     cmdkInput: document.getElementById('cmdk-input'),
     cmdkList: document.getElementById('cmdk-list'),
     cmdkEmpty: document.getElementById('cmdk-empty'),
-    cmdkCount: document.getElementById('cmdk-count')
+    cmdkCount: document.getElementById('cmdk-count'),
+    favSection: document.getElementById('fav-section'),
+    favGroups: document.getElementById('fav-groups'),
+    favTotal: document.getElementById('fav-total')
   };
 
   if (!DATA || !Array.isArray(DATA.categories)) {
@@ -56,7 +63,7 @@
     return {
       id: cat.id || ('cat-' + ci),
       name: cat.name || ('分类 ' + (ci + 1)),
-      emoji: cat.emoji || '',
+      type: cat.type === 'fav' ? 'fav' : 'nav',
       links: links
     };
   }).filter(function (cat) { return cat.links.length > 0; });
@@ -97,6 +104,27 @@
   el.footerMeta.textContent = footerParts.join(' · ');
 
   /* ---------- 工具函数 ---------- */
+  // 所有分类统一用同一个文件夹图标，收藏夹类只靠 chip 的虚线边框区分
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  var FOLDER_D = 'M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2';
+
+  function folderIcon(cls) {
+    var svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('class', cls);
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    var p = document.createElementNS(SVG_NS, 'path');
+    p.setAttribute('d', FOLDER_D);
+    svg.appendChild(p);
+    return svg;
+  }
+
   function hostOf(url) {
     try { return new URL(url).hostname.replace(/^www\./, ''); }
     catch (e) { return ''; }
@@ -239,7 +267,6 @@
   }
 
   /* ---------- 分类导航 ---------- */
-  var navObserver = null;
 
   function renderNav(visibleCats) {
     el.catnav.textContent = '';
@@ -249,10 +276,11 @@
     visibleCats.forEach(function (cat, idx) {
       var btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'cat-chip' + (idx === 0 ? ' is-active' : '');
+      btn.className = 'cat-chip' + (idx === 0 ? ' is-active' : '') + (cat.type === 'fav' ? ' is-fav' : '');
       btn.dataset.target = cat.id;
+      if (cat.type === 'fav') btn.title = '收藏夹分类';
 
-      if (cat.emoji) btn.appendChild(document.createTextNode(cat.emoji + ' '));
+      btn.appendChild(folderIcon('cat-ico'));
       btn.appendChild(document.createTextNode(cat.name));
 
       var count = document.createElement('span');
@@ -261,6 +289,9 @@
       btn.appendChild(count);
 
       btn.addEventListener('click', function () {
+        setActiveChip(cat.id);
+        // 平滑滚动期间锁定高亮，否则 scrollspy 会在途中改到别的分类
+        spyLockUntil = Date.now() + 800;
         var target = document.getElementById(cat.id);
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
@@ -269,93 +300,294 @@
     });
 
     el.catnav.appendChild(inner);
+    if (el.catnavBar) el.catnavBar.hidden = visibleCats.length === 0;
+    lastActiveChipId = null;
+    updateCatnavScrollState();
   }
 
   function setActiveChip(id) {
     var chips = el.catnav.querySelectorAll('.cat-chip');
+    var hit = null;
     for (var i = 0; i < chips.length; i++) {
-      chips[i].classList.toggle('is-active', chips[i].dataset.target === id);
+      var on = chips[i].dataset.target === id;
+      chips[i].classList.toggle('is-active', on);
+      if (on) hit = chips[i];
+    }
+    if (hit && lastActiveChipId !== id) ensureChipVisible(hit);
+    lastActiveChipId = id;
+  }
+
+  /* ---------- 分类栏横向滚动：分类多到一屏放不下时 ---------- */
+  var lastActiveChipId = null;
+  var catnavTick = false;
+  var navReduceMQ = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+
+  // 显式传 behavior 会盖过 CSS 的 prefers-reduced-motion，所以这里自己判断
+  function navBehavior() { return navReduceMQ.matches ? 'auto' : 'smooth'; }
+
+  function updateCatnavScrollState() {
+    var n = el.catnav;
+    if (!n || !n.clientWidth) return;
+    // 宽屏是左侧纵向列表，没有横向溢出这回事
+    if (isVerticalNav()) {
+      n.removeAttribute('data-fade');
+      if (el.catnavPrev) el.catnavPrev.hidden = true;
+      if (el.catnavNext) el.catnavNext.hidden = true;
+      return;
+    }
+    var max = n.scrollWidth - n.clientWidth;
+    var canScroll = max > 1;
+    var atStart = n.scrollLeft <= 1;
+    var atEnd = n.scrollLeft >= max - 1;
+    var fade = (canScroll && !atStart ? 'l ' : '') + (canScroll && !atEnd ? 'r' : '');
+    fade = fade.trim();
+    if (fade) n.setAttribute('data-fade', fade);
+    else n.removeAttribute('data-fade');
+    if (el.catnavPrev) el.catnavPrev.hidden = !(canScroll && !atStart);
+    if (el.catnavNext) el.catnavNext.hidden = !(canScroll && !atEnd);
+  }
+
+  function scrollCatnavBy(dir) {
+    var n = el.catnav;
+    if (!n) return;
+    n.scrollBy({ left: dir * Math.max(180, n.clientWidth * 0.7), behavior: navBehavior() });
+  }
+
+  // 宽屏是左侧纵向列表（滚动容器是 .sidebar），窄屏是顶部横向条（容器是 .catnav）
+  function isVerticalNav() {
+    var inner = el.catnav && el.catnav.firstElementChild;
+    if (!inner) return true;
+    try { return window.getComputedStyle(inner).flexDirection.indexOf('column') !== -1; } catch (e) { return true; }
+  }
+
+  // 让当前选中的标签留在可视区中间（分类被挤出屏幕时自动跟随）
+  function ensureChipVisible(chip) {
+    var n = el.catnav;
+    if (!n || !chip) return;
+    var pad = 16;
+
+    if (isVerticalNav()) {
+      var box = el.sidebar || n;
+      var vmax = box.scrollHeight - box.clientHeight;
+      if (vmax <= 1) return;
+      var c0 = chip.getBoundingClientRect();
+      var b0 = box.getBoundingClientRect();
+      if (c0.top >= b0.top + pad && c0.bottom <= b0.bottom - pad) return;
+      var vt = box.scrollTop + (c0.top - b0.top) - (b0.height - c0.height) / 2;
+      box.scrollTo({ top: Math.max(0, Math.min(vmax, vt)), behavior: navBehavior() });
+      return;
+    }
+
+    var max = n.scrollWidth - n.clientWidth;
+    if (max <= 1) return;
+    var cr = chip.getBoundingClientRect();
+    var nr = n.getBoundingClientRect();
+    var padX = 56;
+    if (cr.left >= nr.left + padX && cr.right <= nr.right - padX) return;
+    var target = n.scrollLeft + (cr.left - nr.left) - (nr.width - cr.width) / 2;
+    n.scrollTo({ left: Math.max(0, Math.min(max, target)), behavior: navBehavior() });
+  }
+
+  function onCatnavScroll() {
+    if (catnavTick) return;
+    catnavTick = true;
+    window.requestAnimationFrame(function () { catnavTick = false; updateCatnavScrollState(); });
+  }
+
+  function bindCatnav() {
+    if (el.catnav) {
+      el.catnav.addEventListener('scroll', onCatnavScroll, { passive: true });
+      // Tab 到标签栏后可用方向键翻（纵向翻 sidebar，横向翻 catnav）
+      el.catnav.addEventListener('keydown', function (e) {
+        var forward = e.key === 'ArrowRight' || e.key === 'ArrowDown';
+        var back = e.key === 'ArrowLeft' || e.key === 'ArrowUp';
+        if (!forward && !back) return;
+        e.preventDefault();
+        if (isVerticalNav()) {
+          var box = el.sidebar || el.catnav;
+          box.scrollBy({ top: (forward ? 1 : -1) * Math.max(120, box.clientHeight * 0.6), behavior: navBehavior() });
+        } else {
+          scrollCatnavBy(forward ? 1 : -1);
+        }
+      });
+    }
+    if (el.catnavPrev) el.catnavPrev.addEventListener('click', function () { scrollCatnavBy(-1); });
+    if (el.catnavNext) el.catnavNext.addEventListener('click', function () { scrollCatnavBy(1); });
+    window.addEventListener('resize', onCatnavScroll, { passive: true });
+    // 字体加载完宽度会变，重算一次溢出状态
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { updateCatnavScrollState(); });
     }
   }
 
+  // 滚动高亮：基准线取 sticky 栏下沿（与 .section/.fav-group 的 scroll-margin-top 对齐）。
+  // 不用 IntersectionObserver：观察区判定会让"上一段只剩底部露头"时高亮滞后一格。
+  function activeChipId() {
+    var all = document.querySelectorAll('.section, .fav-group');
+    if (!all.length) return null;
+    var horizontal = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+    var topH = 64;
+    try { topH = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--topbar-h'), 10) || 64; } catch (e) {}
+    // 窄屏基准线要越过顶栏 + 横向标签栏；宽屏只有顶栏
+    var line = topH + (horizontal ? 66 : 24);
+    var current = all[0];
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].getBoundingClientRect().top <= line) current = all[i];
+      else break;
+    }
+    // 滚到页面底部时，最后一段可能顶不到基准线，兜底高亮最后一个
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = all[all.length - 1];
+    }
+    return current.id;
+  }
+
+  function updateActiveChip() {
+    if (Date.now() < spyLockUntil) return;
+    var id = activeChipId();
+    if (id) setActiveChip(id);
+  }
+
+  var spyLockUntil = 0;
+  var spyTick = false;
+  function onScrollSpy() {
+    if (spyTick) return;
+    spyTick = true;
+    window.requestAnimationFrame(function () { spyTick = false; updateActiveChip(); });
+  }
+
   function observeSections() {
-    if (navObserver) navObserver.disconnect();
-    if (typeof IntersectionObserver !== 'function') return;
+    updateActiveChip();
+  }
 
-    var sections = el.content.querySelectorAll('.section');
-    var visible = new Map();
-
-    navObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) visible.set(e.target.id, e.target);
-        else visible.delete(e.target.id);
-      });
-      if (!visible.size) return;
-      var best = null;
-      visible.forEach(function (node) {
-        if (!best || node.getBoundingClientRect().top < best.getBoundingClientRect().top) best = node;
-      });
-      if (best) setActiveChip(best.id);
-    }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
-
-    sections.forEach(function (s) { navObserver.observe(s); });
+  function bindScrollSpy() {
+    window.addEventListener('scroll', onScrollSpy, { passive: true });
+    window.addEventListener('resize', onScrollSpy, { passive: true });
   }
 
   /* ---------- 主渲染 ---------- */
+  function buildSection(cat, terms) {
+    var section = document.createElement('section');
+    section.className = 'section';
+    section.id = cat.id;
+
+    var head = document.createElement('div');
+    head.className = 'section-head';
+
+    var h2 = document.createElement('h2');
+    h2.className = 'section-title';
+    h2.appendChild(folderIcon('cat-ico'));
+    h2.appendChild(document.createTextNode(cat.name));
+
+    var count = document.createElement('span');
+    count.className = 'section-count';
+    count.textContent = cat.links.length;
+
+    head.appendChild(h2);
+    head.appendChild(count);
+    section.appendChild(head);
+
+    var grid = document.createElement('div');
+    grid.className = 'grid';
+    cat.links.forEach(function (link, i) { grid.appendChild(buildCard(link, terms, i)); });
+    section.appendChild(grid);
+    return section;
+  }
+
+  /* ---------- 收藏夹：紧凑单行条目 ---------- */
+  function buildFavItem(link, terms) {
+    var a = document.createElement('a');
+    a.className = 'fav-item';
+    a.href = link.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.title = link.name + (link.desc ? '\n' + link.desc : '') + '\n' + link.url;
+
+    var icon = buildIcon(link);
+    icon.classList.add('fav-icon');
+    a.appendChild(icon);
+
+    var name = document.createElement('span');
+    name.className = 'fav-name';
+    highlightedNodes(link.name, terms).forEach(function (n) { name.appendChild(n); });
+    a.appendChild(name);
+
+    var host = hostOf(link.url);
+    if (host) {
+      var h = document.createElement('span');
+      h.className = 'fav-host';
+      h.textContent = host;
+      a.appendChild(h);
+    }
+    return a;
+  }
+
+  function renderFav(favCats, terms) {
+    if (!favCats.length) {
+      el.favSection.hidden = true;
+      return;
+    }
+    var total = 0;
+    favCats.forEach(function (c) { total += c.links.length; });
+    el.favTotal.textContent = total + ' 条';
+    el.favSection.hidden = false;
+
+    var frag = document.createDocumentFragment();
+    favCats.forEach(function (cat) {
+      var group = document.createElement('div');
+      group.className = 'fav-group';
+      group.id = cat.id;
+
+      var head = document.createElement('h3');
+      head.className = 'fav-group-head';
+      head.appendChild(folderIcon('cat-ico'));
+      head.appendChild(document.createTextNode(cat.name));
+
+      var count = document.createElement('span');
+      count.className = 'fav-group-count';
+      count.textContent = cat.links.length;
+      head.appendChild(count);
+
+      group.appendChild(head);
+
+      var grid = document.createElement('div');
+      grid.className = 'fav-grid';
+      cat.links.forEach(function (link) { grid.appendChild(buildFavItem(link, terms)); });
+      group.appendChild(grid);
+
+      frag.appendChild(group);
+    });
+    el.favGroups.appendChild(frag);
+  }
+
   function render(terms) {
     el.content.textContent = '';
+    el.favGroups.textContent = '';
     el.content.classList.toggle('is-filtering', terms.length > 0);
 
-    var visibleCats = [];
+    var navCats = [];
+    var favCats = [];
     categories.forEach(function (cat) {
       var hits = terms.length
         ? cat.links.filter(function (l) { return terms.every(function (t) { return l._hay.indexOf(t) !== -1; }); })
         : cat.links;
-      if (hits.length) visibleCats.push({ id: cat.id, name: cat.name, emoji: cat.emoji, links: hits });
+      if (!hits.length) return;
+      var view = { id: cat.id, name: cat.name, type: cat.type, links: hits };
+      if (cat.type === 'fav') favCats.push(view);
+      else navCats.push(view);
     });
 
-    renderNav(visibleCats);
+    renderNav(navCats.concat(favCats));
 
     var frag = document.createDocumentFragment();
-    visibleCats.forEach(function (cat) {
-      var section = document.createElement('section');
-      section.className = 'section';
-      section.id = cat.id;
-
-      var head = document.createElement('div');
-      head.className = 'section-head';
-
-      var h2 = document.createElement('h2');
-      h2.className = 'section-title';
-      if (cat.emoji) {
-        var em = document.createElement('span');
-        em.className = 'section-emoji';
-        em.textContent = cat.emoji;
-        h2.appendChild(em);
-      }
-      h2.appendChild(document.createTextNode(cat.name));
-
-      var count = document.createElement('span');
-      count.className = 'section-count';
-      count.textContent = cat.links.length;
-
-      head.appendChild(h2);
-      head.appendChild(count);
-      section.appendChild(head);
-
-      var grid = document.createElement('div');
-      grid.className = 'grid';
-      cat.links.forEach(function (link, i) { grid.appendChild(buildCard(link, terms, i)); });
-      section.appendChild(grid);
-
-      frag.appendChild(section);
-    });
-
+    navCats.forEach(function (cat) { frag.appendChild(buildSection(cat, terms)); });
     el.content.appendChild(frag);
 
-    var noResult = visibleCats.length === 0;
+    renderFav(favCats, terms);
+
+    var noResult = navCats.length === 0 && favCats.length === 0;
     el.empty.hidden = !noResult;
-    el.content.hidden = noResult;
+    el.content.hidden = noResult || navCats.length === 0;
 
     if (!noResult) observeSections();
   }
@@ -1078,6 +1310,8 @@
   }
 
   /* ---------- 启动 ---------- */
+  bindCatnav();
+  bindScrollSpy();
   initTheme();
   applyScope(currentScope());
   render([]);

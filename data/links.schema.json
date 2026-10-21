@@ -36,7 +36,7 @@
             "pattern": "^[A-Za-z0-9_-]+$"
           },
           "name": { "type": "string", "minLength": 1, "description": "分类显示名" },
-          "emoji": { "type": "string", "description": "分类图标，可选" },
+          "emoji": { "type": "string", "deprecated": true, "description": "已废弃：所有分类统一显示文件夹图标，此字段不起作用" },
           "links": {
             "type": "array",
             "description": "该分类下的链接",

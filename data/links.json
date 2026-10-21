@@ -9,7 +9,6 @@
     {
       "id": "dev",
       "name": "开发",
-      "emoji": "🛠️",
       "links": [
         {
           "name": "GitHub",
@@ -66,7 +65,6 @@
     {
       "id": "docs",
       "name": "文档",
-      "emoji": "📚",
       "links": [
         {
           "name": "MDN",
@@ -114,7 +112,6 @@
     {
       "id": "ai",
       "name": "AI",
-      "emoji": "🤖",
       "links": [
         {
           "name": "ChatGPT",
@@ -164,7 +161,8 @@
           "tags": [
             "AI"
           ],
-          "keywords": "burn"
+          "keywords": "burn",
+          "icon": "data/icons/burn.hair.png"
         },
         {
           "name": "🤯 随便聊聊 · LobeChat",
@@ -172,7 +170,8 @@
           "tags": [
             "AI"
           ],
-          "keywords": "otaku lobechat"
+          "keywords": "otaku lobechat",
+          "icon": "data/icons/ai.otaku.online.png"
         },
         {
           "name": "Qwen",
@@ -180,14 +179,14 @@
           "tags": [
             "AI"
           ],
-          "keywords": "qwen"
+          "keywords": "qwen",
+          "icon": "data/icons/chat.qwen.ai.png"
         }
       ]
     },
     {
       "id": "design",
       "name": "设计",
-      "emoji": "🎨",
       "links": [
         {
           "name": "Figma",
@@ -232,7 +231,6 @@
     {
       "id": "life",
       "name": "常用",
-      "emoji": "🌤️",
       "links": [
         {
           "name": "Bilibili",
@@ -283,7 +281,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github badkangaroo unityprojects"
+          "keywords": "github badkangaroo unityprojects",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "（转） unity 在移动平台中,文件操作路径详解 - ☆A希亿 - 博客园",
@@ -292,7 +291,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity"
+          "keywords": "cnblogs unity",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "[Editor]查看Prefab用在哪些场景 - 赵青青 - 博客园",
@@ -301,7 +301,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs editor prefab"
+          "keywords": "cnblogs editor prefab",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "燕良@游戏开发 - 博客频道 - CSDN.NET",
@@ -309,7 +310,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn csdn.net"
+          "keywords": "csdn csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "unity3d课程 课程 第1页- 58开发网 - 游戏开发与移动开发在线课程|IT技术网络课堂|Unity3D培训|上海Unity培训|上海Unity3d培训|上海unity培训|上海unity3d培训|Unity企业培训|Unity程序员培训|Unity学习|Unity自",
@@ -317,7 +319,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "58kaifa unity3d it unity"
+          "keywords": "58kaifa unity3d it unity",
+          "icon": "data/icons/58kaifa.com.svg"
         },
         {
           "name": "有哪些推荐的Unity3D开发方面的博客？ - 知乎",
@@ -326,7 +329,8 @@
             "问答",
             "游戏"
           ],
-          "keywords": "zhihu unity3d"
+          "keywords": "zhihu unity3d",
+          "icon": "data/icons/zhihu.com.png"
         },
         {
           "name": "全面理解 Unity UI 系统 - 白 猫 - 博客园",
@@ -335,7 +339,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity ui"
+          "keywords": "cnblogs unity ui",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "小牛学堂 - 与大牛同行！ - 小牛学堂 - 与大牛同行！ | Unity | 大数据 | 森纵云课堂 | SAP在线学习第一社区 - 国内第一家SAP在线学习社区 - 免费在线学习SAP课程 - SAP云课堂 - Powered By EduSoho",
@@ -344,7 +349,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "edu360 unity sap powered by"
+          "keywords": "edu360 unity sap powered by",
+          "icon": "data/icons/edu360.cn.ico"
         },
         {
           "name": "MYC和朋友们的开发之路 | Unity3D",
@@ -352,7 +358,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "mycmessia myc unity3d"
+          "keywords": "mycmessia myc unity3d",
+          "icon": "data/icons/mycmessia.com.svg"
         },
         {
           "name": "太粗难进 - 博客园",
@@ -360,7 +367,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "easing_demo",
@@ -369,7 +377,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "robertpenner easing demo"
+          "keywords": "robertpenner easing demo",
+          "icon": "data/icons/robertpenner.com.ico"
         },
         {
           "name": "【Unity3D基础教程】给初学者看的Unity教程（零）：如何学习Unity3D - 王选易 - 博客园",
@@ -379,7 +388,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity3d unity"
+          "keywords": "cnblogs unity3d unity",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Unity - Collaboration - Unity Team License",
@@ -387,7 +397,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unity3d unity collaboration team license"
+          "keywords": "unity3d unity collaboration team license",
+          "icon": "data/icons/unity3d.com.png"
         },
         {
           "name": "Unity3D 多人协作开发 环境搭建 笔记 - 赵青青 - 博客园",
@@ -396,7 +407,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity3d"
+          "keywords": "cnblogs unity3d",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "U3DXT - Access the iOS SDK using our Unity3D Plugin",
@@ -414,7 +426,8 @@
             "文档",
             "html"
           ],
-          "keywords": "5helpyou unity ugui unity3d"
+          "keywords": "5helpyou unity ugui unity3d",
+          "icon": "data/icons/unity.5helpyou.com.ico"
         },
         {
           "name": "(1)Unity3d&nbsp;iOS&nbsp;内购详细流程总汇_萨拉蒙丁_新浪博客",
@@ -423,7 +436,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "blog unity3d nbsp ios"
+          "keywords": "blog unity3d nbsp ios",
+          "icon": "data/icons/blog.sina.com.cn.ico"
         },
         {
           "name": "Majchrzak/StoreKit-Unity-3D",
@@ -431,7 +445,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github majchrzak storekit unity"
+          "keywords": "github majchrzak storekit unity",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "objective c - Submitting App from building in Xcode 6.4 - Stack Overflow",
@@ -440,7 +455,8 @@
             "问答",
             "游戏"
           ],
-          "keywords": "stackoverflow objective submitting app from"
+          "keywords": "stackoverflow objective submitting app from",
+          "icon": "data/icons/stackoverflow.com.png"
         },
         {
           "name": "游戏蛮牛 unity5教程手册 - Unity中文翻译用户手册 u3d|unity3d开发手册",
@@ -449,7 +465,8 @@
             "文档",
             "游戏"
           ],
-          "keywords": "manew unity5 unity u3d unity3d"
+          "keywords": "manew unity5 unity u3d unity3d",
+          "icon": "data/icons/docs.manew.com.svg"
         },
         {
           "name": "Unity游戏UI框架 - 精品正版课程-泰课在线 - 游戏开发与移动开发在线课程|IT技术网络课堂 - Powered By EduSoho",
@@ -457,7 +474,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "taikr unity ui it powered"
+          "keywords": "taikr unity ui it powered",
+          "icon": "data/icons/taikr.com.ico"
         },
         {
           "name": "Unify Community Wiki",
@@ -467,7 +485,8 @@
             "百科",
             "php"
           ],
-          "keywords": "unity3d unify community wiki"
+          "keywords": "unity3d unify community wiki",
+          "icon": "data/icons/wiki.unity3d.com.svg"
         },
         {
           "name": "[原创]一种Unity2D多分辨率屏幕适配方案 - 不忘初“辛” - 博客园",
@@ -476,7 +495,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity2d"
+          "keywords": "cnblogs unity2d",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Unity3d视频|插件|特效|Shader编程|UI制作教程",
@@ -486,7 +506,8 @@
             "文档",
             "shader"
           ],
-          "keywords": "5helpyou unity3d shader ui"
+          "keywords": "5helpyou unity3d shader ui",
+          "icon": "data/icons/unity.5helpyou.com.ico"
         },
         {
           "name": "猫都能学会的Unity3D Shader入门指南（一）",
@@ -495,7 +516,8 @@
             "游戏",
             "shader"
           ],
-          "keywords": "onevcat unity3d shader"
+          "keywords": "onevcat unity3d shader",
+          "icon": "data/icons/onevcat.com.png"
         },
         {
           "name": "sploreg/goap · GitHub",
@@ -503,7 +525,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github sploreg goap"
+          "keywords": "github sploreg goap",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Unity Ads",
@@ -511,7 +534,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unity3d unity ads"
+          "keywords": "unity3d unity ads",
+          "icon": "data/icons/dashboard.unityads.unity3d.com.svg"
         },
         {
           "name": "AssetBundle机制相关资料收集 - yaol - 博客园",
@@ -520,7 +544,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs assetbundle yaol"
+          "keywords": "cnblogs assetbundle yaol",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Tiled2Unity",
@@ -528,7 +553,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "seanba tiled2unity"
+          "keywords": "seanba tiled2unity",
+          "icon": "data/icons/seanba.com.ico"
         },
         {
           "name": "Rm2kdev - Indie Game Developer, Projects, Tutorials and Games",
@@ -536,7 +562,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "rm2kdev indie game developer projects"
+          "keywords": "rm2kdev indie game developer projects",
+          "icon": "data/icons/rm2kdev.net.png"
         },
         {
           "name": "Json .Net for Unity",
@@ -544,7 +571,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "parentelement json net for unity"
+          "keywords": "parentelement json net for unity",
+          "icon": "data/icons/parentelement.com.ico"
         },
         {
           "name": "OpenGameArt.org",
@@ -552,7 +580,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "opengameart opengameart.org"
+          "keywords": "opengameart opengameart.org",
+          "icon": "data/icons/opengameart.org.ico"
         },
         {
           "name": "[知乎] 开放世界游戏中的大地图背后有哪些实现技术？",
@@ -560,7 +589,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "gulu-dev"
+          "keywords": "gulu-dev",
+          "icon": "data/icons/gulu-dev.com.ico"
         },
         {
           "name": "Amit’s Game Programming Information",
@@ -569,7 +599,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "stanford amit game programming information"
+          "keywords": "stanford amit game programming information",
+          "icon": "data/icons/www-cs-students.stanford.edu.ico"
         },
         {
           "name": "【专题】A*寻路算法完全讲解&Unity功能实现 - 蛮牛教育 - 国内最大的Unity在线学习平台|Unity培训|Unity3d培训|Unity视频学习|Unity教程 - Powered By EduSoho",
@@ -587,7 +618,8 @@
             "游戏",
             "php"
           ],
-          "keywords": "alexstv voxel tutorial"
+          "keywords": "alexstv voxel tutorial",
+          "icon": "data/icons/alexstv.com.png"
         },
         {
           "name": "[Tutorial] Procedural meshes and voxel terrain C# | Unity Community",
@@ -597,7 +629,8 @@
             "游戏",
             "c#"
           ],
-          "keywords": "unity3d tutorial procedural meshes and"
+          "keywords": "unity3d tutorial procedural meshes and",
+          "icon": "data/icons/forum.unity3d.com.png"
         },
         {
           "name": "Noise, a Unity C# Tutorial",
@@ -606,7 +639,8 @@
             "游戏",
             "c#"
           ],
-          "keywords": "catlikecoding noise unity c# tutorial"
+          "keywords": "catlikecoding noise unity c# tutorial",
+          "icon": "data/icons/catlikecoding.com.png"
         },
         {
           "name": "Noise Derivatives, a Unity C# Tutorial",
@@ -615,7 +649,8 @@
             "游戏",
             "c#"
           ],
-          "keywords": "catlikecoding noise derivatives unity c#"
+          "keywords": "catlikecoding noise derivatives unity c#",
+          "icon": "data/icons/catlikecoding.com.png"
         },
         {
           "name": "Munkkeli's - YouTube",
@@ -624,7 +659,8 @@
             "视频",
             "游戏"
           ],
-          "keywords": "youtube munkkeli"
+          "keywords": "youtube munkkeli",
+          "icon": "data/icons/youtube.com.ico"
         },
         {
           "name": "Student Game Dev has moved!",
@@ -632,7 +668,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "blogspot student game dev has"
+          "keywords": "blogspot student game dev has",
+          "icon": "data/icons/studentgamedev.blogspot.no.ico"
         },
         {
           "name": "Unity 5 2D Procedural Terrain | Lynda.com",
@@ -642,7 +679,8 @@
             "素材",
             "html"
           ],
-          "keywords": "lynda unity procedural terrain lynda.com"
+          "keywords": "lynda unity procedural terrain lynda.com",
+          "icon": "data/icons/lynda.com.ico"
         },
         {
           "name": "Unity二维地形制作训练视频教程 Unity 5 2D Procedural Terrain - 〖 CG教程 〗 - 人人素材社区 - Powered by Discuz!",
@@ -652,7 +690,8 @@
             "文档",
             "html"
           ],
-          "keywords": "rr-sc unity procedural terrain cg"
+          "keywords": "rr-sc unity procedural terrain cg",
+          "icon": "data/icons/rr-sc.com.ico"
         },
         {
           "name": "视线和光线：如何给游戏添加 2D 可见性和阴影效果 - 博客 - 伯乐在线",
@@ -668,7 +707,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "bin donjon random dungeon generator"
+          "keywords": "bin donjon random dungeon generator",
+          "icon": "data/icons/donjon.bin.sh.ico"
         },
         {
           "name": "Algorithms for Procedural Content Generation - Procedural Content Generation Wiki",
@@ -677,7 +717,8 @@
             "百科",
             "游戏"
           ],
-          "keywords": "wikidot algorithms for procedural content"
+          "keywords": "wikidot algorithms for procedural content",
+          "icon": "data/icons/pcg.wikidot.com.png"
         },
         {
           "name": "独立精神 | indienova",
@@ -685,7 +726,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "indienova"
+          "keywords": "indienova",
+          "icon": "data/icons/indienova.com.svg"
         },
         {
           "name": "UGUI教程之-基于MVC模式的背包系统UGUI实现 | Unity3D学习网",
@@ -695,7 +737,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "5helpyou ugui mvc unity3d"
+          "keywords": "5helpyou ugui mvc unity3d",
+          "icon": "data/icons/unity.5helpyou.com.ico"
         },
         {
           "name": "Unity导出ios工程如何减小运行内存、安装包（ipa）、以及安装后大小 - 三人行、则必有我师 - 博客频道 - CSDN.NET",
@@ -703,7 +746,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn unity ios ipa csdn.net"
+          "keywords": "csdn unity ios ipa csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "candycat - 博客频道 - CSDN.NET",
@@ -711,7 +755,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn candycat csdn.net"
+          "keywords": "csdn candycat csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "Unity3D Shader新手教程 - 随笔分类 - 桑果 - 博客园",
@@ -721,7 +766,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity3d shader"
+          "keywords": "cnblogs unity3d shader",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Unity3D游戏开发之SQLite让数据库开发更简单 - 秦元培 - 博客频道 - CSDN.NET",
@@ -729,7 +775,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn unity3d sqlite csdn.net"
+          "keywords": "csdn unity3d sqlite csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "基于平均法线实现顶点网格变形控制的总结 - 清道夫的专栏（3D程序员，炼心，终生编程） - 博客频道 - CSDN.NET",
@@ -737,7 +784,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn csdn.net"
+          "keywords": "csdn csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "慕容小匹夫 - 博客园",
@@ -745,7 +793,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Catlike Coding",
@@ -753,7 +802,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "catlikecoding catlike coding"
+          "keywords": "catlikecoding catlike coding",
+          "icon": "data/icons/catlikecoding.com.png"
         },
         {
           "name": "GitHub - f15gdsy/2D-Light-of-Sight-Unity: A plugin for creating 2D lighting & shadows, and line of sight effects in Unity3d.",
@@ -761,7 +811,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github f15gdsy light of sight"
+          "keywords": "github f15gdsy light of sight",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "IndieACE | 独立游戏开发者社区",
@@ -770,7 +821,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "indieace"
+          "keywords": "indieace",
+          "icon": "data/icons/indieace.com.svg"
         },
         {
           "name": "深入浅出聊优化：从Draw Calls到GC - 慕容小匹夫 - 博客园",
@@ -779,7 +831,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs draw calls gc"
+          "keywords": "cnblogs draw calls gc",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "UnityGems – Unity and C# articles and tutorials",
@@ -788,7 +841,8 @@
             "游戏",
             "c#"
           ],
-          "keywords": "wordpress unitygems unity and c#"
+          "keywords": "wordpress unitygems unity and c#",
+          "icon": "data/icons/unitygem.wordpress.com.png"
         },
         {
           "name": "Unity3D占用内存太大的解决方法 - 星尘 - 博客园",
@@ -797,7 +851,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs unity3d"
+          "keywords": "cnblogs unity3d",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "技术人生 · luzexi.com",
@@ -805,7 +860,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "luzexi luzexi.com"
+          "keywords": "luzexi luzexi.com",
+          "icon": "data/icons/luzexi.com.ico"
         },
         {
           "name": "Block Engine demystified VI -> The crabby patty recipe | Block Story",
@@ -813,7 +869,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "blockstory block engine demystified vi"
+          "keywords": "blockstory block engine demystified vi",
+          "icon": "data/icons/blockstory.net.png"
         },
         {
           "name": "Quill18's Unity 3d & Blender Programming Tutorials",
@@ -821,7 +878,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "quill18 unity blender programming tutorials"
+          "keywords": "quill18 unity blender programming tutorials",
+          "icon": "data/icons/quill18.com.svg"
         },
         {
           "name": "Using Tile Masks to Set a Tile's Type Based on Its Surrounding Tiles",
@@ -829,7 +887,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "tutsplus using tile masks to"
+          "keywords": "tutsplus using tile masks to",
+          "icon": "data/icons/gamedevelopment.tutsplus.com.png"
         },
         {
           "name": "Unity Tutorials | 2D Platformer Controller",
@@ -847,7 +906,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs esfog unityshader"
+          "keywords": "cnblogs esfog unityshader",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "[Unity实战]自定义mesh - 宏哥的博客 - 博客频道 - CSDN.NET",
@@ -855,7 +915,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn unity mesh csdn.net"
+          "keywords": "csdn unity mesh csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "Unity - Manual: Vertex and Fragment Shader Examples",
@@ -865,7 +926,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "unity3d unity manual vertex and"
+          "keywords": "unity3d unity manual vertex and",
+          "icon": "data/icons/docs.unity3d.com.png"
         },
         {
           "name": "cyh24/GameProgrammingPatterns-CN: Game Programming Patterns 中文翻译版本",
@@ -874,7 +936,8 @@
             "游戏",
             "翻译"
           ],
-          "keywords": "github cyh24 gameprogrammingpatterns cn game"
+          "keywords": "github cyh24 gameprogrammingpatterns cn game",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "GitHub - losetear/nmap: 实现Unity下的自定义地图生成，优化了自定义模块",
@@ -882,7 +945,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github losetear nmap unity"
+          "keywords": "github losetear nmap unity",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Unity 5： Asset Bundle 和 Asset Bundle Manager (1) | 心亡则忙，亡心则忘",
@@ -890,7 +954,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "shuiguzi unity asset bundle manager"
+          "keywords": "shuiguzi unity asset bundle manager",
+          "icon": "data/icons/blog.shuiguzi.com.svg"
         },
         {
           "name": "mr-kelly/KSFramework: KEngine + SLua = Unity3D Framework/Toolsets focus on hot reload",
@@ -898,7 +963,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github mr kelly ksframework kengine"
+          "keywords": "github mr kelly ksframework kengine",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "candycat1992/Unity_Shaders_Book: 书籍《Unity Shader入门精要》源代码",
@@ -907,7 +973,8 @@
             "游戏",
             "shader"
           ],
-          "keywords": "github candycat1992 unity shaders book"
+          "keywords": "github candycat1992 unity shaders book",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Unity3D 5.3 新版AssetBundle使用方案及策略",
@@ -915,7 +982,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "qq unity3d assetbundle"
+          "keywords": "qq unity3d assetbundle",
+          "icon": "data/icons/mp.weixin.qq.com.png"
         },
         {
           "name": "Unity Runtimes - Creature",
@@ -924,7 +992,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "kestrelmoon unity runtimes creature"
+          "keywords": "kestrelmoon unity runtimes creature",
+          "icon": "data/icons/kestrelmoon.com.png"
         },
         {
           "name": "【Unity3D】利用Shader以及更改Mesh实现2D游戏的动态阴影效果_ASP.NET_第七城市",
@@ -933,7 +1002,8 @@
             "游戏",
             "shader"
           ],
-          "keywords": "th7 unity3d shader mesh asp.net"
+          "keywords": "th7 unity3d shader mesh asp.net",
+          "icon": "data/icons/th7.cn.png"
         },
         {
           "name": "3ds Max 教程: 简介",
@@ -943,7 +1013,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "autodesk ds max"
+          "keywords": "autodesk ds max",
+          "icon": "data/icons/docs.autodesk.com.ico"
         },
         {
           "name": "Unity3d Open Source by Taras Leskiv | ZEEF",
@@ -951,7 +1022,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "zeef unity3d open source by"
+          "keywords": "zeef unity3d open source by",
+          "icon": "data/icons/unity3d-open-source.zeef.com.png"
         },
         {
           "name": "GaTu | Unity + Shader Forge",
@@ -960,7 +1032,8 @@
             "游戏",
             "shader"
           ],
-          "keywords": "gametutor gatu unity shader forge"
+          "keywords": "gametutor gatu unity shader forge",
+          "icon": "data/icons/gametutor.com.svg"
         },
         {
           "name": "Browse - UnityList",
@@ -968,7 +1041,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unitylist browse"
+          "keywords": "unitylist browse",
+          "icon": "data/icons/unitylist.com.svg"
         },
         {
           "name": "UniRx尝试翻译下 | indienova",
@@ -977,7 +1051,8 @@
             "游戏",
             "翻译"
           ],
-          "keywords": "indienova unirx"
+          "keywords": "indienova unirx",
+          "icon": "data/icons/indienova.com.svg"
         },
         {
           "name": "Blog - UWA",
@@ -994,7 +1069,8 @@
             "文档",
             "游戏"
           ],
-          "keywords": "cgtsj cg"
+          "keywords": "cgtsj cg",
+          "icon": "data/icons/cgtsj.com.ico"
         },
         {
           "name": "Ghostxx-CG|艺术|设计|技术|建筑|软件行业网站搜集。资源|模型|教程|软件|插件|贴图",
@@ -1003,7 +1079,8 @@
             "设计",
             "文档"
           ],
-          "keywords": "ghostxx cg"
+          "keywords": "ghostxx cg",
+          "icon": "data/icons/ghostxx.com.ico"
         },
         {
           "name": "Unity3d游戏开发框架篇 - Circle - 博客频道 - CSDN.NET",
@@ -1011,7 +1088,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "tysfr unity3d circle csdn.net"
+          "keywords": "tysfr unity3d circle csdn.net",
+          "icon": "data/icons/tysfr.cn.svg"
         },
         {
           "name": "Textures for 3D, graphic design and Photoshop!",
@@ -1020,7 +1098,8 @@
             "游戏",
             "素材"
           ],
-          "keywords": "textures for graphic design and"
+          "keywords": "textures for graphic design and",
+          "icon": "data/icons/textures.com.png"
         },
         {
           "name": "UGUI（九）UI粒子特效_潜水的小懒猫_新浪博客",
@@ -1029,7 +1108,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "blog ugui ui"
+          "keywords": "blog ugui ui",
+          "icon": "data/icons/blog.sina.com.cn.ico"
         },
         {
           "name": "3D Animation Online Services, 3D Characters, and Character Rigging - Mixamo",
@@ -1037,7 +1117,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "mixamo animation online services characters"
+          "keywords": "mixamo animation online services characters",
+          "icon": "data/icons/mixamo.com.ico"
         },
         {
           "name": "U3D在线-悠游课堂-Unity3D视频教程-MAYA视频教程-Unity3D论坛",
@@ -1046,7 +1127,8 @@
             "视频",
             "文档"
           ],
-          "keywords": "u3dol u3d unity3d maya"
+          "keywords": "u3dol u3d unity3d maya",
+          "icon": "data/icons/u3dol.com.ico"
         },
         {
           "name": "Unity资源商店里必不可少的免费资源_Gad-腾讯游戏开发者平台",
@@ -1055,7 +1137,8 @@
             "游戏",
             "翻译"
           ],
-          "keywords": "qq unity gad"
+          "keywords": "qq unity gad",
+          "icon": "data/icons/gad.qq.com.svg"
         },
         {
           "name": "Unity - Handling Non-Player objects",
@@ -1063,7 +1146,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unity3d unity handling non player"
+          "keywords": "unity3d unity handling non player",
+          "icon": "data/icons/unity3d.com.png"
         },
         {
           "name": "【Unity UGUI 原理篇（四）: Event System Manager 事件与触发】-蛮牛译馆-【游戏蛮牛】-虚拟现实,unity3d,unity3d教程下载首选u3d,unity3d官网",
@@ -1073,7 +1157,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "manew unity ugui event system"
+          "keywords": "manew unity ugui event system",
+          "icon": "data/icons/manew.com.svg"
         },
         {
           "name": "Shaders Laboratory - page 2",
@@ -1082,7 +1167,8 @@
             "游戏",
             "php"
           ],
-          "keywords": "shaderslab shaders laboratory page"
+          "keywords": "shaderslab shaders laboratory page",
+          "icon": "data/icons/shaderslab.com.ico"
         },
         {
           "name": "UnityEffects(3)之闪电链 - A希亿的博客 - 博客频道 - CSDN.NET",
@@ -1090,7 +1176,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn unityeffects csdn.net"
+          "keywords": "csdn unityeffects csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "How to Generate Shockingly Good 2D Lightning Effects in Unity (C#)",
@@ -1099,7 +1186,8 @@
             "游戏",
             "c#"
           ],
-          "keywords": "tutsplus how to generate shockingly"
+          "keywords": "tutsplus how to generate shockingly",
+          "icon": "data/icons/gamedevelopment.tutsplus.com.png"
         },
         {
           "name": "Unity StrangeIoc 框架介绍_Gad-腾讯游戏开发者平台",
@@ -1107,7 +1195,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "qq unity strangeioc gad"
+          "keywords": "qq unity strangeioc gad",
+          "icon": "data/icons/gad.qq.com.svg"
         },
         {
           "name": "我爱吃橙子 - 博客园",
@@ -1115,7 +1204,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Startup Freak | Unleash your entrepreneurial prowess!",
@@ -1123,7 +1213,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "startupfreakgame startup freak unleash your"
+          "keywords": "startupfreakgame startup freak unleash your",
+          "icon": "data/icons/startupfreakgame.com.png"
         },
         {
           "name": "The Knights of Unity - Blog of Knowledge - Index - Unity Tips & Tricks",
@@ -1131,7 +1222,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "theknightsofunity the knights of unity"
+          "keywords": "theknightsofunity the knights of unity",
+          "icon": "data/icons/blog.theknightsofunity.com.png"
         }
       ]
     },
@@ -1147,7 +1239,8 @@
             "c#",
             "html"
           ],
-          "keywords": "cnblogs c# learning hard"
+          "keywords": "cnblogs c# learning hard",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Newtonsoft.Json高级用法 - 志超的专栏 - 博客频道 - CSDN.NET",
@@ -1155,7 +1248,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "csdn newtonsoft.json csdn.net"
+          "keywords": "csdn newtonsoft.json csdn.net",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "Json.NET - Newtonsoft",
@@ -1163,7 +1257,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "newtonsoft json.net"
+          "keywords": "newtonsoft json.net",
+          "icon": "data/icons/newtonsoft.com.ico"
         },
         {
           "name": "Linux .NET大本营 - .NET跨平台技术专业网站",
@@ -1172,7 +1267,8 @@
             "c#",
             "linux"
           ],
-          "keywords": "linuxdot linux net"
+          "keywords": "linuxdot linux net",
+          "icon": "data/icons/linuxdot.net.ico"
         },
         {
           "name": "解读ASP.NET 5 & MVC6系列 - 汤姆大叔 - 博客园",
@@ -1181,7 +1277,8 @@
             "c#",
             "html"
           ],
-          "keywords": "cnblogs asp.net mvc6"
+          "keywords": "cnblogs asp.net mvc6",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "第 9 频道： 由创建 Microsoft 产品和服务的人员提供的适用于开发人员的视频",
@@ -1190,7 +1287,8 @@
             "视频",
             "c#"
           ],
-          "keywords": "msdn microsoft"
+          "keywords": "msdn microsoft",
+          "icon": "data/icons/channel9.msdn.com.png"
         },
         {
           "name": "CLR via C# - 随笔分类 - 小静（Cathy） - 博客园",
@@ -1199,7 +1297,8 @@
             "c#",
             "html"
           ],
-          "keywords": "cnblogs clr via c# cathy"
+          "keywords": "cnblogs clr via c# cathy",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "C# 编程指南",
@@ -1217,7 +1316,8 @@
             "c#",
             "html"
           ],
-          "keywords": "cnblogs c# vito qi"
+          "keywords": "cnblogs c# vito qi",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "C#: How the Adapter Design Pattern Can Make Your Life Easier - CodeProject",
@@ -1225,7 +1325,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "codeproject c# how the adapter"
+          "keywords": "codeproject c# how the adapter",
+          "icon": "data/icons/codeproject.com.png"
         },
         {
           "name": "ASP.NET Core 中文文档 第三章 原理（1）应用程序启动 - .NETCore中国学习小组 - 博客园",
@@ -1235,7 +1336,8 @@
             "c#",
             "html"
           ],
-          "keywords": "cnblogs asp.net core netcore"
+          "keywords": "cnblogs asp.net core netcore",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "ReSharper 2016.2 Ultimate 官方最新破解版 原版+通用破解补丁（VS2015最好用的插件） - 吾乐吧软件站",
@@ -1244,7 +1346,8 @@
             "c#",
             "html"
           ],
-          "keywords": "wuleba resharper ultimate vs2015"
+          "keywords": "wuleba resharper ultimate vs2015",
+          "icon": "data/icons/wuleba.com.ico"
         },
         {
           "name": "【英特尔酷睿i5-4590】英特尔（Intel）酷睿四核 i5-4590 1150接口 盒装CPU处理器 【行情 报价 价格 评测】-京东",
@@ -1254,7 +1357,8 @@
             "c#",
             "html"
           ],
-          "keywords": "jd i5 intel cpu"
+          "keywords": "jd i5 intel cpu",
+          "icon": "data/icons/item.jd.com.ico"
         },
         {
           "name": "C# Pad: Run C# Code Online",
@@ -1270,7 +1374,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "dotnetfiddle net fiddle"
+          "keywords": "dotnetfiddle net fiddle",
+          "icon": "data/icons/dotnetfiddle.net.ico"
         },
         {
           "name": "GoalKicker.com – Free Programming Books",
@@ -1278,7 +1383,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "goalkicker goalkicker.com free programming books"
+          "keywords": "goalkicker goalkicker.com free programming books",
+          "icon": "data/icons/goalkicker.com.ico"
         },
         {
           "name": "Angular 2 With Identity Server 4 Implicit Flow – AmilsPage – As a dev's life flow!",
@@ -1287,7 +1393,8 @@
             "angular",
             "c#"
           ],
-          "keywords": "amilspage angular with identity server"
+          "keywords": "amilspage angular with identity server",
+          "icon": "data/icons/amilspage.com.ico"
         },
         {
           "name": "Linux任务调度crontab时间规则介绍_Linux教程_Linux公社-Linux系统门户网站",
@@ -1307,7 +1414,8 @@
             "问答",
             "c#"
           ],
-          "keywords": "zhihu"
+          "keywords": "zhihu",
+          "icon": "data/icons/zhihu.com.png"
         },
         {
           "name": "Tutorials - Multilanguage Database Design In Mysql | ApPHP - Professional PHP Web Scripts",
@@ -1317,7 +1425,8 @@
             "php",
             "mysql"
           ],
-          "keywords": "apphp tutorials multilanguage database design"
+          "keywords": "apphp tutorials multilanguage database design",
+          "icon": "data/icons/apphp.com.jpg"
         },
         {
           "name": "RobThree/IdGen: Twitter Snowflake-alike ID generator for .Net",
@@ -1325,7 +1434,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "github robthree idgen twitter snowflake"
+          "keywords": "github robthree idgen twitter snowflake",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": ".net - AutoMapper: \"Ignore the rest\"? - Stack Overflow",
@@ -1334,7 +1444,8 @@
             "问答",
             "c#"
           ],
-          "keywords": "stackoverflow net automapper ignore the"
+          "keywords": "stackoverflow net automapper ignore the",
+          "icon": "data/icons/stackoverflow.com.png"
         },
         {
           "name": "Kite - Free AI Coding Assistant and Code Auto-Complete Plugin",
@@ -1343,7 +1454,8 @@
             "AI",
             "c#"
           ],
-          "keywords": "kite free ai coding assistant"
+          "keywords": "kite free ai coding assistant",
+          "icon": "data/icons/kite.com.png"
         },
         {
           "name": "Learn how YOU can use both C# and JavaScript in your .NET Core Blazor app with the JavaScript interop",
@@ -1353,7 +1465,8 @@
             "javascript",
             "c#"
           ],
-          "keywords": "github learn how you can"
+          "keywords": "github learn how you can",
+          "icon": "data/icons/softchris.github.io.svg"
         },
         {
           "name": "Z-Library。世界上最大的数字图书馆。",
@@ -1361,7 +1474,8 @@
           "tags": [
             "c#"
           ],
-          "keywords": "z-lib library"
+          "keywords": "z-lib library",
+          "icon": "data/icons/zh.z-lib.org.svg"
         },
         {
           "name": "分布式算法 - Snowflake算法 | Java 全栈知识体系",
@@ -1371,7 +1485,8 @@
             "c#",
             "html"
           ],
-          "keywords": "pdai snowflake java"
+          "keywords": "pdai snowflake java",
+          "icon": "data/icons/pdai.tech.png"
         }
       ]
     },
@@ -1385,7 +1500,8 @@
           "tags": [
             "代码托管"
           ],
-          "keywords": "github steamworks.net installation"
+          "keywords": "github steamworks.net installation",
+          "icon": "data/icons/steamworks.github.io.svg"
         },
         {
           "name": "Home - Steamworks",
@@ -1393,7 +1509,8 @@
           "tags": [
             "SteamSDK"
           ],
-          "keywords": "steamgames home steamworks"
+          "keywords": "steamgames home steamworks",
+          "icon": "data/icons/partner.steamgames.com.ico"
         },
         {
           "name": "Open.NAT - A NAT Traversal library for .NET and Mono - CodeProject",
@@ -1401,7 +1518,8 @@
           "tags": [
             "SteamSDK"
           ],
-          "keywords": "codeproject open.nat nat traversal library"
+          "keywords": "codeproject open.nat nat traversal library",
+          "icon": "data/icons/codeproject.com.png"
         },
         {
           "name": "Watch out for russian gifts :: The Witcher 3: Wild Hunt 综合讨论",
@@ -1410,7 +1528,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "steamcommunity watch out for russian"
+          "keywords": "steamcommunity watch out for russian",
+          "icon": "data/icons/steamcommunity.com.ico"
         },
         {
           "name": "Steam 社区 :: Steam 网页 API 密钥",
@@ -1419,7 +1538,8 @@
             "文档",
             "社区"
           ],
-          "keywords": "steamcommunity steam api"
+          "keywords": "steamcommunity steam api",
+          "icon": "data/icons/steamcommunity.com.ico"
         },
         {
           "name": "Unity Study Group",
@@ -1427,7 +1547,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unitystudygroup unity study group"
+          "keywords": "unitystudygroup unity study group",
+          "icon": "data/icons/unitystudygroup.com.svg"
         },
         {
           "name": "NAT Traversal - Asset Store",
@@ -1435,7 +1556,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "unity3d nat traversal asset store"
+          "keywords": "unity3d nat traversal asset store",
+          "icon": "data/icons/assetstore.unity3d.com.png"
         },
         {
           "name": "NuGet Gallery | Z.EntityFramework.Extensions 3.13.0",
@@ -1443,7 +1565,8 @@
           "tags": [
             "SteamSDK"
           ],
-          "keywords": "nuget gallery z.entityframework.extensions"
+          "keywords": "nuget gallery z.entityframework.extensions",
+          "icon": "data/icons/nuget.org.ico"
         },
         {
           "name": "文献库主页 （Steamworks 文献库）",
@@ -1451,7 +1574,8 @@
           "tags": [
             "文档"
           ],
-          "keywords": "steamgames steamworks"
+          "keywords": "steamgames steamworks",
+          "icon": "data/icons/partner.steamgames.com.ico"
         },
         {
           "name": "Better Steam Web API Documentation",
@@ -1459,7 +1583,8 @@
           "tags": [
             "文档"
           ],
-          "keywords": "azurewebsites better steam web api"
+          "keywords": "azurewebsites better steam web api",
+          "icon": "data/icons/steamwebapi.azurewebsites.net.ico"
         }
       ]
     },
@@ -1473,7 +1598,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "aspnetboilerplate asp.net boilerplate web application"
+          "keywords": "aspnetboilerplate asp.net boilerplate web application",
+          "icon": "data/icons/aspnetboilerplate.com.png"
         },
         {
           "name": "角落的白板报 - 博客园",
@@ -1481,7 +1607,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "kid1412 - 博客园",
@@ -1489,7 +1616,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "cnblogs kid1412"
+          "keywords": "cnblogs kid1412",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "圣杰 - 简书",
@@ -1497,7 +1625,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "jianshu"
+          "keywords": "jianshu",
+          "icon": "data/icons/jianshu.com.png"
         },
         {
           "name": "ABP文档 - 目录 - kid1412 - 博客园",
@@ -1506,7 +1635,8 @@
             "文档",
             "html"
           ],
-          "keywords": "cnblogs abp kid1412"
+          "keywords": "cnblogs abp kid1412",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "ABPFrameWorkGroup/AbpDocument2Chinese: Abp翻译文档",
@@ -1515,7 +1645,8 @@
             "文档",
             "翻译"
           ],
-          "keywords": "github abpframeworkgroup abpdocument2chinese abp"
+          "keywords": "github abpframeworkgroup abpdocument2chinese abp",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "ABP - 随笔分类 - ZHK的博客 - 博客园",
@@ -1523,7 +1654,8 @@
           "tags": [
             "html"
           ],
-          "keywords": "cnblogs abp zhk"
+          "keywords": "cnblogs abp zhk",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "鸭补一生如梦 - 博客园",
@@ -1531,7 +1663,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "wecatch/china_regions: 最全最新中国省，市，地区json及sql数据",
@@ -1539,7 +1672,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "github wecatch china regions json"
+          "keywords": "github wecatch china regions json",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Equivalent to ServiceCollection.AddScoped<> in IocManager · Issue #2281 · aspnetboilerplate/aspnetboilerplate",
@@ -1547,7 +1681,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "github equivalent to servicecollection.addscoped in"
+          "keywords": "github equivalent to servicecollection.addscoped in",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "IdentityServer4 中文文档 - 晓晨Master - 博客园",
@@ -1556,7 +1691,8 @@
             "文档",
             "html"
           ],
-          "keywords": "cnblogs identityserver4 master"
+          "keywords": "cnblogs identityserver4 master",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "[Abp vNext微服务实践] - 文章目录 - 一曲肝腸斷 - 博客园",
@@ -1564,7 +1700,8 @@
           "tags": [
             "html"
           ],
-          "keywords": "cnblogs abp vnext"
+          "keywords": "cnblogs abp vnext",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "一曲肝腸斷 - 博客园",
@@ -1572,7 +1709,8 @@
           "tags": [
             "ABP"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         }
       ]
     },
@@ -1586,7 +1724,8 @@
           "tags": [
             "文档"
           ],
-          "keywords": "microsoft package manager console visual"
+          "keywords": "microsoft package manager console visual",
+          "icon": "data/icons/docs.microsoft.com.png"
         },
         {
           "name": "c# - EF Core - Table '*.__EFMigrationsHistory' doesn't exist - Stack Overflow",
@@ -1595,7 +1734,8 @@
             "问答",
             "c#"
           ],
-          "keywords": "stackoverflow c# ef core table"
+          "keywords": "stackoverflow c# ef core table",
+          "icon": "data/icons/stackoverflow.com.png"
         },
         {
           "name": "microsoft/aspnetcore - Docker Hub",
@@ -1603,7 +1743,8 @@
           "tags": [
             "docker"
           ],
-          "keywords": "docker microsoft aspnetcore hub"
+          "keywords": "docker microsoft aspnetcore hub",
+          "icon": "data/icons/hub.docker.com.ico"
         },
         {
           "name": "WEB前端开发 - 专注前端开发，关注用户体验 - 专注前端开发，关注用户体验",
@@ -1619,7 +1760,8 @@
           "tags": [
             "vue"
           ],
-          "keywords": "laracasts learn vue step by"
+          "keywords": "laracasts learn vue step by",
+          "icon": "data/icons/laracasts.com.png"
         },
         {
           "name": "TypeScript Handbook（中文版） · GitBook",
@@ -1627,7 +1769,8 @@
           "tags": [
             "typescript"
           ],
-          "keywords": "gitbook typescript handbook"
+          "keywords": "gitbook typescript handbook",
+          "icon": "data/icons/gitbook.com.png"
         },
         {
           "name": "JavaScript | MDN",
@@ -1636,7 +1779,8 @@
             "文档",
             "javascript"
           ],
-          "keywords": "mozilla javascript mdn"
+          "keywords": "mozilla javascript mdn",
+          "icon": "data/icons/developer.mozilla.org.png"
         },
         {
           "name": "Host ASP.NET Core on Linux with Nginx | Microsoft Docs",
@@ -1645,7 +1789,8 @@
             "文档",
             "linux"
           ],
-          "keywords": "microsoft host asp.net core on"
+          "keywords": "microsoft host asp.net core on",
+          "icon": "data/icons/docs.microsoft.com.png"
         },
         {
           "name": "Entity Framework Core | Microsoft Docs",
@@ -1653,7 +1798,8 @@
           "tags": [
             "文档"
           ],
-          "keywords": "microsoft entity framework core docs"
+          "keywords": "microsoft entity framework core docs",
+          "icon": "data/icons/docs.microsoft.com.png"
         },
         {
           "name": "Ant Design of Angular - NG-ZORRO",
@@ -1662,7 +1808,8 @@
             "文档",
             "angular"
           ],
-          "keywords": "ant design of angular ng"
+          "keywords": "ant design of angular ng",
+          "icon": "data/icons/ng.ant.design.png"
         },
         {
           "name": "awesome-tutorials/README.md at master · wpcfan/awesome-tutorials",
@@ -1670,7 +1817,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github awesome tutorials readme.md at"
+          "keywords": "github awesome tutorials readme.md at",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "65条最常用正则表达式,你要的都在这里了_慕课手记",
@@ -1678,7 +1826,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "imooc"
+          "keywords": "imooc",
+          "icon": "data/icons/imooc.com.png"
         },
         {
           "name": "Real-World Angular Series - Part 1: MEAN Setup & Angular Architecture",
@@ -1687,7 +1836,8 @@
             "资讯",
             "angular"
           ],
-          "keywords": "auth0 real world angular series"
+          "keywords": "auth0 real world angular series",
+          "icon": "data/icons/auth0.com.png"
         },
         {
           "name": "FullStack Mark — User Authentication with Angular and ASP.NET Core",
@@ -1720,7 +1870,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "jasonwatmore angular jwt authentication example"
+          "keywords": "jasonwatmore angular jwt authentication example",
+          "icon": "data/icons/jasonwatmore.com.png"
         },
         {
           "name": "快速上手 | TypeScript Handbook（中文版）",
@@ -1730,7 +1881,8 @@
             "typescript",
             "html"
           ],
-          "keywords": "gitbooks typescript handbook"
+          "keywords": "gitbooks typescript handbook",
+          "icon": "data/icons/zhongsp.gitbooks.io.png"
         },
         {
           "name": "TG-路虽远，无所畏 Angular 教程",
@@ -1739,7 +1891,8 @@
             "文档",
             "angular"
           ],
-          "keywords": "ghmagical tg angular"
+          "keywords": "ghmagical tg angular",
+          "icon": "data/icons/ghmagical.com.svg"
         },
         {
           "name": "Tinyproxy Http代理软件",
@@ -1747,7 +1900,8 @@
           "tags": [
             "代码托管"
           ],
-          "keywords": "github tinyproxy http"
+          "keywords": "github tinyproxy http",
+          "icon": "data/icons/tinyproxy.github.io.svg"
         },
         {
           "name": "Quartz Enterprise Scheduler .NET 任务框架",
@@ -1755,7 +1909,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "quartz-scheduler quartz enterprise scheduler net"
+          "keywords": "quartz-scheduler quartz enterprise scheduler net",
+          "icon": "data/icons/quartz-scheduler.net.png"
         },
         {
           "name": "缓动函数速查表",
@@ -1763,7 +1918,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "easings"
+          "keywords": "easings",
+          "icon": "data/icons/easings.net.png"
         },
         {
           "name": "solenovex - 博客园 Identity Server 4",
@@ -1771,7 +1927,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "cnblogs solenovex identity server"
+          "keywords": "cnblogs solenovex identity server",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Design Patterns: Asp.Net Core Web API, services, and repositories - ForEvolve",
@@ -1779,7 +1936,8 @@
           "tags": [
             "文档"
           ],
-          "keywords": "forevolve design patterns asp.net core"
+          "keywords": "forevolve design patterns asp.net core",
+          "icon": "data/icons/forevolve.com.png"
         },
         {
           "name": "使用OpenSSL生成pfx、cer、crt证书 - 简书",
@@ -1787,7 +1945,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "jianshu openssl pfx cer crt"
+          "keywords": "jianshu openssl pfx cer crt",
+          "icon": "data/icons/jianshu.com.png"
         },
         {
           "name": "AI - .Net Core 微服务 - .Net Core 开源微服务 套件 工具包 CSharpKit",
@@ -1804,7 +1963,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "ASP.NET Core 2.0 Series – Tahir Naushad's Blog",
@@ -1820,7 +1980,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "cnblogs jeffcky"
+          "keywords": "cnblogs jeffcky",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "IdentityServer/IdentityServer4.Templates: dotnet new templates for IdentityServer4",
@@ -1828,7 +1989,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "github identityserver identityserver4.templates dotnet new"
+          "keywords": "github identityserver identityserver4.templates dotnet new",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "RESTful Service API 设计最佳工程实践和常见问题解决方案 - 简书",
@@ -1837,7 +1999,8 @@
             "设计",
             "文档"
           ],
-          "keywords": "jianshu restful service api"
+          "keywords": "jianshu restful service api",
+          "icon": "data/icons/jianshu.com.png"
         },
         {
           "name": "BlazorHelp Website > Home",
@@ -1845,7 +2008,8 @@
           "tags": [
             "asp.net core"
           ],
-          "keywords": "blazorhelpwebsite blazorhelp website home"
+          "keywords": "blazorhelpwebsite blazorhelp website home",
+          "icon": "data/icons/blazorhelpwebsite.com.ico"
         }
       ]
     },
@@ -1869,7 +2033,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "angular"
+          "keywords": "angular",
+          "icon": "data/icons/angular.cn.png"
         },
         {
           "name": "ng-book2/code",
@@ -1877,7 +2042,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github ng book2 code"
+          "keywords": "github ng book2 code",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "技术 | cipchk",
@@ -1893,7 +2059,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "angular components material"
+          "keywords": "angular components material",
+          "icon": "data/icons/material.angular.io.svg"
         },
         {
           "name": "Angular实现多标签页效果(路由重用) - 漂_泊 - 博客园",
@@ -1902,7 +2069,8 @@
             "angular",
             "html"
           ],
-          "keywords": "cnblogs angular"
+          "keywords": "cnblogs angular",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "angular 4 实现的tab栏切换 - smiles - 博客园",
@@ -1911,7 +2079,8 @@
             "angular",
             "html"
           ],
-          "keywords": "cnblogs angular tab smiles"
+          "keywords": "cnblogs angular tab smiles",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Nebular Documentation - Add into existing project",
@@ -2000,7 +2169,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "jianshu flex"
+          "keywords": "jianshu flex",
+          "icon": "data/icons/jianshu.com.png"
         },
         {
           "name": "Plunker",
@@ -2034,7 +2204,8 @@
             "angular",
             "html"
           ],
-          "keywords": "cnblogs nginx proxy pass rewrite"
+          "keywords": "cnblogs nginx proxy pass rewrite",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "Nginx Reverse Proxy to ASP.NET Core - Separate Docker Containers - SEP Blog",
@@ -2052,7 +2223,8 @@
             "问答",
             "angular"
           ],
-          "keywords": "stackoverflow angular best way to"
+          "keywords": "stackoverflow angular best way to",
+          "icon": "data/icons/stackoverflow.com.png"
         },
         {
           "name": "RxJS 中文社区",
@@ -2061,7 +2233,8 @@
             "社区",
             "angular"
           ],
-          "keywords": "github rxjs"
+          "keywords": "github rxjs",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Angular教程 - Eve",
@@ -2129,7 +2302,8 @@
             "angular",
             "javascript"
           ],
-          "keywords": "github identitymodel oidc client js"
+          "keywords": "github identitymodel oidc client js",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Angular Reactive Forms: trigger validation on submit",
@@ -2161,7 +2335,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github sabyasachibiswal angular5 social login"
+          "keywords": "github sabyasachibiswal angular5 social login",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "angular-oauth2-oidc",
@@ -2179,7 +2354,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github manfredsteyer angular oauth2 oidc"
+          "keywords": "github manfredsteyer angular oauth2 oidc",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Enums · TypeScript Deep Dive",
@@ -2238,6 +2414,7 @@
     {
       "id": "cat-12",
       "name": "entity frame work core",
+      "type": "fav",
       "links": [
         {
           "name": "raochunjiang/Microsoft.EntityFrameworkCore.Docs.zh-Hans: 微软 EntityFrameworkCore 中文文档",
@@ -2245,13 +2422,15 @@
           "tags": [
             "文档"
           ],
-          "keywords": "github raochunjiang microsoft.entityframeworkcore.docs.zh hans entityframeworkcore"
+          "keywords": "github raochunjiang microsoft.entityframeworkcore.docs.zh hans entityframeworkcore",
+          "icon": "data/icons/github.com.png"
         }
       ]
     },
     {
       "id": "cat-13",
       "name": "twitter",
+      "type": "fav",
       "links": [
         {
           "name": "sakuragame_test | Twitter Application Management",
@@ -2266,6 +2445,7 @@
     {
       "id": "cat-14",
       "name": "Docker",
+      "type": "fav",
       "links": [
         {
           "name": "前言 · Docker —— 从入门到实践",
@@ -2289,7 +2469,8 @@
             "html",
             "css"
           ],
-          "keywords": "mozilla web mdn"
+          "keywords": "mozilla web mdn",
+          "icon": "data/icons/developer.mozilla.org.png"
         },
         {
           "name": "Let's Encrypt - Free SSL/TLS Certificates",
@@ -2384,7 +2565,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github maximegris angular electron at"
+          "keywords": "github maximegris angular electron at",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "greenworks/docs at master · greenheartgames/greenworks",
@@ -2392,13 +2574,15 @@
           "tags": [
             "文档"
           ],
-          "keywords": "github greenworks docs at master"
+          "keywords": "github greenworks docs at master",
+          "icon": "data/icons/github.com.png"
         }
       ]
     },
     {
       "id": "cat-17",
       "name": "CTP交易",
+      "type": "fav",
       "links": [
         {
           "name": "程序化交易二三事",
@@ -2446,6 +2630,7 @@
     {
       "id": "cat-19",
       "name": "数据结构",
+      "type": "fav",
       "links": [
         {
           "name": "树形结构数据库存储方式汇总",
@@ -2453,7 +2638,8 @@
           "tags": [
             "数据结构"
           ],
-          "keywords": "github"
+          "keywords": "github",
+          "icon": "data/icons/github.com.png"
         }
       ]
     },
@@ -2475,7 +2661,8 @@
           "tags": [
             "技术"
           ],
-          "keywords": "github learn regex readme cn.md"
+          "keywords": "github learn regex readme cn.md",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "ng-select/ng-select: Native angular 6+ select component",
@@ -2483,7 +2670,8 @@
           "tags": [
             "angular"
           ],
-          "keywords": "github ng select native angular"
+          "keywords": "github ng select native angular",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "zBook",
@@ -2555,7 +2743,8 @@
           "tags": [
             "Tool"
           ],
-          "keywords": "github cdoco jetbrains license server"
+          "keywords": "github cdoco jetbrains license server",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "zd423 - 软件分享平台领跑者",
@@ -2651,7 +2840,8 @@
           "tags": [
             "视频"
           ],
-          "keywords": "youtube traversy media"
+          "keywords": "youtube traversy media",
+          "icon": "data/icons/youtube.com.ico"
         },
         {
           "name": "AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启Kubernetes和Istio - Enable Kubernetes/Istio on Docker Desktop in China",
@@ -2660,7 +2850,8 @@
             "docker",
             "kubernetes"
           ],
-          "keywords": "github aliyuncontainerservice k8s for docker"
+          "keywords": "github aliyuncontainerservice k8s for docker",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "JSON在线 | JSON解析格式化—SO JSON在线工具",
@@ -2741,6 +2932,7 @@
     {
       "id": "cat-23",
       "name": "影音",
+      "type": "fav",
       "links": [
         {
           "name": "1080P高清电影下载_720P高清电影百度云下载_4K电影迅雷下载 - 592美剧",
@@ -2772,7 +2964,8 @@
           "tags": [
             "影音"
           ],
-          "keywords": "github ngosang trackerslist an updated"
+          "keywords": "github ngosang trackerslist an updated",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Torrent Downloads - download free torrents!",
@@ -2810,7 +3003,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github releases shadowsocksrr shadowsocksr android"
+          "keywords": "github releases shadowsocksrr shadowsocksr android",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "ToyoDAdoubi/doubi: 一个逗比写的各种逗比脚本~",
@@ -2818,7 +3012,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github toyodadoubi doubi"
+          "keywords": "github toyodadoubi doubi",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "hq450/fancyss: fancyss is a project providing tools to across the GFW on asuswrt/merlin based router.",
@@ -2826,7 +3021,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github hq450 fancyss is project"
+          "keywords": "github hq450 fancyss is project",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "V2Ray一键安装脚本 · 233boy/v2ray Wiki",
@@ -2834,7 +3030,8 @@
           "tags": [
             "百科"
           ],
-          "keywords": "github v2ray boy wiki"
+          "keywords": "github v2ray boy wiki",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Releases · 2dust/v2rayNG",
@@ -2842,7 +3039,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github releases dust v2rayng"
+          "keywords": "github releases dust v2rayng",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "客戶中心 - Just My Socks",
@@ -2882,7 +3080,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github zusterben sterben"
+          "keywords": "github zusterben sterben",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "My Subscriptions - Vultr.com",
@@ -2898,7 +3097,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github fancyss history package x64"
+          "keywords": "github fancyss history package x64",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "hq450/fancyss_history_package: 科学上网插件的离线安装包储存在这里",
@@ -2906,7 +3106,8 @@
           "tags": [
             "SS"
           ],
-          "keywords": "github hq450 fancyss history package"
+          "keywords": "github hq450 fancyss history package",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "POTATO CLOUD",
@@ -2946,7 +3147,8 @@
           "tags": [
             "html"
           ],
-          "keywords": "cnblogs l2tp xiaopeng"
+          "keywords": "cnblogs l2tp xiaopeng",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "节点列表 — 优云666",
@@ -2993,6 +3195,7 @@
     {
       "id": "cat-25",
       "name": "博客收藏",
+      "type": "fav",
       "links": [
         {
           "name": "Leriou's Tavern - Maxime terribilis esse superbia",
@@ -3245,7 +3448,8 @@
           "tags": [
             "YD"
           ],
-          "keywords": "qq"
+          "keywords": "qq",
+          "icon": "data/icons/mp.weixin.qq.com.png"
         },
         {
           "name": "四川省证券期货业协会",
@@ -3743,6 +3947,7 @@
     {
       "id": "cat-28",
       "name": "CloudServer",
+      "type": "fav",
       "links": [
         {
           "name": "HomeNAS - Synology DiskStation",
@@ -3765,7 +3970,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "epicgames epic"
+          "keywords": "epicgames epic",
+          "icon": "data/icons/dev.epicgames.com.png"
         },
         {
           "name": "Console access for Unreal Engine — Epic Online Services | 开发者门户",
@@ -3773,7 +3979,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "epicgames console access for unreal"
+          "keywords": "epicgames console access for unreal",
+          "icon": "data/icons/dev.epicgames.com.png"
         },
         {
           "name": "Unreal Engine Platform File Extensions",
@@ -3868,7 +4075,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github kefengwei gasdocumentation chinese"
+          "keywords": "github kefengwei gasdocumentation chinese",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Binding Input in C++ with Unreal Engine 4 | Unrealistic",
@@ -3885,7 +4093,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn ue4 delegate declare multicast"
+          "keywords": "csdn ue4 delegate declare multicast",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "tranek/GASDocumentation: My understanding of Unreal Engine 5's GameplayAbilitySystem plugin with a simple multiplayer sample project.",
@@ -3893,7 +4102,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github tranek gasdocumentation my understanding"
+          "keywords": "github tranek gasdocumentation my understanding",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Enhanced Input - What you need to know",
@@ -3909,7 +4119,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "csdn ue4"
+          "keywords": "csdn ue4",
+          "icon": "data/icons/blog.csdn.net.png"
         },
         {
           "name": "kefengwei/GASDocumentation_Chinese",
@@ -3917,7 +4128,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "github kefengwei gasdocumentation chinese"
+          "keywords": "github kefengwei gasdocumentation chinese",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "2D碰撞算法",
@@ -3975,7 +4187,8 @@
             "游戏",
             "html"
           ],
-          "keywords": "cnblogs"
+          "keywords": "cnblogs",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "构建支持多平台打包的二进制引擎 | 虚幻社区知识库",
@@ -4104,7 +4317,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "unrealengine ue how to build"
+          "keywords": "unrealengine ue how to build",
+          "icon": "data/icons/forums.unrealengine.com.png"
         },
         {
           "name": "Unreal Directive",
@@ -4174,7 +4388,8 @@
           "tags": [
             "游戏"
           ],
-          "keywords": "qq ssl"
+          "keywords": "qq ssl",
+          "icon": "data/icons/mp.weixin.qq.com.png"
         },
         {
           "name": "Integrating third-party libraries as Unreal Engine plugins: ABI compatibility and Linux toolchain – P. Galeone's blog",
@@ -4201,7 +4416,8 @@
             "社区",
             "游戏"
           ],
-          "keywords": "epicgames example project loading pak"
+          "keywords": "epicgames example project loading pak",
+          "icon": "data/icons/dev.epicgames.com.png"
         },
         {
           "name": "PSO Caching on Android | Unreal Engine 4.27 Documentation | Epic Developer Community",
@@ -4210,7 +4426,8 @@
             "文档",
             "社区"
           ],
-          "keywords": "epicgames pso caching on android"
+          "keywords": "epicgames pso caching on android",
+          "icon": "data/icons/dev.epicgames.com.png"
         },
         {
           "name": "循迹研究室",
@@ -4256,7 +4473,8 @@
           "tags": [
             "html"
           ],
-          "keywords": "cnblogs appstore"
+          "keywords": "cnblogs appstore",
+          "icon": "data/icons/cnblogs.com.png"
         },
         {
           "name": "UE4 ios调试 ue4 xcode_ganmaola的技术博客_51CTO博客",
@@ -4293,6 +4511,7 @@
     {
       "id": "cat-33",
       "name": "Nintendo",
+      "type": "fav",
       "links": [
         {
           "name": "Homepage - Nintendo Developer Portal",
@@ -4307,6 +4526,7 @@
     {
       "id": "cat-34",
       "name": "Steam",
+      "type": "fav",
       "links": [
         {
           "name": "Steamworks",
@@ -4314,7 +4534,8 @@
           "tags": [
             "Steam"
           ],
-          "keywords": "steamgames steamworks"
+          "keywords": "steamgames steamworks",
+          "icon": "data/icons/partner.steamgames.com.ico"
         }
       ]
     },
@@ -4336,7 +4557,8 @@
           "tags": [
             "Parse"
           ],
-          "keywords": "github sadortun goplan app"
+          "keywords": "github sadortun goplan app",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "google-play-billing-validator - npm",
@@ -4344,7 +4566,8 @@
           "tags": [
             "包管理"
           ],
-          "keywords": "npmjs google play billing validator"
+          "keywords": "npmjs google play billing validator",
+          "icon": "data/icons/npmjs.com.png"
         },
         {
           "name": "node-apple-receipt-verify - npm",
@@ -4353,7 +4576,8 @@
             "包管理",
             "node"
           ],
-          "keywords": "npmjs node apple receipt verify"
+          "keywords": "npmjs node apple receipt verify",
+          "icon": "data/icons/npmjs.com.png"
         },
         {
           "name": "in-app-purchase - npm",
@@ -4361,7 +4585,8 @@
           "tags": [
             "包管理"
           ],
-          "keywords": "npmjs in app purchase npm"
+          "keywords": "npmjs in app purchase npm",
+          "icon": "data/icons/npmjs.com.png"
         },
         {
           "name": "apple/app-store-server-library-node",
@@ -4369,7 +4594,8 @@
           "tags": [
             "node"
           ],
-          "keywords": "github apple app store server"
+          "keywords": "github apple app store server",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "googleapis/google-api-nodejs-client: Google's officially supported Node.js client library for accessing Google APIs. Support for authorization and authentication with OAuth 2.0, API Keys and JWT (Service Tokens) is included.",
@@ -4378,7 +4604,8 @@
             "文档",
             "node"
           ],
-          "keywords": "github googleapis google api nodejs"
+          "keywords": "github googleapis google api nodejs",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "What is BullMQ | BullMQ",
@@ -4395,7 +4622,8 @@
           "tags": [
             "Parse"
           ],
-          "keywords": "github felixmosh bull board queue"
+          "keywords": "github felixmosh bull board queue",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "rgunindi/parse-cache-memory",
@@ -4403,7 +4631,8 @@
           "tags": [
             "Parse"
           ],
-          "keywords": "github rgunindi parse cache memory"
+          "keywords": "github rgunindi parse cache memory",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "json-editor/json-editor: JSON Schema Based Editor",
@@ -4411,7 +4640,8 @@
           "tags": [
             "Parse"
           ],
-          "keywords": "github json editor schema based"
+          "keywords": "github json editor schema based",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "opensource/packages/get-generation/README.md at master · owsas/opensource",
@@ -4419,7 +4649,8 @@
           "tags": [
             "Parse"
           ],
-          "keywords": "github opensource packages get generation"
+          "keywords": "github opensource packages get generation",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "jsonforms/packages/vue-vuetify/README.md at master · eclipsesource/jsonforms",
@@ -4427,7 +4658,8 @@
           "tags": [
             "vue"
           ],
-          "keywords": "github jsonforms packages vue vuetify"
+          "keywords": "github jsonforms packages vue vuetify",
+          "icon": "data/icons/github.com.png"
         },
         {
           "name": "Hugo的笔记空间 | Hugo Knowledge Base",
@@ -4480,6 +4712,7 @@
     {
       "id": "cat-37",
       "name": "abp",
+      "type": "fav",
       "links": [
         {
           "name": "openiddic 添加自定义grant type",
@@ -4488,7 +4721,8 @@
             "文档",
             "社区"
           ],
-          "keywords": "github openiddic grant type"
+          "keywords": "github openiddic grant type",
+          "icon": "data/icons/github.com.png"
         }
       ]
     },
@@ -4517,6 +4751,7 @@
     {
       "id": "cat-39",
       "name": "未分类",
+      "type": "fav",
       "links": [
         {
           "name": "我的笔记",
@@ -4793,6 +5028,7 @@
     {
       "id": "cat-43",
       "name": "阅读列表保存",
+      "type": "fav",
       "links": [
         {
           "name": "KubeSphere 安装 - KubeSphere 安装 - KubeSphere 安装 - KubeSphere | Enterprise container platform, built on Kubernetes",
@@ -4808,7 +5044,8 @@
           "tags": [
             "视频"
           ],
-          "keywords": "youtube what is stir fried"
+          "keywords": "youtube what is stir fried",
+          "icon": "data/icons/youtube.com.ico"
         }
       ]
     }

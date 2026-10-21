@@ -28,6 +28,26 @@
     var day = String(d.getDate()).padStart(2, '0');
     return d.getFullYear() + '-' + m + '-' + day;
   }
+
+  // 分类统一图标（跟主页同一个文件夹），页面里重复插几处，避免额外请求
+  var _SVG_NS = 'http://www.w3.org/2000/svg';
+  var _FOLDER_D = 'M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2';
+  function folderIcon(cls) {
+    var svg = document.createElementNS(_SVG_NS, 'svg');
+    svg.setAttribute('class', cls);
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    var p = document.createElementNS(_SVG_NS, 'path');
+    p.setAttribute('d', _FOLDER_D);
+    svg.appendChild(p);
+    return svg;
+  }
   function str(v) { return typeof v === 'string' ? v : ''; }
 
   var statusEl, statusTimer;
@@ -91,7 +111,7 @@
       out.categories.push({
         id: str(c.id) || 'cat-' + (out.categories.length + 1),
         name: str(c.name) || '未命名分类',
-        emoji: str(c.emoji),
+        type: c.type === 'fav' ? 'fav' : 'nav',
         links: (Array.isArray(c.links) ? c.links : []).map(normalizeLink)
       });
     }
@@ -108,7 +128,7 @@
       },
       categories: state.data.categories.map(function (c) {
         var co = { id: c.id.trim(), name: c.name.trim() };
-        if (c.emoji) co.emoji = c.emoji;
+        if (c.type === 'fav') co.type = 'fav';
         co.links = c.links.map(function (l) {
           var x = { name: l.name.trim(), url: l.url.trim() };
           if (l.desc) x.desc = l.desc;
@@ -166,24 +186,31 @@
     ul.textContent = '';
     state.data.categories.forEach(function (c, i) {
       var li = document.createElement('li');
-      li.className = 'adm-cat' + (i === state.activeCat ? ' is-active' : '');
+      li.className = 'adm-cat' + (i === state.activeCat ? ' is-active' : '') + (c.type === 'fav' ? ' is-fav' : '');
       li.dataset.i = String(i);
-      li.title = c.id;
+      li.title = c.id + (c.type === 'fav' ? '（收藏夹）' : '（导航）');
 
-      var em = document.createElement('span');
-      em.className = 'adm-cat-emoji';
-      em.textContent = c.emoji || '📁';
+      var em = folderIcon('cat-ico');
 
       var nm = document.createElement('span');
       nm.className = 'adm-cat-name';
       nm.textContent = c.name || '未命名分类';
 
+      if (c.type === 'fav') {
+        var tag = document.createElement('span');
+        tag.className = 'adm-cat-fav';
+        tag.textContent = '收藏';
+        li.appendChild(em);
+        li.appendChild(nm);
+        li.appendChild(tag);
+      } else {
+        li.appendChild(em);
+        li.appendChild(nm);
+      }
+
       var ct = document.createElement('span');
       ct.className = 'adm-cat-count';
       ct.textContent = String(c.links.length);
-
-      li.appendChild(em);
-      li.appendChild(nm);
       li.appendChild(ct);
       ul.appendChild(li);
     });
@@ -229,8 +256,11 @@
     box.hidden = disabled;
     if (disabled) return;
 
-    box.appendChild(makeField('f-emoji', '图标', 'emoji', c.emoji, '🧭'));
     box.appendChild(makeField('f-name', '分类名', 'name', c.name, '开发'));
+    box.appendChild(makeSelect('f-type', '类型', 'type', c.type, [
+      ['nav', '🧭 导航（卡片瀑布流）'],
+      ['fav', '📁 收藏夹（紧凑列表）']
+    ]));
     box.appendChild(makeField('f-id', 'id（锚点）', 'id', c.id, 'dev'));
 
     var sp = document.createElement('div');
@@ -243,6 +273,26 @@
     del.id = 'btn-del-cat';
     del.textContent = '删除分类';
     box.appendChild(del);
+  }
+
+  function makeSelect(cls, label, key, value, options) {
+    var wrap = document.createElement('label');
+    wrap.className = cls;
+    var span = document.createElement('span');
+    span.textContent = label;
+    var sel = document.createElement('select');
+    sel.dataset.scope = 'cat';
+    sel.dataset.k = key;
+    options.forEach(function (o) {
+      var op = document.createElement('option');
+      op.value = o[0];
+      op.textContent = o[1];
+      sel.appendChild(op);
+    });
+    sel.value = value || options[0][0];
+    wrap.appendChild(span);
+    wrap.appendChild(sel);
+    return wrap;
   }
 
   function makeField(cls, label, key, value, placeholder) {
@@ -370,11 +420,21 @@
         t.classList.toggle('is-invalid', nameBad);
         t.title = nameBad ? '分类名不能为空' : '分类名';
         syncCatLabel(state.activeCat);
-      } else if (k === 'emoji') {
-        c.emoji = t.value;
-        syncCatLabel(state.activeCat);
       }
       markDirty();
+    });
+
+    box.addEventListener('change', function (e) {
+      var t = e.target;
+      if (!(t instanceof HTMLSelectElement)) return;
+      var c = state.data.categories[state.activeCat];
+      if (!c || t.dataset.k !== 'type') return;
+      c.type = t.value === 'fav' ? 'fav' : 'nav';
+      markDirty();
+      renderCats();
+      setStatus(c.type === 'fav'
+        ? '已改为收藏夹类：显示在页面底部的紧凑列表里'
+        : '已改为导航类：显示在页面顶部的卡片瀑布流里', 'ok');
     });
 
     box.addEventListener('click', function (e) {
@@ -483,7 +543,7 @@
   function bindAddButtons() {
     $('btn-add-cat').addEventListener('click', function () {
       var id = nextCatId();
-      state.data.categories.push({ id: id, name: '新分类', emoji: '', links: [] });
+      state.data.categories.push({ id: id, name: '新分类', type: 'nav', links: [] });
       state.activeCat = state.data.categories.length - 1;
       markDirty();
       renderAll();
@@ -1085,7 +1145,7 @@
       if (g.catIndex >= 0) {
         target = state.data.categories[g.catIndex];
       } else {
-        target = { id: nextCatId(), name: g.name, emoji: '', links: [] };
+        target = { id: nextCatId(), name: g.name, links: [] };
         state.data.categories.push(target);
         newCats++;
       }

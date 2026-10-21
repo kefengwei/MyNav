@@ -95,7 +95,10 @@ export function validateData(data) {
     else seenIds.add(cat.id);
 
     if (!isText(cat.name)) err(base + '.name', '必填，分类显示名');
-    if (cat.emoji !== undefined && typeof cat.emoji !== 'string') err(base + '.emoji', '必须是字符串');
+    if (cat.emoji !== undefined) warn(base + '.emoji', 'emoji 已废弃：所有分类统一显示文件夹图标，这个字段不起作用，可以删掉');
+    if (cat.type !== undefined && cat.type !== 'nav' && cat.type !== 'fav') {
+      err(base + '.type', '只能是 "nav"（导航卡片）或 "fav"（收藏夹紧凑列表），省略等于 nav');
+    }
 
     if (!Array.isArray(cat.links)) {
       err(base + '.links', '必须是数组');

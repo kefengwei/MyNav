@@ -8,6 +8,7 @@
  *   node tools/fetch-icons.mjs --force      忽略本地缓存重新下载
  *   node tools/fetch-icons.mjs --dry-run    只打印将要做的事
  *   node tools/fetch-icons.mjs --limit=5    只处理前 5 个
+ *   node tools/fetch-icons.mjs --include-fav 连收藏夹类一起抓（默认跳过，避免 CI 超时）
  *
  * 抓取顺序（拿到清晰图标就停）：
  *   1. 首页 HTML 里的 <link rel="apple-touch-icon">（通常 180x180 PNG，最清晰）
@@ -17,6 +18,8 @@
  *   5. favicon.im 公开服务（只用于被 Cloudflare 拦截、直连拿不到的站点）
  *
  * 抓不到的链接保持无 icon 字段，前端会自动回落到首字母色块。
+ * 只处理导航类（type 不是 "fav"）的分类：收藏夹类条数多、图标在 16px 单行里看不清，
+ * 抓它们只会拖长 CI 时间（GitHub Actions 每轮都有 8 分钟上限）。
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -36,6 +39,7 @@ const opts = {
   all: argv.includes('--all'),
   force: argv.includes('--force'),
   dryRun: argv.includes('--dry-run'),
+  includeFav: argv.includes('--include-fav'),
   limit: (function () {
     const hit = argv.find((a) => a.startsWith('--limit='));
     return hit ? Math.max(0, parseInt(hit.slice(8), 10) || 0) : 0;
@@ -152,7 +156,14 @@ async function main() {
   const data = JSON.parse(fs.readFileSync(SRC_PATH, 'utf8'));
 
   const targets = [];
+  let skippedFav = 0;
   for (const cat of data.categories || []) {
+    // 收藏夹类不抓图标：条目多、收益低，还会把 CI 的抓取时间撑爆。
+    // 这类链接保持无 icon，前端回落成首字母色块。
+    if (cat.type === 'fav' && !opts.includeFav) {
+      skippedFav += (cat.links || []).length;
+      continue;
+    }
     for (const link of cat.links || []) {
       if (!link || !link.url) continue;
       if (opts.all || !link.icon) targets.push({ link, cat });
@@ -160,7 +171,8 @@ async function main() {
   }
   const queue = opts.limit ? targets.slice(0, opts.limit) : targets;
 
-  console.log('→ 待处理 ' + queue.length + ' 条链接' + (opts.dryRun ? '（dry-run）' : ''));
+  console.log('→ 待处理 ' + queue.length + ' 条链接' + (opts.dryRun ? '（dry-run）' : '')
+    + (skippedFav ? '（跳过收藏夹类 ' + skippedFav + ' 条）' : ''));
 
   if (!opts.dryRun && !fs.existsSync(ICON_DIR)) fs.mkdirSync(ICON_DIR, { recursive: true });
 
@@ -189,12 +201,34 @@ async function main() {
 
   function originOf(u) { try { return new URL(u).origin; } catch (e) { return ''; } }
 
+  // 增量落盘：CI 里这一步有 8 分钟上限，超时会被 SIGTERM 杀掉。
+  // 如果只在最后写一次 links.json，被杀的代价是「图标文件都在、icon 字段全丢」，
+  // 页面上一片首字母色块，还得靠 tools/link-icons.mjs 事后补救。所以每 20 个写一次。
+  let lastFlush = 0;
+  function flush() {
+    fs.writeFileSync(SRC_PATH, JSON.stringify(data, null, 2) + '\n', 'utf8');
+    lastFlush = ok;
+  }
+  let killed = false;
+  function onKill(sig) {
+    if (killed) return;
+    killed = true;
+    if (!opts.dryRun && ok > lastFlush) {
+      try { flush(); } catch (e) { /* 落盘失败也要退出 */ }
+    }
+    console.log('⚠ 收到 ' + sig + '，已保存进度（' + ok + ' 个图标）');
+    process.exit(0);
+  }
+  process.on('SIGTERM', () => onKill('SIGTERM'));
+  process.on('SIGINT', () => onKill('SIGINT'));
+
   for (let i = 0; i < queue.length; i += CONCURRENCY) {
     await Promise.all(queue.slice(i, i + CONCURRENCY).map(work));
+    if (!opts.dryRun && ok - lastFlush >= 20) flush();
   }
 
-  if (!opts.dryRun && ok > 0) {
-    fs.writeFileSync(SRC_PATH, JSON.stringify(data, null, 2) + '\n', 'utf8');
+  if (!opts.dryRun && ok > lastFlush) {
+    flush();
     console.log('✔ 已写入 ' + path.relative(REPO_ROOT, SRC_PATH) + '（' + ok + ' 个图标）');
     console.log('  下一步：node tools/build-data.mjs');
   }
