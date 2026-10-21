@@ -43,65 +43,86 @@
     return;
   }
 
-  /* ---------- 数据规范化 ---------- */
-  var meta = DATA.meta || {};
-  var categories = DATA.categories.map(function (cat, ci) {
-    var links = (cat.links || []).filter(function (l) { return l && l.url; }).map(function (l) {
-      var tags = Array.isArray(l.tags) ? l.tags : (l.tags ? [l.tags] : []);
-      var link = {
-        name: String(l.name || l.url),
-        url: String(l.url),
-        desc: l.desc ? String(l.desc) : '',
-        icon: l.icon ? String(l.icon) : '',
-        tags: tags.map(String),
-        keywords: l.keywords ? String(l.keywords) : ''
+  /* ---------- 数据规范化（每次数据变动后可重建，编辑模式复用） ---------- */
+  var meta;
+  var categories;
+  var totalLinks;
+  var entries;
+  var footerParts;
+
+  // 编辑模式用：内部 link 对象 ↔ data/links.json 里的原始对象，靠 _eid 建立反向索引
+  var eidSeq = 0;
+  var byEid = Object.create(null);
+
+  function rebuildModel() {
+    eidSeq = 0;
+    byEid = Object.create(null);
+    meta = DATA.meta || {};
+    categories = DATA.categories.map(function (cat, ci) {
+      var catOut = {
+        id: cat.id || ('cat-' + ci),
+        name: cat.name || ('分类 ' + (ci + 1)),
+        type: cat.type === 'fav' ? 'fav' : 'nav',
+        links: [],
+        _src: cat
       };
-      link._hay = [link.name, link.url, link.desc, link.tags.join(' '), link.keywords]
-        .join(' ').toLowerCase();
-      return link;
-    });
-    return {
-      id: cat.id || ('cat-' + ci),
-      name: cat.name || ('分类 ' + (ci + 1)),
-      type: cat.type === 'fav' ? 'fav' : 'nav',
-      links: links
-    };
-  }).filter(function (cat) { return cat.links.length > 0; });
+      catOut.links = (cat.links || []).filter(function (l) { return l && l.url; }).map(function (l) {
+        var tags = Array.isArray(l.tags) ? l.tags : (l.tags ? [l.tags] : []);
+        var link = {
+          name: String(l.name || l.url),
+          url: String(l.url),
+          desc: l.desc ? String(l.desc) : '',
+          icon: l.icon ? String(l.icon) : '',
+          tags: tags.map(String),
+          keywords: l.keywords ? String(l.keywords) : '',
+          _eid: ++eidSeq,
+          _catId: catOut.id
+        };
+        link._hay = [link.name, link.url, link.desc, link.tags.join(' '), link.keywords]
+          .join(' ').toLowerCase();
+        byEid[link._eid] = { link: link, src: l, cat: catOut };
+        return link;
+      });
+      return catOut;
+    }).filter(function (cat) { return cat.links.length > 0 || isEditing(); });
 
-  var totalLinks = categories.reduce(function (n, c) { return n + c.links.length; }, 0);
+    totalLinks = categories.reduce(function (n, c) { return n + c.links.length; }, 0);
 
-  // 扁平化：给模糊搜索和快速面板用，附带小写字段避免每次重复转换
-  var entries = [];
-  categories.forEach(function (cat) {
-    cat.links.forEach(function (link) {
-      entries.push({
-        link: link,
-        url: link.url,
-        name: link.name,
-        desc: link.desc,
-        catName: cat.name,
-        catId: cat.id,
-        nameL: link.name.toLowerCase(),
-        urlL: link.url.toLowerCase(),
-        descL: link.desc.toLowerCase(),
-        tagsL: link.tags.join(' ').toLowerCase(),
-        kwL: link.keywords.toLowerCase(),
-        catL: cat.name.toLowerCase(),
-        nameInit: initialsOf(link.name.toLowerCase())
+    // 扁平化：给模糊搜索和快速面板用，附带小写字段避免每次重复转换
+    entries = [];
+    categories.forEach(function (cat) {
+      cat.links.forEach(function (link) {
+        entries.push({
+          link: link,
+          url: link.url,
+          name: link.name,
+          desc: link.desc,
+          catName: cat.name,
+          catId: cat.id,
+          nameL: link.name.toLowerCase(),
+          urlL: link.url.toLowerCase(),
+          descL: link.desc.toLowerCase(),
+          tagsL: link.tags.join(' ').toLowerCase(),
+          kwL: link.keywords.toLowerCase(),
+          catL: cat.name.toLowerCase(),
+          nameInit: initialsOf(link.name.toLowerCase())
+        });
       });
     });
-  });
 
-  /* ---------- 文档标题与页脚 ---------- */
-  if (meta.title) {
-    el.title.textContent = meta.title;
-    document.title = meta.title + (meta.subtitle ? ' · ' + meta.subtitle : '');
+    /* ---------- 文档标题与页脚 ---------- */
+    if (meta.title) {
+      el.title.textContent = meta.title;
+      document.title = meta.title + (meta.subtitle ? ' · ' + meta.subtitle : '');
+    }
+    if (meta.subtitle) el.subtitle.textContent = meta.subtitle;
+
+    footerParts = ['共 ' + totalLinks + ' 个链接', categories.length + ' 个分类'];
+    if (meta.updated) footerParts.push('更新于 ' + meta.updated);
+    el.footerMeta.textContent = footerParts.join(' · ');
   }
-  if (meta.subtitle) el.subtitle.textContent = meta.subtitle;
 
-  var footerParts = ['共 ' + totalLinks + ' 个链接', categories.length + ' 个分类'];
-  if (meta.updated) footerParts.push('更新于 ' + meta.updated);
-  el.footerMeta.textContent = footerParts.join(' · ');
+  rebuildModel();
 
   /* ---------- 工具函数 ---------- */
   // 所有分类统一用同一个文件夹图标，收藏夹类只靠 chip 的虚线边框区分
@@ -228,6 +249,56 @@
     box.style.color = '#fff';
   }
 
+  /* ---------- 编辑模式辅助（真正的逻辑在 assets/editor.js） ---------- */
+  function isEditing() {
+    return document.body.classList.contains('is-editing');
+  }
+
+  function actBtn(act, label, title, eid) {
+    var s = document.createElement('span');
+    s.className = 'card-act is-' + act;
+    s.setAttribute('role', 'button');
+    s.setAttribute('tabindex', '-1');
+    s.setAttribute('data-act', act);
+    s.setAttribute('data-eid', String(eid));
+    s.title = title;
+    s.setAttribute('aria-label', title);
+    s.textContent = label;
+    return s;
+  }
+
+  function buildActs(link) {
+    var box = document.createElement('span');
+    box.className = 'card-acts';
+    box.appendChild(actBtn('edit', '✎', '编辑', link._eid));
+    box.appendChild(actBtn('del', '×', '删除', link._eid));
+    return box;
+  }
+
+  function catActBtn(catId) {
+    var s = document.createElement('span');
+    s.className = 'cat-act';
+    s.setAttribute('role', 'button');
+    s.setAttribute('tabindex', '-1');
+    s.setAttribute('data-cat-act', 'edit');
+    s.setAttribute('data-cat-id', catId);
+    s.setAttribute('title', '编辑这个分类');
+    s.setAttribute('aria-label', '编辑分类');
+    s.textContent = '\u270E';
+    return s;
+  }
+
+  function addLinkBtn(catId) {
+    var b = document.createElement('span');
+    b.className = 'sec-add';
+    b.setAttribute('role', 'button');
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('data-add', catId);
+    b.title = '在这个分类里添加链接';
+    b.textContent = '+ 添加';
+    return b;
+  }
+
   function buildCard(link, terms, idx) {
     var a = document.createElement('a');
     a.className = 'card';
@@ -263,6 +334,10 @@
     }
 
     a.appendChild(body);
+    if (isEditing()) {
+      a.classList.add('is-editable');
+      a.appendChild(buildActs(link));
+    }
     return a;
   }
 
@@ -287,6 +362,11 @@
       count.className = 'count';
       count.textContent = cat.links.length;
       btn.appendChild(count);
+
+      if (isEditing()) {
+        btn.classList.add('is-editable');
+        btn.appendChild(catActBtn(cat.id));
+      }
 
       btn.addEventListener('click', function () {
         setActiveChip(cat.id);
@@ -485,6 +565,7 @@
 
     head.appendChild(h2);
     head.appendChild(count);
+    if (isEditing()) head.appendChild(addLinkBtn(cat.id));
     section.appendChild(head);
 
     var grid = document.createElement('div');
@@ -519,6 +600,10 @@
       h.textContent = host;
       a.appendChild(h);
     }
+    if (isEditing()) {
+      a.classList.add('is-editable');
+      a.appendChild(buildActs(link));
+    }
     return a;
   }
 
@@ -547,6 +632,7 @@
       count.className = 'fav-group-count';
       count.textContent = cat.links.length;
       head.appendChild(count);
+      if (isEditing()) head.appendChild(addLinkBtn(cat.id));
 
       group.appendChild(head);
 
@@ -571,7 +657,8 @@
       var hits = terms.length
         ? cat.links.filter(function (l) { return terms.every(function (t) { return l._hay.indexOf(t) !== -1; }); })
         : cat.links;
-      if (!hits.length) return;
+      // 编辑模式下保留空分类，否则刚新建的分类在页面上看不见
+      if (!hits.length && !(isEditing() && !terms.length)) return;
       var view = { id: cat.id, name: cat.name, type: cat.type, links: hits };
       if (cat.type === 'fav') favCats.push(view);
       else navCats.push(view);
@@ -1308,6 +1395,25 @@
     resize();
     start();
   }
+
+  /* ---------- 对外 API（编辑模式 assets/editor.js 使用） ---------- */
+  window.MyNavApp = {
+    get data() { return DATA; },
+    refresh: function (terms) {
+      var y = window.scrollY;
+      rebuildModel();
+      render(typeof terms === 'undefined' ? currentTerms() : terms);
+      window.scrollTo(0, y);
+    },
+    entry: function (eid) { return byEid[eid] || null; },
+    category: function (catId) {
+      var hit = null;
+      DATA.categories.forEach(function (c) { if (c && c.id === catId) hit = c; });
+      return hit;
+    },
+    allCategories: function () { return categories; },
+    isEditing: isEditing
+  };
 
   /* ---------- 启动 ---------- */
   bindCatnav();

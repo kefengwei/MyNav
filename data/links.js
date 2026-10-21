@@ -1066,7 +1066,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "uwa4d blog uwa"
+          "keywords": "uwa4d blog uwa",
+          "icon": "data/icons/blog.uwa4d.com.png"
         },
         {
           "name": "CG资源网-CG教程",
@@ -1312,7 +1313,8 @@ window.NAV_DATA = {
           "tags": [
             "c#"
           ],
-          "keywords": "microsoft c#"
+          "keywords": "microsoft c#",
+          "icon": "data/icons/msdn.microsoft.com.png"
         },
         {
           "name": "C#设计模式系列 - 随笔分类 - vito qi - 博客园",
@@ -1859,7 +1861,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "voidcn asp.net core authentication"
+          "keywords": "voidcn asp.net core authentication",
+          "icon": "data/icons/voidcn.com.ico"
         },
         {
           "name": "教程 | RxJS 中文文档",
@@ -2096,7 +2099,8 @@ window.NAV_DATA = {
             "文档",
             "angular"
           ],
-          "keywords": "github nebular documentation add into"
+          "keywords": "github nebular documentation add into",
+          "icon": "data/icons/akveo.github.io.png"
         },
         {
           "name": "MDB Admin Template Pro (Angular version) - Material Design for Bootstrap",
@@ -2104,7 +2108,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "mdbootstrap mdb admin template pro"
+          "keywords": "mdbootstrap mdb admin template pro",
+          "icon": "data/icons/mdbootstrap.com.ico"
         },
         {
           "name": "Fuse2 - Angular 5+ Material Design Admin Template",
@@ -2112,7 +2117,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "withinpixels fuse2 angular material design"
+          "keywords": "withinpixels fuse2 angular material design",
+          "icon": "data/icons/fuse-angular-material.withinpixels.com.svg"
         },
         {
           "name": "Angular in Docker with Nginx, supporting environments, using Docker multi-stage builds",
@@ -2121,7 +2127,8 @@ window.NAV_DATA = {
             "angular",
             "docker"
           ],
-          "keywords": "medium angular in docker with"
+          "keywords": "medium angular in docker with",
+          "icon": "data/icons/medium.com.png"
         },
         {
           "name": "Iconfont-阿里巴巴矢量图标库",
@@ -2131,7 +2138,8 @@ window.NAV_DATA = {
             "素材",
             "angular"
           ],
-          "keywords": "iconfont"
+          "keywords": "iconfont",
+          "icon": "data/icons/iconfont.cn.png"
         },
         {
           "name": "游戏循环 · 学习 RxJS 操作符",
@@ -2141,7 +2149,8 @@ window.NAV_DATA = {
             "游戏",
             "angular"
           ],
-          "keywords": "github rxjs"
+          "keywords": "github rxjs",
+          "icon": "data/icons/rxjs-cn.github.io.png"
         },
         {
           "name": "理解Flexbox：你需要知道的一切_Flexbox 教程_w3cplus",
@@ -2151,7 +2160,8 @@ window.NAV_DATA = {
             "angular",
             "html"
           ],
-          "keywords": "w3cplus flexbox"
+          "keywords": "w3cplus flexbox",
+          "icon": "data/icons/w3cplus.com.ico"
         },
         {
           "name": "The Best & Fastest Angular Data Grid in the World",
@@ -2159,7 +2169,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "infragistics the best fastest angular"
+          "keywords": "infragistics the best fastest angular",
+          "icon": "data/icons/infragistics.com.ico"
         },
         {
           "name": "SPA Authentiction using OpenID Connect, Angular CLI and oidc-client - Scott Brady",
@@ -2167,7 +2178,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "scottbrady91 spa authentiction using openid"
+          "keywords": "scottbrady91 spa authentiction using openid",
+          "icon": "data/icons/scottbrady91.com.svg"
         },
         {
           "name": "Flex 布局 对齐 等分 均分 详解 - 简书",
@@ -2184,7 +2196,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "plnkr plunker"
+          "keywords": "plnkr plunker",
+          "icon": "data/icons/plnkr.co.ico"
         },
         {
           "name": "Angular University",
@@ -2192,7 +2205,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "angular-university angular university"
+          "keywords": "angular-university angular university",
+          "icon": "data/icons/blog.angular-university.io.png"
         },
         {
           "name": "Enter ASP.NET Core 2 and Angular 5 Applications with Docker",
@@ -2201,7 +2215,8 @@ window.NAV_DATA = {
             "angular",
             "docker"
           ],
-          "keywords": "codeburst enter asp.net core and"
+          "keywords": "codeburst enter asp.net core and",
+          "icon": "data/icons/codeburst.io.png"
         },
         {
           "name": "NGINX中的proxy_pass和rewrite - luxianghao - 博客园",
@@ -2220,7 +2235,8 @@ window.NAV_DATA = {
             "angular",
             "docker"
           ],
-          "keywords": "sep nginx reverse proxy to"
+          "keywords": "sep nginx reverse proxy to",
+          "icon": "data/icons/sep.com.png"
         },
         {
           "name": "angular - Best way to import Observable from rxjs - Stack Overflow",
@@ -2257,7 +2273,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "mdbootstrap angular bootstrap borders examples"
+          "keywords": "mdbootstrap angular bootstrap borders examples",
+          "icon": "data/icons/mdbootstrap.com.ico"
         },
         {
           "name": "Apollo-Angular 1.2 - using GraphQL in your apps just got a whole lot easier!",
@@ -2265,7 +2282,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "medium apollo angular using graphql"
+          "keywords": "medium apollo angular using graphql",
+          "icon": "data/icons/medium.com.png"
         },
         {
           "name": "GraphQL Code Generator · Generate code from your GraphQL schema with a single function call",
@@ -2273,7 +2291,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "graphql-code-generator graphql code generator generate"
+          "keywords": "graphql-code-generator graphql code generator generate",
+          "icon": "data/icons/graphql-code-generator.com.png"
         },
         {
           "name": "关于Angular样式封装 - 个人文章 - SegmentFault 思否",
@@ -2282,7 +2301,8 @@ window.NAV_DATA = {
             "问答",
             "angular"
           ],
-          "keywords": "segmentfault angular"
+          "keywords": "segmentfault angular",
+          "icon": "data/icons/segmentfault.com.ico"
         },
         {
           "name": "Angular - Shortcut to Importing Styles Files in Components ― Scotch",
@@ -2290,7 +2310,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "scotch angular shortcut to importing"
+          "keywords": "scotch angular shortcut to importing",
+          "icon": "data/icons/scotch.io.png"
         },
         {
           "name": "Home | ngx-gallery",
@@ -2299,7 +2320,8 @@ window.NAV_DATA = {
             "代码托管",
             "angular"
           ],
-          "keywords": "github home ngx gallery"
+          "keywords": "github home ngx gallery",
+          "icon": "data/icons/murhafsousli.github.io.svg"
         },
         {
           "name": "IdentityModel/oidc-client-js: OpenID Connect (OIDC) and OAuth2 protocol support for browser-based JavaScript applications",
@@ -2317,7 +2339,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "loiane angular reactive forms trigger"
+          "keywords": "loiane angular reactive forms trigger",
+          "icon": "data/icons/loiane.com.png"
         },
         {
           "name": "All Posts | malcoded",
@@ -2325,7 +2348,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "malcoded all posts"
+          "keywords": "malcoded all posts",
+          "icon": "data/icons/malcoded.com.png"
         },
         {
           "name": "RxJS and Reactive Programming - Animations and visual lessons",
@@ -2333,7 +2357,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "reactive rxjs and programming animations"
+          "keywords": "reactive rxjs and programming animations",
+          "icon": "data/icons/reactive.how.png"
         },
         {
           "name": "sabyasachibiswal/angular5-social-login: Social authentication module for Angular 5. Includes Facebook and Google login with AOT compatibility.",
@@ -2352,7 +2377,8 @@ window.NAV_DATA = {
             "文档",
             "angular"
           ],
-          "keywords": "github angular oauth2 oidc"
+          "keywords": "github angular oauth2 oidc",
+          "icon": "data/icons/manfredsteyer.github.io.ico"
         },
         {
           "name": "manfredsteyer/angular-oauth2-oidc: Support for OAuth 2 and OpenId Connect (OIDC) in Angular.",
@@ -2371,7 +2397,8 @@ window.NAV_DATA = {
             "angular",
             "typescript"
           ],
-          "keywords": "gitbooks enums typescript deep dive"
+          "keywords": "gitbooks enums typescript deep dive",
+          "icon": "data/icons/basarat.gitbooks.io.svg"
         },
         {
           "name": "Getting Started – Splide",
@@ -2379,7 +2406,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "splidejs getting started splide"
+          "keywords": "splidejs getting started splide",
+          "icon": "data/icons/splidejs.com.png"
         },
         {
           "name": "Angular Universal: Complete Practical Guide",
@@ -2387,7 +2415,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "angular-university angular universal complete practical"
+          "keywords": "angular-university angular universal complete practical",
+          "icon": "data/icons/blog.angular-university.io.png"
         },
         {
           "name": "Tutorial: Installation - Handsontable Documentation",
@@ -2397,7 +2426,8 @@ window.NAV_DATA = {
             "angular",
             "html"
           ],
-          "keywords": "handsontable tutorial installation documentation"
+          "keywords": "handsontable tutorial installation documentation",
+          "icon": "data/icons/handsontable.com.ico"
         },
         {
           "name": "Angular TreeView/Tree List | Hierarchical Data Model | Syncfusion",
@@ -2405,7 +2435,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "syncfusion angular treeview tree list"
+          "keywords": "syncfusion angular treeview tree list",
+          "icon": "data/icons/syncfusion.com.ico"
         },
         {
           "name": "angular 优化博客",
@@ -2413,7 +2444,8 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "web angular"
+          "keywords": "web angular",
+          "icon": "data/icons/web.dev.png"
         }
       ]
     },
@@ -2484,7 +2516,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "letsencrypt let encrypt free ssl"
+          "keywords": "letsencrypt let encrypt free ssl",
+          "icon": "data/icons/letsencrypt.org.ico"
         },
         {
           "name": "Flex 布局教程：实例篇 - 阮一峰的网络日志",
@@ -2493,7 +2526,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "ruanyifeng flex"
+          "keywords": "ruanyifeng flex",
+          "icon": "data/icons/ruanyifeng.com.ico"
         },
         {
           "name": "前端开发应该怎么学（含CSS布局练习源码）",
@@ -2503,7 +2537,8 @@ window.NAV_DATA = {
             "html",
             "css"
           ],
-          "keywords": "zhihu css"
+          "keywords": "zhihu css",
+          "icon": "data/icons/zhuanlan.zhihu.com.ico"
         },
         {
           "name": "SitePoint – Learn HTML, CSS, JavaScript, PHP, Ruby & Responsive Design",
@@ -2513,7 +2548,8 @@ window.NAV_DATA = {
             "php",
             "ruby"
           ],
-          "keywords": "sitepoint learn html css javascript"
+          "keywords": "sitepoint learn html css javascript",
+          "icon": "data/icons/sitepoint.com.ico"
         },
         {
           "name": "CSS-Tricks",
@@ -2522,7 +2558,8 @@ window.NAV_DATA = {
             "html",
             "css"
           ],
-          "keywords": "css-tricks css tricks"
+          "keywords": "css-tricks css tricks",
+          "icon": "data/icons/css-tricks.com.png"
         },
         {
           "name": "Flexbox - CSS Reference | 免费的 CSS 属性可视化文档",
@@ -2532,7 +2569,8 @@ window.NAV_DATA = {
             "html",
             "css"
           ],
-          "keywords": "parryqiu flexbox css reference"
+          "keywords": "parryqiu flexbox css reference",
+          "icon": "data/icons/cssreference.parryqiu.com.svg"
         },
         {
           "name": "Flex 布局教程：语法篇 - 阮一峰的网络日志",
@@ -2541,7 +2579,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "ruanyifeng flex"
+          "keywords": "ruanyifeng flex",
+          "icon": "data/icons/ruanyifeng.com.ico"
         },
         {
           "name": "How To Create a Slideshow",
@@ -2549,7 +2588,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "w3schools how to create slideshow"
+          "keywords": "w3schools how to create slideshow",
+          "icon": "data/icons/w3schools.com.png"
         },
         {
           "name": "Free Frontend",
@@ -2557,7 +2597,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "freefrontend free frontend"
+          "keywords": "freefrontend free frontend",
+          "icon": "data/icons/freefrontend.com.ico"
         }
       ]
     },
@@ -2612,7 +2653,8 @@ window.NAV_DATA = {
             "python",
             "golang"
           ],
-          "keywords": "regex101 online regex tester and"
+          "keywords": "regex101 online regex tester and",
+          "icon": "data/icons/regex101.com.png"
         },
         {
           "name": "正则表达式 – 教程 | 菜鸟教程",
@@ -2621,7 +2663,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "runoob"
+          "keywords": "runoob",
+          "icon": "data/icons/runoob.com.png"
         },
         {
           "name": "RegExr: Learn, Build, & Test RegEx",
@@ -2629,7 +2672,8 @@ window.NAV_DATA = {
           "tags": [
             "regex"
           ],
-          "keywords": "regexr learn build test regex"
+          "keywords": "regexr learn build test regex",
+          "icon": "data/icons/regexr.com.svg"
         }
       ]
     },
@@ -2659,7 +2703,8 @@ window.NAV_DATA = {
           "tags": [
             "技术"
           ],
-          "keywords": "bookstack it"
+          "keywords": "bookstack it",
+          "icon": "data/icons/bookstack.cn.ico"
         },
         {
           "name": "learn-regex/README-cn.md at master · ziishaned/learn-regex",
@@ -2685,7 +2730,8 @@ window.NAV_DATA = {
           "tags": [
             "技术"
           ],
-          "keywords": "zbook"
+          "keywords": "zbook",
+          "icon": "data/icons/zbook.lol.svg"
         },
         {
           "name": "SiteServer CMS - 开源免费、企业级、可商用CMS系统",
@@ -2693,7 +2739,8 @@ window.NAV_DATA = {
           "tags": [
             "技术"
           ],
-          "keywords": "sscms siteserver cms"
+          "keywords": "sscms siteserver cms",
+          "icon": "data/icons/sscms.com.png"
         }
       ]
     },
@@ -2709,7 +2756,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "github helm"
+          "keywords": "github helm",
+          "icon": "data/icons/whmzsu.github.io.png"
         },
         {
           "name": "使用 SSL · Helm用户与开发者指南",
@@ -2719,7 +2767,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "github ssl helm"
+          "keywords": "github ssl helm",
+          "icon": "data/icons/whmzsu.github.io.png"
         }
       ]
     },
@@ -2733,7 +2782,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "guidgenerator online guid generator"
+          "keywords": "guidgenerator online guid generator",
+          "icon": "data/icons/guidgenerator.com.png"
         },
         {
           "name": "Free JetBrains Products License Server -- XIDEA.ONLINE",
@@ -2741,7 +2791,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "xidea free jetbrains products license"
+          "keywords": "xidea free jetbrains products license",
+          "icon": "data/icons/xidea.online.png"
         },
         {
           "name": "cdoco/jetbrains-license-server: jetbrains 免费注册服务",
@@ -2758,7 +2809,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "zdfans zd423"
+          "keywords": "zdfans zd423",
+          "icon": "data/icons/zdfans.com.svg"
         },
         {
           "name": "JSON压缩转义工具，JSON转义，JSON压缩一行",
@@ -2774,7 +2826,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "steampowered https store.steampowered.com api appdetails"
+          "keywords": "steampowered https store.steampowered.com api appdetails",
+          "icon": "data/icons/store.steampowered.com.png"
         },
         {
           "name": "JSON To CSV Converter",
@@ -2782,7 +2835,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "convertcsv json to csv converter"
+          "keywords": "convertcsv json to csv converter",
+          "icon": "data/icons/convertcsv.com.ico"
         },
         {
           "name": "TWrench",
@@ -2798,7 +2852,8 @@ window.NAV_DATA = {
           "tags": [
             "素材"
           ],
-          "keywords": "picsum lorem"
+          "keywords": "picsum lorem",
+          "icon": "data/icons/picsum.photos.png"
         },
         {
           "name": "ADOBE CC 2019 for Windows 完美破解版(含Google載點) | ALotOf Software ShareStation",
@@ -2806,7 +2861,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "alotof adobe cc for windows"
+          "keywords": "alotof adobe cc for windows",
+          "icon": "data/icons/alotof.software.svg"
         },
         {
           "name": "心蓝数据 - 软件开发|网站制作|虚拟主机|域名注册",
@@ -2814,7 +2870,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "bhdata"
+          "keywords": "bhdata",
+          "icon": "data/icons/bhdata.com.ico"
         },
         {
           "name": "dotnet-graphql generic Type - Google 搜索",
@@ -2822,7 +2879,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "google dotnet graphql generic type"
+          "keywords": "google dotnet graphql generic type",
+          "icon": "data/icons/google.com.hk.ico"
         },
         {
           "name": "创造狮 创意工作者导航",
@@ -2830,7 +2888,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "chuangzaoshi"
+          "keywords": "chuangzaoshi",
+          "icon": "data/icons/chuangzaoshi.com.png"
         },
         {
           "name": "国内领先的H5动画特效,WebGL,WebVR,WebAR,WebXR作品分享平台 - 踏得网",
@@ -2873,7 +2932,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "zhile idea"
+          "keywords": "zhile idea",
+          "icon": "data/icons/zhile.io.svg"
         },
         {
           "name": "Pycharm|PHPStorm|WebStorm|Goland Clion intellij idea全家桶 通用教程 License Server 激活教程 | 激活码",
@@ -2882,7 +2942,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "taojingling pycharm phpstorm webstorm goland"
+          "keywords": "taojingling pycharm phpstorm webstorm goland",
+          "icon": "data/icons/taojingling.cn.svg"
         },
         {
           "name": "X-Icon Editor",
@@ -2890,7 +2951,8 @@ window.NAV_DATA = {
           "tags": [
             "素材"
           ],
-          "keywords": "xiconeditor icon editor"
+          "keywords": "xiconeditor icon editor",
+          "icon": "data/icons/xiconeditor.com.ico"
         },
         {
           "name": "Stately - Visual Editor",
@@ -2898,7 +2960,8 @@ window.NAV_DATA = {
           "tags": [
             "AI"
           ],
-          "keywords": "stately visual editor"
+          "keywords": "stately visual editor",
+          "icon": "data/icons/stately.ai.png"
         },
         {
           "name": "IntelliJ IDEA 注册码",
@@ -2906,7 +2969,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "lanyus intellij idea"
+          "keywords": "lanyus intellij idea",
+          "icon": "data/icons/idea.lanyus.com.ico"
         },
         {
           "name": "JSON to CSV Converter Online",
@@ -2914,7 +2978,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "json-csv json to csv converter"
+          "keywords": "json-csv json to csv converter",
+          "icon": "data/icons/json-csv.com.png"
         },
         {
           "name": "DiskGenius 破解专业版合辑 (更新至 5.4.2) | Ln's Blog",
@@ -2923,7 +2988,8 @@ window.NAV_DATA = {
             "代码托管",
             "html"
           ],
-          "keywords": "github diskgenius ln blog"
+          "keywords": "github diskgenius ln blog",
+          "icon": "data/icons/weilining.github.io.png"
         },
         {
           "name": "修复黑群晖 DSM7.0 + Btrfs 存储空间/磁盘损毁的问题 - 在路上",
@@ -2931,7 +2997,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "1min dsm7.0 btrfs"
+          "keywords": "1min dsm7.0 btrfs",
+          "icon": "data/icons/1min.cc.svg"
         }
       ]
     },
@@ -3054,7 +3121,8 @@ window.NAV_DATA = {
           "tags": [
             "php"
           ],
-          "keywords": "justmysocks just my socks"
+          "keywords": "justmysocks just my socks",
+          "icon": "data/icons/justmysocks.net.svg"
         },
         {
           "name": "优云666",
@@ -3062,7 +3130,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "youyun9"
+          "keywords": "youyun9",
+          "icon": "data/icons/youyun9.net.ico"
         },
         {
           "name": "Internet Speed Test | Fast.com",
@@ -3070,7 +3139,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "fast internet speed test fast.com"
+          "keywords": "fast internet speed test fast.com",
+          "icon": "data/icons/fast.com.png"
         },
         {
           "name": "配置 | Proxy SwitchyOmega",
@@ -3078,7 +3148,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "proxy-switchyomega proxy switchyomega"
+          "keywords": "proxy-switchyomega proxy switchyomega",
+          "icon": "data/icons/proxy-switchyomega.com.ico"
         },
         {
           "name": "zusterben (sterben)",
@@ -3095,7 +3166,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "vultr my subscriptions vultr.com"
+          "keywords": "vultr my subscriptions vultr.com",
+          "icon": "data/icons/my.vultr.com.ico"
         },
         {
           "name": "fancyss_history_package/fancyss_X64 at master · hq450/fancyss_history_package",
@@ -3121,7 +3193,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--9kq61slq0c potato cloud"
+          "keywords": "xn--9kq61slq0c potato cloud",
+          "icon": "data/icons/xn--9kq61slq0c.com.svg"
         },
         {
           "name": "大机场 Big Airport",
@@ -3129,7 +3202,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--mesr8b36x big airport"
+          "keywords": "xn--mesr8b36x big airport",
+          "icon": "data/icons/xn--mesr8b36x.net.svg"
         },
         {
           "name": "魔戒.net",
@@ -3137,7 +3211,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "mojie net"
+          "keywords": "mojie net",
+          "icon": "data/icons/mojie.pw.svg"
         },
         {
           "name": "POTATO CLOUD",
@@ -3145,7 +3220,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--9kq61slq0c potato cloud"
+          "keywords": "xn--9kq61slq0c potato cloud",
+          "icon": "data/icons/xn--9kq61slq0c.com.svg"
         },
         {
           "name": "L2TP连接尝试失败:因为安全层在初始化与远程计算机的协商时遇到了一个处理错误 - xiaopeng丶 - 博客园",
@@ -3162,7 +3238,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "youyun9"
+          "keywords": "youyun9",
+          "icon": "data/icons/youyun9.com.ico"
         },
         {
           "name": "『原创』CentOS/Debian/Ubuntu ShadowsocksR 单/多端口 一键管理脚本 | 逗比根据地",
@@ -3170,7 +3247,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "doub centos debian ubuntu shadowsocksr"
+          "keywords": "doub centos debian ubuntu shadowsocksr",
+          "icon": "data/icons/doub.io.svg"
         },
         {
           "name": "Asus RT-ACRH17 OpenWrt 固件 | 核桃",
@@ -3178,7 +3256,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "hceasy asus rt acrh17 openwrt"
+          "keywords": "hceasy asus rt acrh17 openwrt",
+          "icon": "data/icons/hceasy.com.ico"
         },
         {
           "name": "最好用的 V2Ray 一键安装脚本 & 管理脚本 - 笨猫博客",
@@ -3186,7 +3265,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "nbmao v2ray"
+          "keywords": "nbmao v2ray",
+          "icon": "data/icons/nbmao.com.ico"
         },
         {
           "name": "恶龙咆哮！",
@@ -3194,7 +3274,8 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "airua"
+          "keywords": "airua",
+          "icon": "data/icons/airua.xyz.png"
         }
       ]
     },
@@ -3288,7 +3369,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "shuxuele"
+          "keywords": "shuxuele",
+          "icon": "data/icons/shuxuele.com.ico"
         },
         {
           "name": "Confidence Interval of a Proportion",
@@ -3296,7 +3378,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "vassarstats confidence interval of proportion"
+          "keywords": "vassarstats confidence interval of proportion",
+          "icon": "data/icons/vassarstats.net.ico"
         },
         {
           "name": "How Not To Sort By Average Rating – Evan Miller",
@@ -3304,7 +3387,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "evanmiller how not to sort"
+          "keywords": "evanmiller how not to sort",
+          "icon": "data/icons/evanmiller.org.ico"
         }
       ]
     },
@@ -3318,7 +3402,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142"
+          "keywords": "142",
+          "icon": "data/icons/172.23.18.142.svg"
         },
         {
           "name": "查找、筛选 - 经营范围规范表述查询系统",
@@ -3326,7 +3411,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "jyfwyun"
+          "keywords": "jyfwyun",
+          "icon": "data/icons/jyfwyun.com.png"
         },
         {
           "name": "经营范围规范表述查询系统（试用版）",
@@ -3334,7 +3420,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "jyfwyun"
+          "keywords": "jyfwyun",
+          "icon": "data/icons/jyfwyun.com.png"
         },
         {
           "name": "证书查询验证--中国人事考试网",
@@ -3342,7 +3429,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "cpta"
+          "keywords": "cpta",
+          "icon": "data/icons/cpta.com.cn.ico"
         },
         {
           "name": "同程商旅_商旅卡_商旅管理_出差费用管理_企业差旅报销服务_流程审批-同程旅游",
@@ -3350,7 +3438,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "ly"
+          "keywords": "ly",
+          "icon": "data/icons/tmc.ly.com.png"
         },
         {
           "name": "国家税务总局全国增值税发票查验平台",
@@ -3358,7 +3447,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "inv-veri"
+          "keywords": "inv-veri",
+          "icon": "data/icons/inv-veri.chinatax.gov.cn.ico"
         },
         {
           "name": "天风证券CRM系统",
@@ -3366,7 +3456,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq crm"
+          "keywords": "tfzq crm",
+          "icon": "data/icons/tfcrm.tfzq.com.svg"
         },
         {
           "name": "成都市人力资源和社会保障局",
@@ -3382,7 +3473,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "175 ferm"
+          "keywords": "175 ferm",
+          "icon": "data/icons/172.19.19.175.svg"
         },
         {
           "name": "联行号-银行联行号查询，开户行查询，银行网点查询",
@@ -3390,7 +3482,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "lianhanghao"
+          "keywords": "lianhanghao",
+          "icon": "data/icons/lianhanghao.com.ico"
         },
         {
           "name": "运单追踪",
@@ -3398,7 +3491,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "sf-express"
+          "keywords": "sf-express",
+          "icon": "data/icons/sf-express.com.png"
         },
         {
           "name": "ywzsrx.cdzk.org",
@@ -3406,7 +3500,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdzk ywzsrx.cdzk.org"
+          "keywords": "cdzk ywzsrx.cdzk.org",
+          "icon": "data/icons/ywzsrx.cdzk.org.svg"
         },
         {
           "name": "泛捷国际速递 - 运单状态跟踪",
@@ -3414,7 +3509,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "epanex"
+          "keywords": "epanex",
+          "icon": "data/icons/epanex.com.ico"
         },
         {
           "name": "成都建工集团有限公司_工商信息_风险信息- 天眼查",
@@ -3422,7 +3518,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tianyancha"
+          "keywords": "tianyancha",
+          "icon": "data/icons/tianyancha.com.ico"
         },
         {
           "name": "cjhmnerggv\\/-+/-/--+\\",
@@ -3446,7 +3543,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "neeq"
+          "keywords": "neeq",
+          "icon": "data/icons/neeq.com.cn.svg"
         },
         {
           "name": "他来啦他来啦，新三板带着精选层走来啦!——打新篇",
@@ -3471,7 +3569,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "camscanner"
+          "keywords": "camscanner",
+          "icon": "data/icons/v4.camscanner.com.png"
         },
         {
           "name": "中国证券业协会远程培训系统",
@@ -3479,7 +3578,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "training"
+          "keywords": "training",
+          "icon": "data/icons/training.sac.net.cn.svg"
         },
         {
           "name": "融资融券业务在线测试",
@@ -3487,7 +3587,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "ebp"
+          "keywords": "ebp",
+          "icon": "data/icons/ebp.sse.com.cn.ico"
         },
         {
           "name": "单位信息查询 - 单位网厅",
@@ -3504,7 +3605,8 @@ window.NAV_DATA = {
             "资讯",
             "html"
           ],
-          "keywords": "tfzq"
+          "keywords": "tfzq",
+          "icon": "data/icons/tfzq.com.svg"
         },
         {
           "name": "全国个体私营经济发展服务网",
@@ -3520,7 +3622,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdhrss"
+          "keywords": "cdhrss",
+          "icon": "data/icons/cdhrss.chengdu.gov.cn.png"
         },
         {
           "name": "IP地址批量查询-IP归属地批量查询-IP批量查询工具",

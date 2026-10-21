@@ -22,6 +22,7 @@
 </script>
 <script src="data/links.js" defer></script>
 <script src="assets/app.js" defer></script>
+<script src="assets/editor.js" defer></script>
 </head>
 <body>
 
@@ -55,10 +56,10 @@
       </button>
     </div>
 
-    <a class="btn-admin" href="admin.html" title="管理链接数据" aria-label="管理链接数据">
-      <span class="ico" aria-hidden="true">⚙️</span>
-      <span class="txt">管理</span>
-    </a>
+    <button class="btn-admin" id="btn-edit" type="button" aria-pressed="false" title="在页面上直接增删改链接" aria-label="进入编辑模式">
+      <span class="ico" aria-hidden="true">✏️</span>
+      <span class="txt">编辑</span>
+    </button>
 
     <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换主题" title="切换主题">
       <span class="theme-auto">🌗</span>
@@ -71,7 +72,7 @@
 <div class="shell">
   <aside class="sidebar" id="sidebar" aria-label="分类导航">
     <div class="catnav-bar" id="catnav-bar" hidden>
-      <div class="sidebar-head">分类</div>
+      <div class="sidebar-head"><span>分类</span><button type="button" class="cat-add" id="btn-add-cat" hidden>+ 分类</button></div>
       <nav id="catnav" class="catnav" aria-label="分类导航" tabindex="0"></nav>
       <button class="catnav-arrow is-prev" id="catnav-prev" type="button" aria-label="向左查看更多分类" hidden>‹</button>
       <button class="catnav-arrow is-next" id="catnav-next" type="button" aria-label="向右查看更多分类" hidden>›</button>
@@ -125,6 +126,99 @@
     </div>
   </div>
 </div>
+
+<!-- 编辑模式：底部工具条 -->
+<div id="edit-bar" class="edit-bar" role="region" aria-label="编辑工具条" hidden>
+  <span class="edit-badge" id="edit-count">尚未改动</span>
+  <span class="edit-note" id="edit-note"></span>
+  <span class="edit-spacer"></span>
+  <button type="button" class="ed-btn" id="btn-export">导出 JSON</button>
+  <a class="ed-btn" href="admin.html">高级管理</a>
+  <button type="button" class="ed-btn is-primary" id="btn-publish">发布到 GitHub</button>
+  <button type="button" class="ed-btn" id="btn-exit">退出编辑</button>
+</div>
+
+<!-- 编辑单条链接 -->
+<dialog id="link-dialog" class="ed-dialog" aria-labelledby="ld-title">
+  <form id="link-form" novalidate>
+    <h2 class="ed-title" id="ld-title">编辑链接</h2>
+    <p class="ed-sub" id="ld-sub"></p>
+    <label class="ed-field"><span>名称</span>
+      <input id="ld-name" type="text" autocomplete="off" spellcheck="false" placeholder="GitHub">
+    </label>
+    <label class="ed-field"><span>网址</span>
+      <input id="ld-url" type="text" autocomplete="off" spellcheck="false" placeholder="https://github.com">
+    </label>
+    <label class="ed-field"><span>描述</span>
+      <input id="ld-desc" type="text" autocomplete="off" placeholder="可选，显示在名称下方">
+    </label>
+    <label class="ed-field"><span>标签</span>
+      <input id="ld-tags" type="text" autocomplete="off" placeholder="可选，用逗号分隔，如：git, 代码">
+    </label>
+    <p class="ed-err" id="ld-err" hidden></p>
+    <div class="ed-actions">
+      <button type="button" class="ed-btn is-danger" id="ld-del" hidden>删除</button>
+      <span class="edit-spacer"></span>
+      <button type="button" class="ed-btn" id="ld-cancel">取消</button>
+      <button type="submit" class="ed-btn is-primary" id="ld-save">保存</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- 编辑分类 -->
+<dialog id="cat-dialog" class="ed-dialog" aria-labelledby="cd-title">
+  <form id="cat-form" novalidate>
+    <h2 class="ed-title" id="cd-title">编辑分类</h2>
+    <p class="ed-sub" id="cd-sub"></p>
+    <label class="ed-field"><span>名称</span>
+      <input id="cd-name" type="text" autocomplete="off" placeholder="开发">
+    </label>
+    <label class="ed-field"><span>id（锚点）</span>
+      <input id="cd-id" type="text" autocomplete="off" spellcheck="false" placeholder="dev">
+    </label>
+    <label class="ed-field"><span>类型</span>
+      <select id="cd-type">
+        <option value="nav">导航（卡片瀑布流）</option>
+        <option value="fav">收藏夹（页底紧凑单行）</option>
+      </select>
+    </label>
+    <div class="ed-order">
+      <span class="ed-order-label">排序</span>
+      <button type="button" class="ed-btn" id="cd-up">↑ 上移</button>
+      <button type="button" class="ed-btn" id="cd-down">↓ 下移</button>
+    </div>
+    <p class="ed-err" id="cd-err" hidden></p>
+    <div class="ed-actions">
+      <button type="button" class="ed-btn is-danger" id="cd-del" hidden>删除分类</button>
+      <span class="edit-spacer"></span>
+      <button type="button" class="ed-btn" id="cd-cancel">取消</button>
+      <button type="submit" class="ed-btn is-primary" id="cd-save">保存</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- GitHub 发布配置 -->
+<dialog id="gh-dialog" class="ed-dialog" aria-labelledby="gh-title">
+  <form id="gh-form" novalidate>
+    <h2 class="ed-title" id="gh-title">发布到 GitHub</h2>
+    <p class="ed-hint">需要 fine-grained token：Repository access 只勾这个仓库，Permissions → Contents 选 <b>Read and write</b>。Token 只存在本机浏览器（localStorage），不会写进仓库，也不会发给 api.github.com 以外的地址。</p>
+    <label class="ed-field"><span>仓库</span>
+      <input id="gh-repo" type="text" autocomplete="off" spellcheck="false" placeholder="kefengwei/MyNav">
+    </label>
+    <label class="ed-field"><span>分支</span>
+      <input id="gh-branch" type="text" value="main" autocomplete="off" spellcheck="false">
+    </label>
+    <label class="ed-field"><span>Token</span>
+      <input id="gh-token" type="password" autocomplete="off" placeholder="github_pat_…">
+    </label>
+    <label class="ed-check"><input id="gh-remember" type="checkbox" checked> 记住在本机（下次不用再填）</label>
+    <div class="ed-actions">
+      <span class="edit-spacer"></span>
+      <button type="button" class="ed-btn" id="gh-cancel">取消</button>
+      <button type="submit" class="ed-btn is-primary">提交</button>
+    </div>
+  </form>
+</dialog>
 
 <noscript>
   <p style="padding:24px;text-align:center">本站需要启用 JavaScript 才能显示导航内容。</p>
