@@ -3269,7 +3269,8 @@ window.NAV_DATA = {
           "tags": [
             "twitter"
           ],
-          "keywords": "twitter sakuragame test application management"
+          "keywords": "twitter sakuragame test application management",
+          "icon": "data/icons/apps.twitter.com.ico"
         },
         {
           "name": "国内领先的H5动画特效,WebGL,WebVR,WebAR,WebXR作品分享平台 - 踏得网",
@@ -3478,7 +3479,8 @@ window.NAV_DATA = {
           "tags": [
             "docker"
           ],
-          "keywords": "gitbooks docker"
+          "keywords": "gitbooks docker",
+          "icon": "data/icons/yeasy.gitbooks.io.png"
         },
         {
           "name": "AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启…",
@@ -3657,7 +3659,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "nintendo homepage developer portal"
+          "keywords": "nintendo homepage developer portal",
+          "icon": "data/icons/developer.nintendo.com.ico"
         }
       ]
     },
@@ -3706,7 +3709,8 @@ window.NAV_DATA = {
           "tags": [
             "CloudServer"
           ],
-          "keywords": "deep-dark-fantasies homenas synology diskstation"
+          "keywords": "deep-dark-fantasies homenas synology diskstation",
+          "icon": "data/icons/deep-dark-fantasies.com.ico"
         },
         {
           "name": "portal.office.com/commerce/payment.aspx",
@@ -4178,7 +4182,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdzfgjj"
+          "keywords": "cdzfgjj",
+          "icon": "data/icons/cdzfgjj.chengdu.gov.cn.png"
         },
         {
           "name": "成都市市场监督管理局（市知识产权局）",
@@ -4230,7 +4235,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "baidu"
+          "keywords": "baidu",
+          "icon": "data/icons/pan.baidu.com.ico"
         },
         {
           "name": "私募基金管理人综合查询 - 中国基金业协会",
@@ -4238,7 +4244,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "gs"
+          "keywords": "gs",
+          "icon": "data/icons/gs.amac.org.cn.ico"
         },
         {
           "name": "累计预扣法下怎么算个税？两个例子就搞懂",
@@ -4616,7 +4623,8 @@ window.NAV_DATA = {
           "tags": [
             "社交"
           ],
-          "keywords": "zhihu"
+          "keywords": "zhihu",
+          "icon": "data/icons/zhuanlan.zhihu.com.png"
         }
       ]
     },
