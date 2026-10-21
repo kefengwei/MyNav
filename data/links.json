@@ -15,51 +15,51 @@
           "name": "GitHub",
           "url": "https://github.com",
           "desc": "代码托管与协作",
+          "icon": "data/icons/github.com.png",
           "tags": [
             "git",
             "代码"
           ],
-          "keywords": "gh",
-          "icon": "data/icons/github.com.png"
+          "keywords": "gh"
         },
         {
           "name": "Gitee 码云",
           "url": "https://gitee.com",
           "desc": "国内代码托管",
+          "icon": "data/icons/gitee.com.ico",
           "tags": [
             "git"
           ],
-          "keywords": "mayun",
-          "icon": "data/icons/gitee.com.ico"
+          "keywords": "mayun"
         },
         {
           "name": "npm",
           "url": "https://www.npmjs.com",
           "desc": "JavaScript 包仓库",
+          "icon": "data/icons/npmjs.com.png",
           "tags": [
             "包管理"
-          ],
-          "icon": "data/icons/npmjs.com.png"
+          ]
         },
         {
           "name": "Stack Overflow",
           "url": "https://stackoverflow.com",
           "desc": "程序员问答",
+          "icon": "data/icons/stackoverflow.com.png",
           "tags": [
             "问答"
           ],
-          "keywords": "so",
-          "icon": "data/icons/stackoverflow.com.png"
+          "keywords": "so"
         },
         {
           "name": "Can I use",
           "url": "https://caniuse.com",
           "desc": "浏览器特性兼容查询",
+          "icon": "data/icons/caniuse.com.png",
           "tags": [
             "兼容性"
           ],
-          "keywords": "caniuse",
-          "icon": "data/icons/caniuse.com.png"
+          "keywords": "caniuse"
         }
       ]
     },
@@ -72,42 +72,42 @@
           "name": "MDN",
           "url": "https://developer.mozilla.org/zh-CN/",
           "desc": "Web 技术权威文档",
+          "icon": "data/icons/developer.mozilla.org.png",
           "tags": [
             "前端",
             "web"
-          ],
-          "icon": "data/icons/developer.mozilla.org.png"
+          ]
         },
         {
           "name": "Unreal Engine 文档",
           "url": "https://dev.epicgames.com/documentation/unreal-engine",
           "desc": "虚幻引擎官方文档",
+          "icon": "data/icons/dev.epicgames.com.png",
           "tags": [
             "ue",
             "引擎"
           ],
-          "keywords": "ue unreal",
-          "icon": "data/icons/dev.epicgames.com.png"
+          "keywords": "ue unreal"
         },
         {
           "name": "Unreal Engine 论坛",
           "url": "https://forums.unrealengine.com",
           "desc": "UE 开发者社区",
+          "icon": "data/icons/forums.unrealengine.com.png",
           "tags": [
             "ue",
             "论坛"
-          ],
-          "icon": "data/icons/forums.unrealengine.com.png"
+          ]
         },
         {
           "name": "C++ Reference",
           "url": "https://en.cppreference.com/w/",
           "desc": "C++ 标准库参考",
+          "icon": "data/icons/en.cppreference.com.png",
           "tags": [
             "cpp"
           ],
-          "keywords": "cpp c++",
-          "icon": "data/icons/en.cppreference.com.png"
+          "keywords": "cpp c++"
         }
       ]
     },
@@ -120,43 +120,43 @@
           "name": "ChatGPT",
           "url": "https://chatgpt.com",
           "desc": "OpenAI 对话助手",
+          "icon": "data/icons/chatgpt.com.webp",
           "tags": [
             "ai",
             "对话"
           ],
-          "keywords": "gpt",
-          "icon": "data/icons/chatgpt.com.webp"
+          "keywords": "gpt"
         },
         {
           "name": "Claude",
           "url": "https://claude.ai",
           "desc": "Anthropic 对话助手",
+          "icon": "data/icons/claude.ai.png",
           "tags": [
             "ai",
             "对话"
-          ],
-          "icon": "data/icons/claude.ai.png"
+          ]
         },
         {
           "name": "DeepSeek",
           "url": "https://chat.deepseek.com",
           "desc": "深度求索对话助手",
+          "icon": "data/icons/chat.deepseek.com.png",
           "tags": [
             "ai",
             "国产"
           ],
-          "keywords": "ds",
-          "icon": "data/icons/chat.deepseek.com.png"
+          "keywords": "ds"
         },
         {
           "name": "Kimi",
           "url": "https://kimi.moonshot.cn",
           "desc": "月之暗面长文本助手",
+          "icon": "data/icons/kimi.moonshot.cn.png",
           "tags": [
             "ai",
             "国产"
-          ],
-          "icon": "data/icons/kimi.moonshot.cn.png"
+          ]
         }
       ]
     },
@@ -169,39 +169,39 @@
           "name": "Figma",
           "url": "https://www.figma.com",
           "desc": "在线协作设计工具",
+          "icon": "data/icons/figma.com.png",
           "tags": [
             "ui",
             "设计"
-          ],
-          "icon": "data/icons/figma.com.png"
+          ]
         },
         {
           "name": "Dribbble",
           "url": "https://dribbble.com",
           "desc": "设计作品灵感",
+          "icon": "data/icons/dribbble.com.png",
           "tags": [
             "灵感"
-          ],
-          "icon": "data/icons/dribbble.com.png"
+          ]
         },
         {
           "name": "Penpot",
           "url": "https://penpot.app",
           "desc": "开源设计协作平台",
+          "icon": "data/icons/penpot.app.ico",
           "tags": [
             "开源",
             "设计"
-          ],
-          "icon": "data/icons/penpot.app.ico"
+          ]
         },
         {
           "name": "Google Fonts",
           "url": "https://fonts.google.com",
           "desc": "免费开源字体",
+          "icon": "data/icons/fonts.google.com.png",
           "tags": [
             "字体"
-          ],
-          "icon": "data/icons/fonts.google.com.png"
+          ]
         }
       ]
     },
@@ -214,38 +214,38 @@
           "name": "Bilibili",
           "url": "https://www.bilibili.com",
           "desc": "视频社区",
+          "icon": "data/icons/bilibili.com.png",
           "tags": [
             "视频"
           ],
-          "keywords": "b站 bili",
-          "icon": "data/icons/bilibili.com.png"
+          "keywords": "b站 bili"
         },
         {
           "name": "知乎",
           "url": "https://www.zhihu.com",
           "desc": "问答社区",
+          "icon": "data/icons/zhihu.com.png",
           "tags": [
             "问答"
-          ],
-          "icon": "data/icons/zhihu.com.png"
+          ]
         },
         {
           "name": "微博",
           "url": "https://weibo.com",
           "desc": "社交平台",
+          "icon": "data/icons/weibo.com.ico",
           "tags": [
             "社交"
-          ],
-          "icon": "data/icons/weibo.com.ico"
+          ]
         },
         {
           "name": "豆瓣",
           "url": "https://www.douban.com",
           "desc": "书影音标记",
+          "icon": "data/icons/douban.com.ico",
           "tags": [
             "书影音"
-          ],
-          "icon": "data/icons/douban.com.ico"
+          ]
         }
       ]
     }
