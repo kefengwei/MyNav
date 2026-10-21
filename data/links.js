@@ -364,8 +364,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "mycmessia myc unity3d",
-          "icon": "data/icons/mycmessia.com.svg"
+          "keywords": "mycmessia myc unity3d"
         },
         {
           "name": "太粗难进 - 博客园",
@@ -471,8 +470,7 @@ window.NAV_DATA = {
             "文档",
             "游戏"
           ],
-          "keywords": "manew unity5 unity u3d unity3d",
-          "icon": "data/icons/docs.manew.com.svg"
+          "keywords": "manew unity5 unity u3d unity3d"
         },
         {
           "name": "Unity游戏UI框架 - 精品正版课程-泰课在线 - 游戏开发与移动开发在线课程|IT技术网络课堂 - Powered By EduSoho",
@@ -491,8 +489,7 @@ window.NAV_DATA = {
             "百科",
             "php"
           ],
-          "keywords": "unity3d unify community wiki",
-          "icon": "data/icons/wiki.unity3d.com.svg"
+          "keywords": "unity3d unify community wiki"
         },
         {
           "name": "[原创]一种Unity2D多分辨率屏幕适配方案 - 不忘初“辛” - 博客园",
@@ -540,8 +537,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unity3d unity ads",
-          "icon": "data/icons/dashboard.unityads.unity3d.com.svg"
+          "keywords": "unity3d unity ads"
         },
         {
           "name": "AssetBundle机制相关资料收集 - yaol - 博客园",
@@ -827,8 +823,7 @@ window.NAV_DATA = {
             "社区",
             "游戏"
           ],
-          "keywords": "indieace",
-          "icon": "data/icons/indieace.com.svg"
+          "keywords": "indieace"
         },
         {
           "name": "深入浅出聊优化：从Draw Calls到GC - 慕容小匹夫 - 博客园",
@@ -884,8 +879,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "quill18 unity blender programming tutorials",
-          "icon": "data/icons/quill18.com.svg"
+          "keywords": "quill18 unity blender programming tutorials"
         },
         {
           "name": "Using Tile Masks to Set a Tile's Type Based on Its Surrounding Tiles",
@@ -960,8 +954,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "shuiguzi unity asset bundle manager",
-          "icon": "data/icons/blog.shuiguzi.com.svg"
+          "keywords": "shuiguzi unity asset bundle manager"
         },
         {
           "name": "mr-kelly/KSFramework: KEngine + SLua = Unity3D Framework/Toolsets focus on hot reload",
@@ -1038,8 +1031,7 @@ window.NAV_DATA = {
             "游戏",
             "shader"
           ],
-          "keywords": "gametutor gatu unity shader forge",
-          "icon": "data/icons/gametutor.com.svg"
+          "keywords": "gametutor gatu unity shader forge"
         },
         {
           "name": "Browse - UnityList",
@@ -1095,8 +1087,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "tysfr unity3d circle csdn.net",
-          "icon": "data/icons/tysfr.cn.svg"
+          "keywords": "tysfr unity3d circle csdn.net"
         },
         {
           "name": "Textures for 3D, graphic design and Photoshop!",
@@ -1144,8 +1135,7 @@ window.NAV_DATA = {
             "游戏",
             "翻译"
           ],
-          "keywords": "qq unity gad",
-          "icon": "data/icons/gad.qq.com.svg"
+          "keywords": "qq unity gad"
         },
         {
           "name": "Unity - Handling Non-Player objects",
@@ -1164,8 +1154,7 @@ window.NAV_DATA = {
             "游戏",
             "html"
           ],
-          "keywords": "manew unity ugui event system",
-          "icon": "data/icons/manew.com.svg"
+          "keywords": "manew unity ugui event system"
         },
         {
           "name": "Shaders Laboratory - page 2",
@@ -1202,8 +1191,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "qq unity strangeioc gad",
-          "icon": "data/icons/gad.qq.com.svg"
+          "keywords": "qq unity strangeioc gad"
         },
         {
           "name": "我爱吃橙子 - 博客园",
@@ -1412,7 +1400,8 @@ window.NAV_DATA = {
             "c#",
             "linux"
           ],
-          "keywords": "linuxidc linux crontab"
+          "keywords": "linuxidc linux crontab",
+          "icon": "data/icons/linuxidc.com.ico"
         },
         {
           "name": "(41 条消息)像知乎这样的评论回复模式，数据库应该怎么设计比较好，考虑性能、可扩展性等？ - 知乎",
@@ -1473,8 +1462,7 @@ window.NAV_DATA = {
             "javascript",
             "c#"
           ],
-          "keywords": "github learn how you can",
-          "icon": "data/icons/softchris.github.io.svg"
+          "keywords": "github learn how you can"
         },
         {
           "name": "Z-Library。世界上最大的数字图书馆。",
@@ -1482,8 +1470,7 @@ window.NAV_DATA = {
           "tags": [
             "c#"
           ],
-          "keywords": "z-lib library",
-          "icon": "data/icons/zh.z-lib.org.svg"
+          "keywords": "z-lib library"
         },
         {
           "name": "分布式算法 - Snowflake算法 | Java 全栈知识体系",
@@ -1508,8 +1495,7 @@ window.NAV_DATA = {
           "tags": [
             "代码托管"
           ],
-          "keywords": "github steamworks.net installation",
-          "icon": "data/icons/steamworks.github.io.svg"
+          "keywords": "github steamworks.net installation"
         },
         {
           "name": "Home - Steamworks",
@@ -1555,8 +1541,7 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unitystudygroup unity study group",
-          "icon": "data/icons/unitystudygroup.com.svg"
+          "keywords": "unitystudygroup unity study group"
         },
         {
           "name": "NAT Traversal - Asset Store",
@@ -1861,8 +1846,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "voidcn asp.net core authentication",
-          "icon": "data/icons/voidcn.com.ico"
+          "keywords": "voidcn asp.net core authentication"
         },
         {
           "name": "教程 | RxJS 中文文档",
@@ -1900,8 +1884,7 @@ window.NAV_DATA = {
             "文档",
             "angular"
           ],
-          "keywords": "ghmagical tg angular",
-          "icon": "data/icons/ghmagical.com.svg"
+          "keywords": "ghmagical tg angular"
         },
         {
           "name": "Tinyproxy Http代理软件",
@@ -1909,8 +1892,7 @@ window.NAV_DATA = {
           "tags": [
             "代码托管"
           ],
-          "keywords": "github tinyproxy http",
-          "icon": "data/icons/tinyproxy.github.io.svg"
+          "keywords": "github tinyproxy http"
         },
         {
           "name": "Quartz Enterprise Scheduler .NET 任务框架",
@@ -1964,7 +1946,8 @@ window.NAV_DATA = {
             "AI",
             "html"
           ],
-          "keywords": "csharpkit ai net core"
+          "keywords": "csharpkit ai net core",
+          "icon": "data/icons/csharpkit.com.png"
         },
         {
           "name": "田园里的蟋蟀 - 博客园",
@@ -2117,8 +2100,7 @@ window.NAV_DATA = {
           "tags": [
             "angular"
           ],
-          "keywords": "withinpixels fuse2 angular material design",
-          "icon": "data/icons/fuse-angular-material.withinpixels.com.svg"
+          "keywords": "withinpixels fuse2 angular material design"
         },
         {
           "name": "Angular in Docker with Nginx, supporting environments, using Docker multi-stage builds",
@@ -2321,8 +2303,7 @@ window.NAV_DATA = {
             "代码托管",
             "angular"
           ],
-          "keywords": "github home ngx gallery",
-          "icon": "data/icons/murhafsousli.github.io.svg"
+          "keywords": "github home ngx gallery"
         },
         {
           "name": "IdentityModel/oidc-client-js: OpenID Connect (OIDC) and OAuth2 protocol support for browser-based JavaScript applications",
@@ -2398,8 +2379,7 @@ window.NAV_DATA = {
             "angular",
             "typescript"
           ],
-          "keywords": "gitbooks enums typescript deep dive",
-          "icon": "data/icons/basarat.gitbooks.io.svg"
+          "keywords": "gitbooks enums typescript deep dive"
         },
         {
           "name": "Getting Started – Splide",
@@ -2492,7 +2472,8 @@ window.NAV_DATA = {
           "tags": [
             "docker"
           ],
-          "keywords": "gitbooks docker"
+          "keywords": "gitbooks docker",
+          "icon": "data/icons/yeasy.gitbooks.io.png"
         }
       ]
     },
@@ -2570,8 +2551,7 @@ window.NAV_DATA = {
             "html",
             "css"
           ],
-          "keywords": "parryqiu flexbox css reference",
-          "icon": "data/icons/cssreference.parryqiu.com.svg"
+          "keywords": "parryqiu flexbox css reference"
         },
         {
           "name": "Flex 布局教程：语法篇 - 阮一峰的网络日志",
@@ -2638,7 +2618,8 @@ window.NAV_DATA = {
           "tags": [
             "社交"
           ],
-          "keywords": "zhihu"
+          "keywords": "zhihu",
+          "icon": "data/icons/zhuanlan.zhihu.com.png"
         }
       ]
     },
@@ -2731,8 +2712,7 @@ window.NAV_DATA = {
           "tags": [
             "技术"
           ],
-          "keywords": "zbook",
-          "icon": "data/icons/zbook.lol.svg"
+          "keywords": "zbook"
         },
         {
           "name": "SiteServer CMS - 开源免费、企业级、可商用CMS系统",
@@ -2810,8 +2790,7 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "zdfans zd423",
-          "icon": "data/icons/zdfans.com.svg"
+          "keywords": "zdfans zd423"
         },
         {
           "name": "JSON压缩转义工具，JSON转义，JSON压缩一行",
@@ -2863,8 +2842,7 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "alotof adobe cc for windows",
-          "icon": "data/icons/alotof.software.svg"
+          "keywords": "alotof adobe cc for windows"
         },
         {
           "name": "心蓝数据 - 软件开发|网站制作|虚拟主机|域名注册",
@@ -2899,8 +2877,7 @@ window.NAV_DATA = {
           "tags": [
             "webgl"
           ],
-          "keywords": "techbrood h5 webgl webvr webar",
-          "icon": "data/icons/techbrood.com.svg"
+          "keywords": "techbrood h5 webgl webvr webar"
         },
         {
           "name": "Traversy Media - YouTube",
@@ -2936,8 +2913,7 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "zhile idea",
-          "icon": "data/icons/zhile.io.svg"
+          "keywords": "zhile idea"
         },
         {
           "name": "Pycharm|PHPStorm|WebStorm|Goland Clion intellij idea全家桶 通用教程 License Server 激活教程 | 激活码",
@@ -2946,8 +2922,7 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "taojingling pycharm phpstorm webstorm goland",
-          "icon": "data/icons/taojingling.cn.svg"
+          "keywords": "taojingling pycharm phpstorm webstorm goland"
         },
         {
           "name": "X-Icon Editor",
@@ -3001,8 +2976,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "1min dsm7.0 btrfs",
-          "icon": "data/icons/1min.cc.svg"
+          "keywords": "1min dsm7.0 btrfs"
         }
       ]
     },
@@ -3025,7 +2999,8 @@ window.NAV_DATA = {
           "tags": [
             "素材"
           ],
-          "keywords": "wallpapershome wallpapers hd images for"
+          "keywords": "wallpapershome wallpapers hd images for",
+          "icon": "data/icons/wallpapershome.com.ico"
         },
         {
           "name": "RARBG Rarbg Index page",
@@ -3050,7 +3025,8 @@ window.NAV_DATA = {
           "tags": [
             "影音"
           ],
-          "keywords": "torrentdownloads torrent downloads download free"
+          "keywords": "torrentdownloads torrent downloads download free",
+          "icon": "data/icons/torrentdownloads.me.ico"
         },
         {
           "name": "Sleazy Fork",
@@ -3058,7 +3034,8 @@ window.NAV_DATA = {
           "tags": [
             "影音"
           ],
-          "keywords": "sleazyfork sleazy fork"
+          "keywords": "sleazyfork sleazy fork",
+          "icon": "data/icons/sleazyfork.org.png"
         },
         {
           "name": "云盘资源分享_云盘网盘资源共享_云盘资源搜索_阿里云盘资源-盘友社区",
@@ -3125,8 +3102,7 @@ window.NAV_DATA = {
           "tags": [
             "php"
           ],
-          "keywords": "justmysocks just my socks",
-          "icon": "data/icons/justmysocks.net.svg"
+          "keywords": "justmysocks just my socks"
         },
         {
           "name": "优云666",
@@ -3197,8 +3173,7 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--9kq61slq0c potato cloud",
-          "icon": "data/icons/xn--9kq61slq0c.com.svg"
+          "keywords": "xn--9kq61slq0c potato cloud"
         },
         {
           "name": "大机场 Big Airport",
@@ -3206,8 +3181,7 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--mesr8b36x big airport",
-          "icon": "data/icons/xn--mesr8b36x.net.svg"
+          "keywords": "xn--mesr8b36x big airport"
         },
         {
           "name": "魔戒.net",
@@ -3215,8 +3189,7 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "mojie net",
-          "icon": "data/icons/mojie.pw.svg"
+          "keywords": "mojie net"
         },
         {
           "name": "POTATO CLOUD",
@@ -3224,8 +3197,7 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "xn--9kq61slq0c potato cloud",
-          "icon": "data/icons/xn--9kq61slq0c.com.svg"
+          "keywords": "xn--9kq61slq0c potato cloud"
         },
         {
           "name": "L2TP连接尝试失败:因为安全层在初始化与远程计算机的协商时遇到了一个处理错误 - xiaopeng丶 - 博客园",
@@ -3251,8 +3223,7 @@ window.NAV_DATA = {
           "tags": [
             "SS"
           ],
-          "keywords": "doub centos debian ubuntu shadowsocksr",
-          "icon": "data/icons/doub.io.svg"
+          "keywords": "doub centos debian ubuntu shadowsocksr"
         },
         {
           "name": "Asus RT-ACRH17 OpenWrt 固件 | 核桃",
@@ -3294,7 +3265,8 @@ window.NAV_DATA = {
           "tags": [
             "代码托管"
           ],
-          "keywords": "github leriou tavern maxime terribilis"
+          "keywords": "github leriou tavern maxime terribilis",
+          "icon": "data/icons/leriou.github.io.png"
         },
         {
           "name": "sunnycoding – 专业·求是·解惑",
@@ -3311,7 +3283,8 @@ window.NAV_DATA = {
             "设计",
             "html"
           ],
-          "keywords": "kkh86 kk"
+          "keywords": "kkh86 kk",
+          "icon": "data/icons/kkh86.com.png"
         },
         {
           "name": "https://www.thereformedprogrammer.net",
@@ -3319,7 +3292,8 @@ window.NAV_DATA = {
           "tags": [
             "博客收藏"
           ],
-          "keywords": "thereformedprogrammer https www.thereformedprogrammer.net"
+          "keywords": "thereformedprogrammer https www.thereformedprogrammer.net",
+          "icon": "data/icons/thereformedprogrammer.net.png"
         },
         {
           "name": "Jimmy Song - 宋净超的博客|Cloud Native|云原生布道师",
@@ -3327,7 +3301,8 @@ window.NAV_DATA = {
           "tags": [
             "博客收藏"
           ],
-          "keywords": "jimmysong jimmy song cloud native"
+          "keywords": "jimmysong jimmy song cloud native",
+          "icon": "data/icons/jimmysong.io.png"
         },
         {
           "name": "DESIGN – Stokastik",
@@ -3359,7 +3334,8 @@ window.NAV_DATA = {
           "tags": [
             "社交"
           ],
-          "keywords": "zhihu ueinside ue4"
+          "keywords": "zhihu ueinside ue4",
+          "icon": "data/icons/zhuanlan.zhihu.com.ico"
         }
       ]
     },
@@ -3406,8 +3382,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142",
-          "icon": "data/icons/172.23.18.142.svg"
+          "keywords": "142"
         },
         {
           "name": "查找、筛选 - 经营范围规范表述查询系统",
@@ -3460,8 +3435,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq crm",
-          "icon": "data/icons/tfcrm.tfzq.com.svg"
+          "keywords": "tfzq crm"
         },
         {
           "name": "成都市人力资源和社会保障局",
@@ -3478,8 +3452,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "175 ferm",
-          "icon": "data/icons/172.19.19.175.svg"
+          "keywords": "175 ferm"
         },
         {
           "name": "联行号-银行联行号查询，开户行查询，银行网点查询",
@@ -3505,8 +3478,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdzk ywzsrx.cdzk.org",
-          "icon": "data/icons/ywzsrx.cdzk.org.svg"
+          "keywords": "cdzk ywzsrx.cdzk.org"
         },
         {
           "name": "泛捷国际速递 - 运单状态跟踪",
@@ -3532,8 +3504,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq cjhmnerggv",
-          "icon": "data/icons/tfoa.tfzq.com.svg"
+          "keywords": "tfzq cjhmnerggv"
         },
         {
           "name": "中国证券登记结算有限责任公司",
@@ -3549,8 +3520,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "neeq",
-          "icon": "data/icons/neeq.com.cn.svg"
+          "keywords": "neeq"
         },
         {
           "name": "他来啦他来啦，新三板带着精选层走来啦!——打新篇",
@@ -3584,8 +3554,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "training",
-          "icon": "data/icons/training.sac.net.cn.svg"
+          "keywords": "training"
         },
         {
           "name": "融资融券业务在线测试",
@@ -3602,7 +3571,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "ggfw"
+          "keywords": "ggfw",
+          "icon": "data/icons/ggfw.scyb.org.cn.ico"
         },
         {
           "name": "天风证券 - 融资融券",
@@ -3612,7 +3582,7 @@ window.NAV_DATA = {
             "html"
           ],
           "keywords": "tfzq",
-          "icon": "data/icons/tfzq.com.svg"
+          "icon": "data/icons/tfzq.com.ico"
         },
         {
           "name": "全国个体私营经济发展服务网",
@@ -3645,7 +3615,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "sichuan"
+          "keywords": "sichuan",
+          "icon": "data/icons/fpdk.sichuan.chinatax.gov.cn.ico"
         },
         {
           "name": "企业风险管理平台(FERM)",
@@ -3653,8 +3624,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "62 ferm",
-          "icon": "data/icons/172.23.18.62.svg"
+          "keywords": "62 ferm"
         },
         {
           "name": "天风财务管理系统",
@@ -3662,8 +3632,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142",
-          "icon": "data/icons/172.23.18.142.svg"
+          "keywords": "142"
         },
         {
           "name": "全国个体私营经济发展服务网",
@@ -3679,8 +3648,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "76",
-          "icon": "data/icons/172.23.16.76.svg"
+          "keywords": "76"
         },
         {
           "name": "https://u.exexm.com",
@@ -3706,8 +3674,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "62",
-          "icon": "data/icons/172.23.18.62.svg"
+          "keywords": "62"
         },
         {
           "name": "天风证券",
@@ -3724,8 +3691,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142",
-          "icon": "data/icons/172.23.18.142.svg"
+          "keywords": "142"
         },
         {
           "name": "业务集中运营管理平台",
@@ -3733,8 +3699,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "76",
-          "icon": "data/icons/172.23.16.76.svg"
+          "keywords": "76"
         },
         {
           "name": "全国法院信息综合查询 - 综合查询",
@@ -3742,7 +3707,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "zxgk"
+          "keywords": "zxgk",
+          "icon": "data/icons/zxgk.court.gov.cn.ico"
         },
         {
           "name": "四川大学自学考试学习服务中心",
@@ -3751,7 +3717,7 @@ window.NAV_DATA = {
             "YD"
           ],
           "keywords": "51100",
-          "icon": "data/icons/51100.net.svg"
+          "icon": "data/icons/51100.net.ico"
         },
         {
           "name": "四川电信•欢go官方网站-综合运营商网上营业厅-官方认证、正品低价、品质保障、新品首发、放心购物、轻松服务",
@@ -3768,8 +3734,7 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "gsxt",
-          "icon": "data/icons/gsxt.gov.cn.svg"
+          "keywords": "gsxt"
         },
         {
           "name": "国家税务总局全国增值税发票查验平台",
@@ -3786,7 +3751,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "sichuan"
+          "keywords": "sichuan",
+          "icon": "data/icons/fpdk.sichuan.chinatax.gov.cn.ico"
         },
         {
           "name": "天风证券客户服务平台",
@@ -3794,8 +3760,7 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq",
-          "icon": "data/icons/crm.tfzq.com.svg"
+          "keywords": "tfzq"
         },
         {
           "name": "天风证券",
@@ -3804,7 +3769,7 @@ window.NAV_DATA = {
             "html"
           ],
           "keywords": "tfzq",
-          "icon": "data/icons/tfzq.com.svg"
+          "icon": "data/icons/tfzq.com.ico"
         },
         {
           "name": "登录EKP系统",
@@ -3828,7 +3793,8 @@ window.NAV_DATA = {
           "tags": [
             "邮箱"
           ],
-          "keywords": "tfzq"
+          "keywords": "tfzq",
+          "icon": "data/icons/mail.tfzq.com.ico"
         },
         {
           "name": "成都住房公积金管理中心",
@@ -3836,7 +3802,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdzfgjj"
+          "keywords": "cdzfgjj",
+          "icon": "data/icons/cdzfgjj.chengdu.gov.cn.png"
         },
         {
           "name": "成都市市场监督管理局（市知识产权局）",
@@ -3860,7 +3827,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "neris"
+          "keywords": "neris",
+          "icon": "data/icons/neris.csrc.gov.cn.png"
         },
         {
           "name": "查看申请表信息",
@@ -3878,7 +3846,8 @@ window.NAV_DATA = {
             "php",
             "html"
           ],
-          "keywords": "aozhuanyun"
+          "keywords": "aozhuanyun",
+          "icon": "data/icons/aozhuanyun.com.ico"
         },
         {
           "name": "百度网盘-全部文件",
@@ -3886,7 +3855,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "baidu"
+          "keywords": "baidu",
+          "icon": "data/icons/pan.baidu.com.ico"
         },
         {
           "name": "私募基金管理人综合查询 - 中国基金业协会",
@@ -3894,7 +3864,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "gs"
+          "keywords": "gs",
+          "icon": "data/icons/gs.amac.org.cn.ico"
         },
         {
           "name": "累计预扣法下怎么算个税？两个例子就搞懂",
@@ -3902,7 +3873,8 @@ window.NAV_DATA = {
           "tags": [
             "资讯"
           ],
-          "keywords": "xuegeshui"
+          "keywords": "xuegeshui",
+          "icon": "data/icons/xuegeshui.com.ico"
         },
         {
           "name": "联行号-银行联行号查询，开户行查询，银行网点查询",
@@ -3910,7 +3882,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "lianhanghao"
+          "keywords": "lianhanghao",
+          "icon": "data/icons/lianhanghao.com.ico"
         },
         {
           "name": "中国期货业协会网上后续培训系统-",
@@ -3918,7 +3891,8 @@ window.NAV_DATA = {
           "tags": [
             "php"
           ],
-          "keywords": "cfachina"
+          "keywords": "cfachina",
+          "icon": "data/icons/mooc.cfachina.org.png"
         },
         {
           "name": "淘宝网",
@@ -3926,7 +3900,8 @@ window.NAV_DATA = {
           "tags": [
             "购物"
           ],
-          "keywords": "taobao"
+          "keywords": "taobao",
+          "icon": "data/icons/taobao.com.png"
         },
         {
           "name": "上证e服务-会员版",
@@ -3950,7 +3925,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "pbccrc"
+          "keywords": "pbccrc",
+          "icon": "data/icons/pbccrc.org.cn.png"
         },
         {
           "name": "中国工商银行中国网站",
@@ -3958,7 +3934,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "icbc"
+          "keywords": "icbc",
+          "icon": "data/icons/icbc.com.cn.ico"
         },
         {
           "name": "企查查-工商信息查询-公司企业注册信息查询-全国企业信用信息公示系统",
@@ -3966,7 +3943,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "qichacha"
+          "keywords": "qichacha",
+          "icon": "data/icons/qichacha.com.png"
         },
         {
           "name": "全国会计专业技术资格考试",
@@ -3982,7 +3960,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "kzp"
+          "keywords": "kzp",
+          "icon": "data/icons/kzp.mof.gov.cn.ico"
         },
         {
           "name": "全国税务师职业资格考试报名系統",
@@ -3998,7 +3977,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "sichuan"
+          "keywords": "sichuan",
+          "icon": "data/icons/etax.sichuan.chinatax.gov.cn.ico"
         },
         {
           "name": "合规工作平台",
@@ -4014,7 +3994,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "ly"
+          "keywords": "ly",
+          "icon": "data/icons/tmc.ly.com.png"
         },
         {
           "name": "四川CA自助服务系统",
@@ -4030,7 +4011,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "sichuan httpsetax.sichuan.chinatax.gov.cnbszm webappsviewsbeforeloginindexbeforepageindex.html#"
+          "keywords": "sichuan httpsetax.sichuan.chinatax.gov.cnbszm webappsviewsbeforeloginindexbeforepageindex.html#",
+          "icon": "data/icons/etax.sichuan.chinatax.gov.cn.ico"
         },
         {
           "name": "www.chinatax.gov.cnn810219n810744n3752930index.html",
@@ -4054,7 +4036,8 @@ window.NAV_DATA = {
           "tags": [
             "素材"
           ],
-          "keywords": "ilovepdf convert jpg to pdf"
+          "keywords": "ilovepdf convert jpg to pdf",
+          "icon": "data/icons/ilovepdf.com.png"
         },
         {
           "name": "【信用服务失信黑名单】-信用中国官网",
@@ -4070,7 +4053,8 @@ window.NAV_DATA = {
           "tags": [
             "资讯"
           ],
-          "keywords": "csrc"
+          "keywords": "csrc",
+          "icon": "data/icons/csrc.gov.cn.ico"
         }
       ]
     },
@@ -4085,7 +4069,8 @@ window.NAV_DATA = {
           "tags": [
             "CloudServer"
           ],
-          "keywords": "deep-dark-fantasies homenas synology diskstation"
+          "keywords": "deep-dark-fantasies homenas synology diskstation",
+          "icon": "data/icons/deep-dark-fantasies.com.ico"
         }
       ]
     },
@@ -4118,7 +4103,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealengine unreal engine platform file"
+          "keywords": "unrealengine unreal engine platform file",
+          "icon": "data/icons/unrealengine.com.png"
         }
       ]
     },
@@ -4132,7 +4118,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "tomlooman tom looman unreal engine"
+          "keywords": "tomlooman tom looman unreal engine",
+          "icon": "data/icons/tomlooman.com.png"
         },
         {
           "name": "Unreal Engine · ben🌱ui",
@@ -4140,7 +4127,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "benui unreal engine ben ui"
+          "keywords": "benui unreal engine ben ui",
+          "icon": "data/icons/benui.ca.ico"
         },
         {
           "name": "Unreal Directive",
@@ -4148,7 +4136,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealdirective unreal directive"
+          "keywords": "unrealdirective unreal directive",
+          "icon": "data/icons/unrealdirective.com.ico"
         },
         {
           "name": "June Rhodes - History",
@@ -4156,7 +4145,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "junerhodes june rhodes history"
+          "keywords": "junerhodes june rhodes history",
+          "icon": "data/icons/junerhodes.au.png"
         },
         {
           "name": "RedpointGames / Unreal Engine Scripts · GitLab",
@@ -4172,7 +4162,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "thegames understanding gameplay effect execution"
+          "keywords": "thegames understanding gameplay effect execution",
+          "icon": "data/icons/thegames.dev.ico"
         },
         {
           "name": "Gameplay Ability System – The Games Dev",
@@ -4180,7 +4171,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "thegames gameplay ability system the"
+          "keywords": "thegames gameplay ability system the",
+          "icon": "data/icons/thegames.dev.svg"
         },
         {
           "name": "Unreal Engine C++ Complete Guide - Tom Looman",
@@ -4189,7 +4181,8 @@ window.NAV_DATA = {
             "游戏",
             "c++"
           ],
-          "keywords": "tomlooman unreal engine c++ complete"
+          "keywords": "tomlooman unreal engine c++ complete",
+          "icon": "data/icons/tomlooman.com.png"
         },
         {
           "name": "Unreal Engine 4 跨平台開發經驗. Project N 的開發經驗談 | by Owen Chiang | NeoBards | Medium",
@@ -4197,7 +4190,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "medium unreal engine project by"
+          "keywords": "medium unreal engine project by",
+          "icon": "data/icons/medium.com.png"
         },
         {
           "name": "kefengwei/GASDocumentation_Chinese",
@@ -4215,7 +4209,8 @@ window.NAV_DATA = {
             "游戏",
             "c++"
           ],
-          "keywords": "unrealistic binding input in c++"
+          "keywords": "unrealistic binding input in c++",
+          "icon": "data/icons/unrealistic.dev.png"
         },
         {
           "name": "UE4的委托(Delegate)使用_declare_multicast_delegate_带帯大师兄的博客-CSDN博客",
@@ -4241,7 +4236,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealdirective enhanced input what you"
+          "keywords": "unrealdirective enhanced input what you",
+          "icon": "data/icons/unrealdirective.com.png"
         },
         {
           "name": "UE4资源热更新_ue4资源升级-CSDN博客",
@@ -4275,7 +4271,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "quodsoler quod soler unreal engine"
+          "keywords": "quodsoler quod soler unreal engine",
+          "icon": "data/icons/quodsoler.com.png"
         },
         {
           "name": "Introduction to Reactive Extensions for .NET --- .NET 反应式扩展简介",
@@ -4283,7 +4280,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "introtorx introduction to reactive extensions"
+          "keywords": "introtorx introduction to reactive extensions",
+          "icon": "data/icons/introtorx.com.svg"
         },
         {
           "name": "Calmer的文章",
@@ -4291,7 +4289,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "mytechplayer calmer"
+          "keywords": "mytechplayer calmer",
+          "icon": "data/icons/mytechplayer.com.png"
         },
         {
           "name": "UE4 Low Level Memory Tracker 使用 | FLYING TREE",
@@ -4300,7 +4299,8 @@ window.NAV_DATA = {
             "代码托管",
             "AI"
           ],
-          "keywords": "github ue4 low level memory"
+          "keywords": "github ue4 low level memory",
+          "icon": "data/icons/jashking.github.io.png"
         },
         {
           "name": "Epic Games Organization Portal",
@@ -4308,7 +4308,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealengine epic games organization portal"
+          "keywords": "unrealengine epic games organization portal",
+          "icon": "data/icons/unrealengine.com.png"
         },
         {
           "name": "虚幻4垃圾回收剖析 - 风恋残雪 - 博客园",
@@ -4327,7 +4328,8 @@ window.NAV_DATA = {
             "社区",
             "百科"
           ],
-          "keywords": "ue5wiki"
+          "keywords": "ue5wiki",
+          "icon": "data/icons/ue5wiki.com.ico"
         },
         {
           "name": "构建支持多平台打包的二进制引擎 | 虚幻社区知识库",
@@ -4336,7 +4338,8 @@ window.NAV_DATA = {
             "社区",
             "百科"
           ],
-          "keywords": "ue5wiki"
+          "keywords": "ue5wiki",
+          "icon": "data/icons/ue5wiki.com.ico"
         },
         {
           "name": "重命名UE项目",
@@ -4344,7 +4347,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealistic ue"
+          "keywords": "unrealistic ue",
+          "icon": "data/icons/unrealistic.dev.png"
         },
         {
           "name": "Unreal Engine Resources",
@@ -4352,7 +4356,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "notion unreal engine resources"
+          "keywords": "notion unreal engine resources",
+          "icon": "data/icons/sandy-bonnet-66c.notion.site.png"
         },
         {
           "name": "手机处理器排行",
@@ -4360,7 +4365,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "nanoreview"
+          "keywords": "nanoreview",
+          "icon": "data/icons/nanoreview.net.png"
         },
         {
           "name": "A Better Unreal DataTable Row Picker · SteveStreeting.com",
@@ -4368,7 +4374,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "stevestreeting better unreal datatable row"
+          "keywords": "stevestreeting better unreal datatable row",
+          "icon": "data/icons/stevestreeting.com.png"
         },
         {
           "name": "Vertex Animation Textures in Unreal | SideFX",
@@ -4376,7 +4383,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "sidefx vertex animation textures in"
+          "keywords": "sidefx vertex animation textures in",
+          "icon": "data/icons/sidefx.com.png"
         },
         {
           "name": "How to reduce Package Size for Unreal Engine Game Builds",
@@ -4384,7 +4392,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "notion how to reduce package"
+          "keywords": "notion how to reduce package",
+          "icon": "data/icons/cobracode.notion.site.png"
         },
         {
           "name": "「Grow by UE」图解角色移动组件 - 知乎",
@@ -4393,7 +4402,8 @@ window.NAV_DATA = {
             "游戏",
             "社交"
           ],
-          "keywords": "zhihu grow by ue"
+          "keywords": "zhihu grow by ue",
+          "icon": "data/icons/zhuanlan.zhihu.com.ico"
         },
         {
           "name": "Debug已打包的包体",
@@ -4402,7 +4412,8 @@ window.NAV_DATA = {
             "社区",
             "百科"
           ],
-          "keywords": "unrealcommunity debug"
+          "keywords": "unrealcommunity debug",
+          "icon": "data/icons/unrealcommunity.wiki.png"
         },
         {
           "name": "Vertex Animation Manager - 虚幻引擎商城",
@@ -4411,7 +4422,8 @@ window.NAV_DATA = {
             "游戏",
             "购物"
           ],
-          "keywords": "unrealengine vertex animation manager"
+          "keywords": "unrealengine vertex animation manager",
+          "icon": "data/icons/unrealengine.com.png"
         },
         {
           "name": "修改游戏默认的数据存储路径 | 虚幻社区知识库",
@@ -4420,7 +4432,8 @@ window.NAV_DATA = {
             "社区",
             "百科"
           ],
-          "keywords": "ue5wiki"
+          "keywords": "ue5wiki",
+          "icon": "data/icons/ue5wiki.com.ico"
         },
         {
           "name": "虚幻社区知识库",
@@ -4429,7 +4442,8 @@ window.NAV_DATA = {
             "社区",
             "游戏"
           ],
-          "keywords": "ue5wiki"
+          "keywords": "ue5wiki",
+          "icon": "data/icons/ue5wiki.com.ico"
         },
         {
           "name": "Unreal Engine 5 Collision Essentials: Understanding Unreal Engine’s Collision Framework , Ulibarri, Stephen, eBook - Amazon.com",
@@ -4438,7 +4452,8 @@ window.NAV_DATA = {
             "游戏",
             "购物"
           ],
-          "keywords": "amazon unreal engine collision essentials"
+          "keywords": "amazon unreal engine collision essentials",
+          "icon": "data/icons/amazon.com.ico"
         },
         {
           "name": "UE 4.27.2 - How to build for target SDK 33 (or 34) ! - Platform & Builds / Mobile - Epic Developer Community Forums",
@@ -4456,7 +4471,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "unrealdirective unreal directive"
+          "keywords": "unrealdirective unreal directive",
+          "icon": "data/icons/unrealdirective.com.ico"
         },
         {
           "name": "UE打包IOS支持Swift Framework",
@@ -4484,7 +4500,8 @@ window.NAV_DATA = {
             "游戏",
             "swift"
           ],
-          "keywords": "213 ue4 swift itms invalid"
+          "keywords": "213 ue4 swift itms invalid",
+          "icon": "data/icons/213.name.ico"
         },
         {
           "name": "GAS精粹 | 游戏江湖",
@@ -4501,7 +4518,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "projprod control rig fur proj"
+          "keywords": "projprod control rig fur proj",
+          "icon": "data/icons/projprod.com.png"
         },
         {
           "name": "Lighting: Unreal 5 Features Reference | by Iri Shinsoj | Medium",
@@ -4510,7 +4528,8 @@ window.NAV_DATA = {
             "文档",
             "游戏"
           ],
-          "keywords": "medium lighting unreal features reference"
+          "keywords": "medium lighting unreal features reference",
+          "icon": "data/icons/medium.com.png"
         },
         {
           "name": "货拉拉SSL证书踩坑之旅",
@@ -4528,7 +4547,8 @@ window.NAV_DATA = {
             "游戏",
             "linux"
           ],
-          "keywords": "pgaleone integrating third party libraries"
+          "keywords": "pgaleone integrating third party libraries",
+          "icon": "data/icons/pgaleone.eu.png"
         },
         {
           "name": "Integrating third-party libraries as Unreal Engine plugins: solving the ABI compatibility issues on Linux when the source code is available – P. Galeone's blog",
@@ -4537,7 +4557,8 @@ window.NAV_DATA = {
             "游戏",
             "linux"
           ],
-          "keywords": "pgaleone integrating third party libraries"
+          "keywords": "pgaleone integrating third party libraries",
+          "icon": "data/icons/pgaleone.eu.png"
         },
         {
           "name": "Example Project: Loading Pak Files At Runtime | Epic Developer Community",
@@ -4565,7 +4586,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "imzlp"
+          "keywords": "imzlp",
+          "icon": "data/icons/imzlp.com.png"
         },
         {
           "name": "UE 热更新：拆分基础包 | 循迹研究室",
@@ -4573,7 +4595,8 @@ window.NAV_DATA = {
           "tags": [
             "游戏"
           ],
-          "keywords": "imzlp ue"
+          "keywords": "imzlp ue",
+          "icon": "data/icons/imzlp.com.png"
         }
       ]
     },
@@ -4587,7 +4610,8 @@ window.NAV_DATA = {
           "tags": [
             "Apple"
           ],
-          "keywords": "apple app store connect"
+          "keywords": "apple app store connect",
+          "icon": "data/icons/appstoreconnect.apple.com.ico"
         },
         {
           "name": "App Store Connect 首页 - 使用入门 - App Store Connect - 帮助 - Apple Developer",
@@ -4595,7 +4619,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "apple app store connect developer"
+          "keywords": "apple app store connect developer",
+          "icon": "data/icons/developer.apple.com.ico"
         },
         {
           "name": "你一定不知道的 AppStore 秘密 - 37手游移动客户端团队 - 博客园",
@@ -4612,7 +4637,8 @@ window.NAV_DATA = {
           "tags": [
             "Apple"
           ],
-          "keywords": "51cto ue4 ios xcode ganmaola"
+          "keywords": "51cto ue4 ios xcode ganmaola",
+          "icon": "data/icons/blog.51cto.com.png"
         }
       ]
     },
@@ -4626,7 +4652,8 @@ window.NAV_DATA = {
           "tags": [
             "Google"
           ],
-          "keywords": "google play console"
+          "keywords": "google play console",
+          "icon": "data/icons/play.google.com.ico"
         },
         {
           "name": "Firestore Modular Web Cheat Sheet – Nextra",
@@ -4634,7 +4661,8 @@ window.NAV_DATA = {
           "tags": [
             "Google"
           ],
-          "keywords": "firecheat firestore modular web cheat"
+          "keywords": "firecheat firestore modular web cheat",
+          "icon": "data/icons/firecheat.dev.ico"
         }
       ]
     },
@@ -4649,7 +4677,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "nintendo homepage developer portal"
+          "keywords": "nintendo homepage developer portal",
+          "icon": "data/icons/developer.nintendo.com.ico"
         }
       ]
     },
@@ -4679,7 +4708,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "parseplatform docs parse"
+          "keywords": "parseplatform docs parse",
+          "icon": "data/icons/docs.parseplatform.org.png"
         },
         {
           "name": "sadortun/GoPlan-app",
@@ -4797,7 +4827,8 @@ window.NAV_DATA = {
           "tags": [
             "百科"
           ],
-          "keywords": "hugogu hugo knowledge base"
+          "keywords": "hugogu hugo knowledge base",
+          "icon": "data/icons/wiki.hugogu.cn.ico"
         }
       ]
     },
@@ -4811,7 +4842,8 @@ window.NAV_DATA = {
           "tags": [
             "阿里云"
           ],
-          "keywords": "aliyun"
+          "keywords": "aliyun",
+          "icon": "data/icons/console.aliyun.com.ico"
         },
         {
           "name": "云效 工作台",
@@ -4819,7 +4851,8 @@ window.NAV_DATA = {
           "tags": [
             "阿里云"
           ],
-          "keywords": "aliyun"
+          "keywords": "aliyun",
+          "icon": "data/icons/devops.aliyun.com.ico"
         },
         {
           "name": "通过SLB和ESS实现自动扩缩容ECI实例_弹性容器实例(ECI)-阿里云帮助中心",
@@ -4827,7 +4860,8 @@ window.NAV_DATA = {
           "tags": [
             "阿里云"
           ],
-          "keywords": "aliyun slb ess eci"
+          "keywords": "aliyun slb ess eci",
+          "icon": "data/icons/help.aliyun.com.png"
         },
         {
           "name": "ClawCloud | 面向开发者的云基础设施和应用部署平台",
@@ -4835,7 +4869,8 @@ window.NAV_DATA = {
           "tags": [
             "部署"
           ],
-          "keywords": "claw clawcloud"
+          "keywords": "claw clawcloud",
+          "icon": "data/icons/claw.cloud.ico"
         }
       ]
     },
@@ -4866,7 +4901,8 @@ window.NAV_DATA = {
           "tags": [
             "postgre"
           ],
-          "keywords": "pigsty free pg rds"
+          "keywords": "pigsty free pg rds",
+          "icon": "data/icons/pigsty.io.png"
         },
         {
           "name": "Citus Data | Distributed Postgres. At any scale. - Citus Data",
@@ -4874,7 +4910,8 @@ window.NAV_DATA = {
           "tags": [
             "postgre"
           ],
-          "keywords": "citusdata citus data distributed postgres"
+          "keywords": "citusdata citus data distributed postgres",
+          "icon": "data/icons/citusdata.com.png"
         }
       ]
     },
@@ -4891,7 +4928,8 @@ window.NAV_DATA = {
         {
           "name": "edclub",
           "url": "https://www.edclub.com/sportal/program-16/4720.play",
-          "keywords": "edclub"
+          "keywords": "edclub",
+          "icon": "data/icons/edclub.com.ico"
         },
         {
           "name": "‌​​​​​‍⁠‬‍​​‬​⁠‍​​‬​​​‬​‌​‌​​‬‍‬​⁠‌ ​​‬‌​‌ ‬​‌​‬​‍✅全流程任务管理 - 飞书云文档",
@@ -4899,7 +4937,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "feishu"
+          "keywords": "feishu",
+          "icon": "data/icons/vwi2vf460dh.feishu.cn.png"
         },
         {
           "name": "服务器环境地址",
@@ -4907,17 +4946,20 @@ window.NAV_DATA = {
           "tags": [
             "百科"
           ],
-          "keywords": "feishu"
+          "keywords": "feishu",
+          "icon": "data/icons/vwi2vf460dh.feishu.cn.png"
         },
         {
           "name": "SigNoz - localhost",
           "url": "http://192.168.200.100:28080/home",
-          "keywords": "100 signoz localhost"
+          "keywords": "100 signoz localhost",
+          "icon": "data/icons/192.168.200.100.png"
         },
         {
           "name": "DoriDori Ops Agent",
           "url": "http://192.168.200.100:30041/",
-          "keywords": "100 doridori ops agent"
+          "keywords": "100 doridori ops agent",
+          "icon": "data/icons/192.168.200.100.png"
         },
         {
           "name": "Never | 深入理解 TypeScript",
@@ -4927,7 +4969,8 @@ window.NAV_DATA = {
             "typescript",
             "html"
           ],
-          "keywords": "github never typescript"
+          "keywords": "github never typescript",
+          "icon": "data/icons/jkchao.github.io.png"
         },
         {
           "name": "多线程相关概念汇总 - GKarch",
@@ -4940,17 +4983,20 @@ window.NAV_DATA = {
         {
           "name": "Context Mapper | Context Mapper is an open source project providing a Domain-specific Language (DSL) based on Domain-driven Design (DDD) patterns for context mapping and service decomposition.",
           "url": "https://contextmapper.org/",
-          "keywords": "contextmapper context mapper is an"
+          "keywords": "contextmapper context mapper is an",
+          "icon": "data/icons/contextmapper.org.ico"
         },
         {
           "name": "学习系统-专业少儿编程",
           "url": "https://www.bellcode.com/#/cm/course_gallery",
-          "keywords": "bellcode"
+          "keywords": "bellcode",
+          "icon": "data/icons/bellcode.com.png"
         },
         {
           "name": "Android APK downloads - safe & verified by Softpedia",
           "url": "https://mobile.softpedia.com/apk/",
-          "keywords": "softpedia android apk downloads safe"
+          "keywords": "softpedia android apk downloads safe",
+          "icon": "data/icons/mobile.softpedia.com.ico"
         }
       ]
     },
@@ -4964,7 +5010,8 @@ window.NAV_DATA = {
           "tags": [
             "Office365"
           ],
-          "keywords": "office portal.office.com commerce payment.aspx"
+          "keywords": "office portal.office.com commerce payment.aspx",
+          "icon": "data/icons/portal.office.com.png"
         },
         {
           "name": "Admin",
@@ -4972,7 +5019,8 @@ window.NAV_DATA = {
           "tags": [
             "Office365"
           ],
-          "keywords": "microsoft admin"
+          "keywords": "microsoft admin",
+          "icon": "data/icons/admin.microsoft.com.png"
         }
       ]
     },
@@ -4986,7 +5034,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "qq ts"
+          "keywords": "qq ts",
+          "icon": "data/icons/docs.qq.com.png"
         },
         {
           "name": "Oasis工作室",
@@ -5010,7 +5059,8 @@ window.NAV_DATA = {
           "tags": [
             "卡卡托斯"
           ],
-          "keywords": "difeh thinking engine"
+          "keywords": "difeh thinking engine",
+          "icon": "data/icons/ta-web.difeh.com.png"
         },
         {
           "name": "乐变后台",
@@ -5018,7 +5068,8 @@ window.NAV_DATA = {
           "tags": [
             "php"
           ],
-          "keywords": "loveota"
+          "keywords": "loveota",
+          "icon": "data/icons/loveota.net.ico"
         },
         {
           "name": "乐变文档",
@@ -5027,7 +5078,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "feishu"
+          "keywords": "feishu",
+          "icon": "data/icons/qlhwsgprmx.feishu.cn.png"
         },
         {
           "name": "‌​​​‌​⁠‌⁠‌‍‌⁠‌​​‍​​‌​⁠​​​‌‬​‌​​‬​​​​​​‬​‌‍‬​​‍​​数据接入流程手册 - 飞书云文档",
@@ -5036,7 +5088,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "feishu"
+          "keywords": "feishu",
+          "icon": "data/icons/thinkingdata.feishu.cn.png"
         },
         {
           "name": "Ts打点文档 - Lark云文档",
@@ -5045,7 +5098,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "larksuite ts lark"
+          "keywords": "larksuite ts lark",
+          "icon": "data/icons/lifelive.sg.larksuite.com.png"
         },
         {
           "name": "‬‬‌​​​⁠⁠⁠‌⁠ ​​‍‌​ ​​⁠​​‬ ​​‌‍​‍‬‍​​​ ‬​‍​​⁠⁠​​​TS-GM需求2026 - Lark云文档",
@@ -5054,7 +5108,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "larksuite ts gm lark"
+          "keywords": "larksuite ts gm lark",
+          "icon": "data/icons/lifelive.sg.larksuite.com.png"
         },
         {
           "name": "‌​ ‬​ ​‬‬​​‬‍‌‬‌‬​​‬​​‬​⁠‬‬​​​​​⁠‬⁠⁠‌​​ ‌​‌​‬ ‬⁠‌代金券方案 - Lark云文档",
@@ -5063,7 +5118,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "larksuite lark"
+          "keywords": "larksuite lark",
+          "icon": "data/icons/lifelive.sg.larksuite.com.png"
         },
         {
           "name": "‌‌‌​‌‬​​‬‌​‬​ ⁠​​​‬​​​⁠⁠​​ ​‬​​​⁠⁠​‍​​‬​‬‬​​​ ‬ ⁠​大区本地化方案 - Lark云文档",
@@ -5072,7 +5128,8 @@ window.NAV_DATA = {
             "文档",
             "百科"
           ],
-          "keywords": "larksuite lark"
+          "keywords": "larksuite lark",
+          "icon": "data/icons/lifelive.sg.larksuite.com.png"
         },
         {
           "name": "Grafana",
@@ -5080,7 +5137,8 @@ window.NAV_DATA = {
           "tags": [
             "卡卡托斯"
           ],
-          "keywords": "hostts grafana"
+          "keywords": "hostts grafana",
+          "icon": "data/icons/sg-grafana.hostts.com.png"
         },
         {
           "name": "SigNoz | Home",
@@ -5088,7 +5146,8 @@ window.NAV_DATA = {
           "tags": [
             "卡卡托斯"
           ],
-          "keywords": "hostts signoz home"
+          "keywords": "hostts signoz home",
+          "icon": "data/icons/sg-signoz.hostts.com.png"
         },
         {
           "name": "kkts-jenkins",
@@ -5096,7 +5155,8 @@ window.NAV_DATA = {
           "tags": [
             "卡卡托斯"
           ],
-          "keywords": "getqccode kkts jenkins"
+          "keywords": "getqccode kkts jenkins",
+          "icon": "data/icons/jenkins.getqccode.com.png"
         }
       ]
     },
@@ -5110,7 +5170,8 @@ window.NAV_DATA = {
           "tags": [
             "6kw"
           ],
-          "keywords": "atomgit u1 gitcode"
+          "keywords": "atomgit u1 gitcode",
+          "icon": "data/icons/atomgit.com.ico"
         },
         {
           "name": "6kw 聚合平台 Android SDK 对接文档 | 6kw 聚合平台 Android SDK 对接文档",
@@ -5119,7 +5180,8 @@ window.NAV_DATA = {
             "文档",
             "html"
           ],
-          "keywords": "youxigui kw android sdk"
+          "keywords": "youxigui kw android sdk",
+          "icon": "data/icons/sdk-doc.youxigui.com.png"
         },
         {
           "name": "登录 - 数据中台",
@@ -5127,7 +5189,8 @@ window.NAV_DATA = {
           "tags": [
             "6kw"
           ],
-          "keywords": "6kw"
+          "keywords": "6kw",
+          "icon": "data/icons/admin-data-mwqs.6kw.com.ico"
         },
         {
           "name": "Console - #164 - Jenkins",
@@ -5135,7 +5198,8 @@ window.NAV_DATA = {
           "tags": [
             "6kw"
           ],
-          "keywords": "100 console jenkins"
+          "keywords": "100 console jenkins",
+          "icon": "data/icons/192.168.200.100.png"
         },
         {
           "name": "渠道拒审问题记录",
@@ -5143,7 +5207,8 @@ window.NAV_DATA = {
           "tags": [
             "文档"
           ],
-          "keywords": "qq"
+          "keywords": "qq",
+          "icon": "data/icons/docs.qq.com.png"
         },
         {
           "name": "Applications Tiles - Argo CD",
@@ -5151,7 +5216,8 @@ window.NAV_DATA = {
           "tags": [
             "6kw"
           ],
-          "keywords": "doridori applications tiles argo cd"
+          "keywords": "doridori applications tiles argo cd",
+          "icon": "data/icons/argocd.doridori.studio.png"
         }
       ]
     },
@@ -5166,7 +5232,8 @@ window.NAV_DATA = {
           "tags": [
             "kubernetes"
           ],
-          "keywords": "kubesphere enterprise container platform built"
+          "keywords": "kubesphere enterprise container platform built",
+          "icon": "data/icons/kubesphere.io.svg"
         },
         {
           "name": "(4) What is STIR FRIED MILK?? We go on a Cantonese food adventure - YouTube",
