@@ -2265,7 +2265,8 @@ window.NAV_DATA = {
             "文档",
             "angular"
           ],
-          "keywords": "angular eve"
+          "keywords": "angular eve",
+          "icon": "data/icons/angular.ink.png"
         },
         {
           "name": "Angular Bootstrap Borders - examples, tutorial & usage. - Material Design for Bootstrap",
@@ -2818,7 +2819,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "sojson json"
+          "keywords": "sojson json",
+          "icon": "data/icons/sojson.com.png"
         },
         {
           "name": "https://store.steampowered.com/api/appdetails?appids=508190",
@@ -2897,7 +2899,8 @@ window.NAV_DATA = {
           "tags": [
             "webgl"
           ],
-          "keywords": "techbrood h5 webgl webvr webar"
+          "keywords": "techbrood h5 webgl webvr webar",
+          "icon": "data/icons/techbrood.com.svg"
         },
         {
           "name": "Traversy Media - YouTube",
@@ -2924,7 +2927,8 @@ window.NAV_DATA = {
           "tags": [
             "Tool"
           ],
-          "keywords": "sojson json so"
+          "keywords": "sojson json so",
+          "icon": "data/icons/sojson.com.png"
         },
         {
           "name": "IDEA 激活",
@@ -3465,7 +3469,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "cdhrss"
+          "keywords": "cdhrss",
+          "icon": "data/icons/cdhrss.chengdu.gov.cn.png"
         },
         {
           "name": "企业风险管理平台(FERM)",
@@ -3527,7 +3532,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq cjhmnerggv"
+          "keywords": "tfzq cjhmnerggv",
+          "icon": "data/icons/tfoa.tfzq.com.svg"
         },
         {
           "name": "中国证券登记结算有限责任公司",
@@ -3647,7 +3653,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "62 ferm"
+          "keywords": "62 ferm",
+          "icon": "data/icons/172.23.18.62.svg"
         },
         {
           "name": "天风财务管理系统",
@@ -3655,7 +3662,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142"
+          "keywords": "142",
+          "icon": "data/icons/172.23.18.142.svg"
         },
         {
           "name": "全国个体私营经济发展服务网",
@@ -3671,7 +3679,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "76"
+          "keywords": "76",
+          "icon": "data/icons/172.23.16.76.svg"
         },
         {
           "name": "https://u.exexm.com",
@@ -3679,7 +3688,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "exexm https u.exexm.com"
+          "keywords": "exexm https u.exexm.com",
+          "icon": "data/icons/u.exexm.com.ico"
         },
         {
           "name": "中国工商银行",
@@ -3687,7 +3697,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "icbc"
+          "keywords": "icbc",
+          "icon": "data/icons/icbc.com.cn.ico"
         },
         {
           "name": "天风证券企业风险管理平台",
@@ -3695,7 +3706,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "62"
+          "keywords": "62",
+          "icon": "data/icons/172.23.18.62.svg"
         },
         {
           "name": "天风证券",
@@ -3703,7 +3715,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq"
+          "keywords": "tfzq",
+          "icon": "data/icons/gcspb.tfzq.com.ico"
         },
         {
           "name": "天风财务文件管理系统",
@@ -3711,7 +3724,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "142"
+          "keywords": "142",
+          "icon": "data/icons/172.23.18.142.svg"
         },
         {
           "name": "业务集中运营管理平台",
@@ -3719,7 +3733,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "76"
+          "keywords": "76",
+          "icon": "data/icons/172.23.16.76.svg"
         },
         {
           "name": "全国法院信息综合查询 - 综合查询",
@@ -3735,7 +3750,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "51100"
+          "keywords": "51100",
+          "icon": "data/icons/51100.net.svg"
         },
         {
           "name": "四川电信•欢go官方网站-综合运营商网上营业厅-官方认证、正品低价、品质保障、新品首发、放心购物、轻松服务",
@@ -3743,7 +3759,8 @@ window.NAV_DATA = {
           "tags": [
             "购物"
           ],
-          "keywords": "189 go"
+          "keywords": "189 go",
+          "icon": "data/icons/189.cn.png"
         },
         {
           "name": "国家企业信用信息公示系统",
@@ -3751,7 +3768,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "gsxt"
+          "keywords": "gsxt",
+          "icon": "data/icons/gsxt.gov.cn.svg"
         },
         {
           "name": "国家税务总局全国增值税发票查验平台",
@@ -3759,7 +3777,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "inv-veri"
+          "keywords": "inv-veri",
+          "icon": "data/icons/inv-veri.chinatax.gov.cn.ico"
         },
         {
           "name": "增值税发票综合服务平台",
@@ -3775,7 +3794,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "tfzq"
+          "keywords": "tfzq",
+          "icon": "data/icons/crm.tfzq.com.svg"
         },
         {
           "name": "天风证券",
@@ -3783,7 +3803,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "tfzq"
+          "keywords": "tfzq",
+          "icon": "data/icons/tfzq.com.svg"
         },
         {
           "name": "登录EKP系统",
