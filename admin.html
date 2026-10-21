@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>管理 · MyNav</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f5fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090a0f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body class="adm">
+
+<header class="adm-top">
+  <div class="adm-brand"><img class="adm-logo" src="assets/logo.svg" alt="" width="24" height="24"> <strong>MyNav</strong> <span class="adm-brand-sub">管理</span></div>
+  <div class="adm-tools">
+    <button id="btn-open" class="adm-btn" hidden>打开 links.json</button>
+    <button id="btn-save" class="adm-btn adm-primary" hidden>保存文件</button>
+    <button id="btn-import" class="adm-btn">导入书签</button>
+    <button id="btn-download" class="adm-btn">下载 JSON</button>
+    <button id="btn-pull" class="adm-btn">从 GitHub 读取</button>
+    <button id="btn-publish" class="adm-btn adm-primary">发布到 GitHub</button>
+    <a class="adm-btn adm-ghost" href="index.html">← 返回站点</a>
+  </div>
+</header>
+
+<main class="adm-main">
+  <aside class="adm-side">
+    <div class="adm-side-head">
+      <span>分类 <em id="cat-count">0</em></span>
+      <button id="btn-add-cat" class="adm-mini">+ 分类</button>
+    </div>
+    <ul id="cat-list" class="adm-cats"></ul>
+
+    <div class="adm-meta">
+      <label><span>站点标题</span><input id="meta-title" type="text" placeholder="MyNav" autocomplete="off"></label>
+      <label><span>副标题</span><input id="meta-subtitle" type="text" placeholder="我的网络收藏" autocomplete="off"></label>
+      <label><span>更新日期</span><input id="meta-updated" type="date"></label>
+    </div>
+  </aside>
+
+  <section class="adm-panel">
+    <div id="cat-editor" class="adm-cat-editor"></div>
+
+    <div class="adm-links-head">
+      <span>链接 <em id="link-count">0</em></span>
+      <button id="btn-add-link" class="adm-mini">+ 链接</button>
+    </div>
+    <div id="link-list" class="adm-links"></div>
+    <p class="adm-empty" id="links-empty" hidden>这个分类还没有链接，点右上角「+ 链接」添加。</p>
+  </section>
+</main>
+
+<footer class="adm-foot">
+  <div id="status" class="adm-status">就绪</div>
+  <p class="adm-hint" id="hint">数据来源：<code>data/links.js</code>。改完点「下载 JSON」覆盖 <code>data/links.json</code>，再运行 <code>node tools/build-data.mjs</code>；或直接「发布到 GitHub」，CI 会自动生成。</p>
+</footer>
+
+<dialog id="gh-dialog" class="adm-dialog">
+  <form id="gh-form">
+    <h2>发布到 GitHub</h2>
+    <p class="adm-note">
+      需要 fine-grained token：<strong>Repository access</strong> 只勾这个仓库，<strong>Permissions → Contents</strong> 选 Read and write。
+      Token 只存在本机浏览器（localStorage），不会写进仓库，也不会发给除 api.github.com 以外的地址。
+    </p>
+    <label><span>仓库</span><input id="gh-repo" type="text" placeholder="kefengwei/MyNav" autocomplete="off"></label>
+    <label><span>分支</span><input id="gh-branch" type="text" placeholder="main" value="main" autocomplete="off"></label>
+    <label><span>Token</span><input id="gh-token" type="password" placeholder="github_pat_..." autocomplete="off"></label>
+    <label class="adm-check"><input id="gh-remember" type="checkbox" checked> <span>记住在本机（下次不用再填）</span></label>
+    <div class="adm-dialog-actions">
+      <button type="button" id="gh-cancel" class="adm-btn">取消</button>
+      <button type="submit" id="gh-confirm" class="adm-btn adm-primary">提交</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="import-dialog" class="adm-dialog adm-dialog-wide">
+  <div class="adm-dialog-body">
+    <h2>从收藏夹导入</h2>
+    <p class="adm-note">
+      支持浏览器导出的书签文件：<strong>Chrome / Edge / Firefox / Safari</strong> 的 HTML，或 Chromium 的 <code>Bookmarks</code> JSON。
+      书签文件夹会变成分类，同名分类自动合并，重复网址自动跳过。
+    </p>
+
+    <label class="adm-drop" id="import-drop" for="import-file">
+      <strong>选择书签文件</strong>
+      <span>或把文件拖到这里（.html / .htm / .json）</span>
+    </label>
+    <input id="import-file" class="adm-file-input" type="file" accept=".html,.htm,.json,text/html,application/json" tabindex="-1">
+
+    <label class="adm-check"><input id="import-autotag" type="checkbox" checked> <span>自动生成标签与关键词（会从域名、名称、描述推断，导入后仍可手改）</span></label>
+    <label class="adm-check"><input id="import-icons" type="checkbox"> <span>保留书签自带的图标（16px 小图；不勾选则由 CI 抓 128px 高清图）</span></label>
+
+    <div id="import-preview" class="adm-import-preview" hidden></div>
+
+    <div class="adm-dialog-actions">
+      <button type="button" id="import-cancel" class="adm-btn">取消</button>
+      <button type="button" id="import-apply" class="adm-btn adm-primary" disabled>导入</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="data/links.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

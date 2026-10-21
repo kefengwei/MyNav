@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+_site/
+
+# 本地调试临时文件（导入/截图测试产物）
+_t*
+_snap*
+_shot*
+_cp*/
+_tp*/
+_sp*/
+_ap*/

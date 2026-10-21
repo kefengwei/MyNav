@@ -1,0 +1,84 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 部署方式：构建产物 -> actions/deploy-pages（GitHub 官方推荐，不用 gh-pages 分支）
+# contents: write 只用于「自动补全图标」那一步把抓到的图提交回仓库；其余步骤不需要写权限。
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # GitHub 的构建机在海外，Google / DuckDuckGo 的图标源都通，成功率比本地高。
+      # 只处理「没有 icon 字段」的链接，所以这一步是幂等的：全都补齐后什么都不做。
+      - name: Fetch missing icons
+        timeout-minutes: 8
+        continue-on-error: true
+        run: node tools/fetch-icons.mjs
+
+      # 抓到的图标必须回到仓库，下一次构建和本地 file:// 预览才拿得到。
+      # 没有变化就跳过；提交信息带 [skip ci]，避免机器人 push 再触发一轮无意义的构建。
+      - name: Commit fetched icons
+        continue-on-error: true
+        run: |
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "没有新图标，跳过提交"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/links.json data/icons
+          git commit -m "chore(icons): 自动补全站点图标 [skip ci]"
+          git push
+
+      # data/links.json 是唯一真源，links.js 由 CI 现场生成。
+      # 数据不合法（缺 name/url、id 重复、url 不是 http）会在这里失败，避免部署坏页面。
+      - name: Build data
+        run: node tools/build-data.mjs
+
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp index.html admin.html _site/
+          cp -r assets _site/
+          cp -r data _site/
+          cp .nojekyll _site/ 2>/dev/null || true
+          ls -la _site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
