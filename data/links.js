@@ -3952,7 +3952,8 @@ window.NAV_DATA = {
           "tags": [
             "html"
           ],
-          "keywords": "53"
+          "keywords": "53",
+          "icon": "data/icons/60.208.22.53.ico"
         },
         {
           "name": "全国会计资格评价网",
