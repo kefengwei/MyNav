@@ -9,6 +9,8 @@
  *   node tools/fetch-icons.mjs --dry-run    只打印将要做的事
  *   node tools/fetch-icons.mjs --limit=5    只处理前 5 个
  *   node tools/fetch-icons.mjs --include-fav 连收藏夹类一起抓（默认跳过，避免 CI 超时）
+ *   node tools/fetch-icons.mjs --concurrency=24  并发数（默认 16）
+ *   node tools/fetch-icons.mjs --timeout=6000    单个请求超时毫秒（默认 8000，首页额外封顶 6000）
  *
  * 抓取顺序（拿到清晰图标就停）：
  *   1. 首页 HTML 里的 <link rel="apple-touch-icon">（通常 180x180 PNG，最清晰）
@@ -16,6 +18,10 @@
  *   3. 根目录 /apple-touch-icon.png
  *   4. 根目录 /favicon.ico
  *   5. favicon.im 公开服务（只用于被 Cloudflare 拦截、直连拿不到的站点）
+ *
+ * 加速策略：第 1、2 步要先拿首页才能知道地址，所以「首页 + 根目录 apple-touch-icon.png
+ * + favicon.im」三者并发发出，避免一条链接被串行的 5 次超时拖到 40 秒以上。
+ * 单条最坏耗时 ≈ 两轮超时，而不是六轮。另有多 worker 拉取，慢站点不会卡住整批。
  *
  * 抓不到的链接保持无 icon 字段，前端会自动回落到首字母色块。
  * 只处理导航类（type 不是 "fav"）的分类：收藏夹类条数多、图标在 16px 单行里看不清，
@@ -32,19 +38,25 @@ const ICON_REL = 'data/icons';
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 const MAX_BYTES = 96 * 1024;
-const CONCURRENCY = 4;
 
 const argv = process.argv.slice(2);
+function numArg(name, fallback) {
+  const hit = argv.find((a) => a.startsWith('--' + name + '='));
+  if (!hit) return fallback;
+  const n = parseInt(hit.slice(name.length + 3), 10);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
 const opts = {
   all: argv.includes('--all'),
   force: argv.includes('--force'),
   dryRun: argv.includes('--dry-run'),
   includeFav: argv.includes('--include-fav'),
-  limit: (function () {
-    const hit = argv.find((a) => a.startsWith('--limit='));
-    return hit ? Math.max(0, parseInt(hit.slice(8), 10) || 0) : 0;
-  })()
+  limit: numArg('limit', 0),
+  concurrency: Math.min(64, numArg('concurrency', 16)),
+  timeout: Math.min(30000, numArg('timeout', 8000))
 };
+// 首页只用来解析 <link rel="icon">，不必等太久；超时了就靠根目录候选兜底。
+const HOME_TIMEOUT = Math.min(opts.timeout, 6000);
 
 function hostSlug(url) {
   try {
@@ -65,7 +77,9 @@ function extFrom(contentType, url) {
   return m ? '.' + m[1].toLowerCase().replace('jpeg', 'jpg') : '.ico';
 }
 
-async function timedFetch(url, timeoutMs) {
+// 超时计时器覆盖整个请求（含 body 读取）。之前只覆盖响应头，
+// 慢速站点在 arrayBuffer()/text() 阶段可以无上限挂着，是「一条链接卡 40 秒」的主因之一。
+async function request(url, timeoutMs) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
@@ -76,6 +90,17 @@ async function timedFetch(url, timeoutMs) {
     });
   } finally {
     clearTimeout(timer);
+  }
+}
+
+async function fetchHomepage(url) {
+  try {
+    const res = await request(url, HOME_TIMEOUT);
+    if (!res.ok) return { apple: [], icon: [] };
+    const text = await res.text();
+    return findIconLinks(text.slice(0, 400000), res.url || url);
+  } catch (e) {
+    return { apple: [], icon: [] };
   }
 }
 
@@ -98,53 +123,81 @@ function findIconLinks(html, baseUrl) {
   return out;
 }
 
+function looksLikeHtml(buf) {
+  const head = buf.subarray(0, 256).toString('utf8').trim().toLowerCase();
+  if (head.startsWith('<svg') || /<svg[\s>]/.test(head)) return false; // <?xml?><svg ...> 也算图片
+  return head.startsWith('<');
+}
+
+const PLACEHOLDER_SVG = 'font-style="italic">f</text>';
+function isPlaceholder(buf) {
+  if (buf.length > 400) return false;
+  return buf.toString('utf8').includes(PLACEHOLDER_SVG);
+}
+
 async function fetchCandidate(url) {
-  const res = await timedFetch(url, 9000);
-  if (!res.ok) return null;
-  const len = Number(res.headers.get('content-length') || 0);
-  if (len > MAX_BYTES) return null;
-  const buf = Buffer.from(await res.arrayBuffer());
-  if (!buf.length || buf.length > MAX_BYTES) return null;
-  const ext = extFrom(res.headers.get('content-type'), url);
-  // 明显的 HTML 错误页直接丢弃
-  const head = buf.subarray(0, 80).toString('utf8').trim().toLowerCase();
-  if (head.startsWith('<!doctype') || head.startsWith('<html')) return null;
-  return { buf, ext };
+  try {
+    const res = await request(url, opts.timeout);
+    if (!res.ok) return null;
+    const len = Number(res.headers.get('content-length') || 0);
+    if (len > MAX_BYTES) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (!buf.length || buf.length > MAX_BYTES) return null;
+    const ext = extFrom(res.headers.get('content-type'), url);
+    // 太小的响应不可能是图标（踩过：4KB 的 /favicon.ico 位置返回 8 字节 PNG 魔数）
+    if (buf.length < 60) return null;
+    // 返回的是网页而不是图片：图标只能是 PNG/JPEG/WEBP/ICO 二进制或 SVG，
+    // 所以「以 < 开头但不含 <svg」一定是 HTML 错误页（踩过：404 页存成 .png）。
+    if (looksLikeHtml(buf)) return null;
+    // favicon.im 对抓不到的域名会返回一张「灰色圆形 + 斜体 f」的占位 SVG（257 字节），
+    // 全站长得一模一样，比首字母色块还难看，直接丢弃让前端回落。
+    if (isPlaceholder(buf)) return null;
+    return { buf, ext };
+  } catch (e) {
+    return null;
+  }
+}
+
+// 并发试多个候选，取第一个成功的（保留候选顺序语义：谁先回来用谁）
+async function firstHit(urls) {
+  if (!urls.length) return null;
+  const results = await Promise.all(urls.map((u) => fetchCandidate(u).then((got) => ({ u, got })).catch(() => null)));
+  for (const r of results) if (r && r.got) return { ...r.got, from: r.u };
+  return null;
 }
 
 async function grabIcon(siteUrl) {
   const origin = new URL(siteUrl).origin;
-
-  // 1+2. 解析首页声明的图标
-  let htmlLinks = { apple: [], icon: [] };
-  try {
-    const res = await timedFetch(siteUrl, 9000);
-    if (res.ok) {
-      const text = await res.text();
-      htmlLinks = findIconLinks(text.slice(0, 400000), res.url || siteUrl);
-    }
-  } catch (e) { /* 首页拿不到就跳过 */ }
-
   // 5. 第三方公开 favicon 服务（仅构建期用一次，抓到就落盘，运行时零外部请求）
   const bareHost = new URL(siteUrl).hostname.replace(/^www\./, '');
+  const thirdParty = 'https://favicon.im/' + bareHost + '?larger=true';
+  const rootApple = origin + '/apple-touch-icon.png';
 
-  const candidates = [
-    ...htmlLinks.apple.slice(0, 2),
-    ...htmlLinks.icon.slice(0, 2),
-    origin + '/apple-touch-icon.png',
-    origin + '/favicon.ico',
-    'https://favicon.im/' + bareHost + '?larger=true'
-  ];
+  // 互不依赖的三个请求同时发出：首页（用来解析 <link rel="icon">）、
+  // 根目录 apple-touch-icon.png、favicon.im。慢站点不再一层层串行等待。
+  const [htmlLinks, appleTouch, fallback] = await Promise.all([
+    fetchHomepage(siteUrl),
+    fetchCandidate(rootApple),
+    fetchCandidate(thirdParty)
+  ]);
 
-  const seen = new Set();
-  for (const url of candidates) {
-    if (seen.has(url)) continue;
-    seen.add(url);
-    try {
-      const got = await fetchCandidate(url);
-      if (got) return { ...got, from: url };
-    } catch (e) { /* 试下一个 */ }
+  // 1+2. 首页声明的图标质量最好，并发试，谁先成功用谁
+  const declared = [...new Set([...htmlLinks.apple.slice(0, 2), ...htmlLinks.icon.slice(0, 2)])];
+  if (declared.length) {
+    const got = await firstHit(declared);
+    if (got) return got;
   }
+
+  // 3. 根目录 apple-touch-icon.png
+  if (appleTouch) return { ...appleTouch, from: rootApple };
+
+  // 4. 根目录 /favicon.ico
+  const ico = await fetchCandidate(origin + '/favicon.ico');
+  if (ico) return { ...ico, from: origin + '/favicon.ico' };
+
+  // 5. favicon.im 兜底
+  if (fallback) return { ...fallback, from: thirdParty };
+
   return null;
 }
 
@@ -222,10 +275,19 @@ async function main() {
   process.on('SIGTERM', () => onKill('SIGTERM'));
   process.on('SIGINT', () => onKill('SIGINT'));
 
-  for (let i = 0; i < queue.length; i += CONCURRENCY) {
-    await Promise.all(queue.slice(i, i + CONCURRENCY).map(work));
-    if (!opts.dryRun && ok - lastFlush >= 20) flush();
+  // 多 worker 拉取：不按批 Promise.all 等待，慢站点不会把整批拖成木桶。
+  let cursor = 0;
+  async function worker() {
+    for (;;) {
+      const i = cursor++;
+      if (i >= queue.length) return;
+      await work(queue[i]);
+      if (!opts.dryRun && ok - lastFlush >= 20) flush();
+    }
   }
+  const pool = Math.min(opts.concurrency, Math.max(1, queue.length));
+  console.log('→ 并发 ' + pool + ' · 单请求超时 ' + opts.timeout + 'ms · 首页封顶 ' + HOME_TIMEOUT + 'ms');
+  await Promise.all(Array.from({ length: pool }, () => worker()));
 
   if (!opts.dryRun && ok > lastFlush) {
     flush();

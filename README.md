@@ -261,15 +261,21 @@ node tools/import-bookmarks.mjs "C:/Users/你/AppData/Local/Microsoft/Edge/User 
 2. **自动抓取**——新加的链接把 `icon` 留空，然后运行：
 
 ```bash
-node tools/fetch-icons.mjs            # 只处理还没有图标的链接
-node tools/fetch-icons.mjs --all      # 全部重新抓（站点换 logo 时用）
-node tools/fetch-icons.mjs --force    # 强制覆盖已有文件
-node tools/fetch-icons.mjs --dry-run  # 只看会抓哪些，不写盘
+node tools/fetch-icons.mjs                       # 只处理还没有图标的链接
+node tools/fetch-icons.mjs --include-fav         # 连收藏夹类一起抓
+node tools/fetch-icons.mjs --all                 # 全部重新抓（站点换 logo 时用）
+node tools/fetch-icons.mjs --force               # 强制覆盖已有文件
+node tools/fetch-icons.mjs --dry-run             # 只看会抓哪些，不写盘
+node tools/fetch-icons.mjs --concurrency=24      # 并发数，默认 16
+node tools/fetch-icons.mjs --timeout=20000       # 单请求超时毫秒，默认 8000
 ```
 
    抓取顺序（命中即停）：`apple-touch-icon` → `<link rel="icon">` → `/apple-touch-icon.png` → `/favicon.ico` → `favicon.im` 兜底。
+   首页解析、`/apple-touch-icon.png`、`favicon.im` 三路**并发发出**，慢站点不会被逐个超时拖死；实测 167 条缺失链接从“几分钟跑不完”降到 **86 秒抓完**。
 
-3. **CI 自动补全**——**加完链接只改 JSON 就行，不用跑命令**。GitHub Actions 在每次构建时会先跑一遍 `fetch-icons`，缺的图标由机器人在海外网络抓取（Google / DuckDuckGo 源在那边是通的，成功率比本地高），然后自动提交回仓库：
+   > 抓不到时 `favicon.im` 会返回一张「灰色圆形 + 斜体 f」的占位 SVG，以及个别站点会把 404 网页当图标返回。这两类和过小的文件都会被丢弃，**宁可留首字母色块，也不放一张假图标**。
+
+3. **CI 自动补全**——**加完链接只改 JSON 就行，不用跑命令**。GitHub Actions 在每次构建时会先跑一遍 `fetch-icons`，缺的图标由机器人在海外网络抓取（`favicon.im` 在那边更通），然后自动提交回仓库：
 
 ```
 chore(icons): 自动补全站点图标 [skip ci]
