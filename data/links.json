@@ -35,7 +35,8 @@
           "desc": "www.youtube.com",
           "tags": [
             "youtube"
-          ]
+          ],
+          "icon": "data/icons/youtube.com.ico"
         },
         {
           "name": "X",
@@ -43,7 +44,8 @@
           "tags": [
             "x",
             "twitter"
-          ]
+          ],
+          "icon": "data/icons/x.com.png"
         }
       ]
     },
@@ -3369,7 +3371,8 @@
             "文档",
             "AI"
           ],
-          "keywords": "bullmq what is"
+          "keywords": "bullmq what is",
+          "icon": "data/icons/docs.bullmq.io.png"
         },
         {
           "name": "felixmosh/bull-board: 🎯 Queue background jobs inspector",
@@ -3702,7 +3705,8 @@
           "tags": [
             "部署"
           ],
-          "keywords": "claw clawcloud"
+          "keywords": "claw clawcloud",
+          "icon": "data/icons/claw.cloud.png"
         },
         {
           "name": "HomeNAS - Synology DiskStation",
@@ -4306,7 +4310,8 @@
           "tags": [
             "YD"
           ],
-          "keywords": "pbccrc"
+          "keywords": "pbccrc",
+          "icon": "data/icons/pbccrc.org.cn.png"
         },
         {
           "name": "中国工商银行中国网站",
@@ -4323,7 +4328,8 @@
           "tags": [
             "YD"
           ],
-          "keywords": "qichacha"
+          "keywords": "qichacha",
+          "icon": "data/icons/qichacha.com.png"
         },
         {
           "name": "全国会计专业技术资格考试",

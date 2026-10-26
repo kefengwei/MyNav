@@ -36,13 +36,22 @@ window.NAV_DATA = {
           ]
         },
         {
-          "name": "豆瓣",
-          "url": "https://www.douban.com",
-          "desc": "书影音标记",
-          "icon": "data/icons/douban.com.ico",
+          "name": "YouTube",
+          "url": "https://www.youtube.com/",
+          "desc": "www.youtube.com",
           "tags": [
-            "书影音"
-          ]
+            "youtube"
+          ],
+          "icon": "data/icons/youtube.com.ico"
+        },
+        {
+          "name": "X",
+          "url": "https://x.com/",
+          "tags": [
+            "x",
+            "twitter"
+          ],
+          "icon": "data/icons/x.com.png"
         }
       ]
     },
@@ -414,6 +423,7 @@ window.NAV_DATA = {
     {
       "id": "unity",
       "name": "Unity",
+      "type": "fav",
       "links": [
         {
           "name": "badkangaroo/UnityProjects · GitHub",
@@ -1366,12 +1376,12 @@ window.NAV_DATA = {
           ],
           "keywords": "theknightsofunity the knights of unity"
         }
-      ],
-      "type": "fav"
+      ]
     },
     {
       "id": "unreal",
       "name": "Unreal",
+      "type": "fav",
       "links": [
         {
           "name": "Tom Looman – Unreal Engine Tutorials and Game Development Blog",
@@ -1887,12 +1897,12 @@ window.NAV_DATA = {
           ],
           "keywords": "unrealengine unreal engine platform file"
         }
-      ],
-      "type": "fav"
+      ]
     },
     {
       "id": "dotnet",
       "name": "C# / .NET",
+      "type": "fav",
       "links": [
         {
           "name": "C#设计模式总结 - Learning hard - 博客园",
@@ -2595,8 +2605,7 @@ window.NAV_DATA = {
           ],
           "keywords": "google dotnet graphql generic type"
         }
-      ],
-      "type": "fav"
+      ]
     },
     {
       "id": "softres",
@@ -3266,11 +3275,11 @@ window.NAV_DATA = {
         {
           "name": "sakuragame_test | Twitter Application Management",
           "url": "https://apps.twitter.com/app/14847183/permissions",
+          "icon": "data/icons/apps.twitter.com.ico",
           "tags": [
             "twitter"
           ],
-          "keywords": "twitter sakuragame test application management",
-          "icon": "data/icons/apps.twitter.com.ico"
+          "keywords": "twitter sakuragame test application management"
         },
         {
           "name": "国内领先的H5动画特效,WebGL,WebVR,WebAR,WebXR作品分享平台 - 踏得网",
@@ -3368,7 +3377,8 @@ window.NAV_DATA = {
             "文档",
             "AI"
           ],
-          "keywords": "bullmq what is"
+          "keywords": "bullmq what is",
+          "icon": "data/icons/docs.bullmq.io.png"
         },
         {
           "name": "felixmosh/bull-board: 🎯 Queue background jobs inspector",
@@ -3476,11 +3486,11 @@ window.NAV_DATA = {
         {
           "name": "前言 · Docker —— 从入门到实践",
           "url": "https://yeasy.gitbooks.io/docker_practice/content/",
+          "icon": "data/icons/yeasy.gitbooks.io.png",
           "tags": [
             "docker"
           ],
-          "keywords": "gitbooks docker",
-          "icon": "data/icons/yeasy.gitbooks.io.png"
+          "keywords": "gitbooks docker"
         },
         {
           "name": "AliyunContainerService/k8s-for-docker-desktop: 为Docker Desktop for Mac/Windows开启…",
@@ -3656,11 +3666,11 @@ window.NAV_DATA = {
         {
           "name": "Homepage - Nintendo Developer Portal",
           "url": "https://developer.nintendo.com/web/development/home",
+          "icon": "data/icons/developer.nintendo.com.ico",
           "tags": [
             "文档"
           ],
-          "keywords": "nintendo homepage developer portal",
-          "icon": "data/icons/developer.nintendo.com.ico"
+          "keywords": "nintendo homepage developer portal"
         }
       ]
     },
@@ -3701,16 +3711,17 @@ window.NAV_DATA = {
           "tags": [
             "部署"
           ],
-          "keywords": "claw clawcloud"
+          "keywords": "claw clawcloud",
+          "icon": "data/icons/claw.cloud.png"
         },
         {
           "name": "HomeNAS - Synology DiskStation",
           "url": "https://www.deep-dark-fantasies.com:5001/",
+          "icon": "data/icons/deep-dark-fantasies.com.ico",
           "tags": [
             "CloudServer"
           ],
-          "keywords": "deep-dark-fantasies homenas synology diskstation",
-          "icon": "data/icons/deep-dark-fantasies.com.ico"
+          "keywords": "deep-dark-fantasies homenas synology diskstation"
         },
         {
           "name": "portal.office.com/commerce/payment.aspx",
@@ -4179,11 +4190,11 @@ window.NAV_DATA = {
         {
           "name": "成都住房公积金管理中心",
           "url": "http://cdzfgjj.chengdu.gov.cn/",
+          "icon": "data/icons/cdzfgjj.chengdu.gov.cn.png",
           "tags": [
             "YD"
           ],
-          "keywords": "cdzfgjj",
-          "icon": "data/icons/cdzfgjj.chengdu.gov.cn.png"
+          "keywords": "cdzfgjj"
         },
         {
           "name": "成都市市场监督管理局（市知识产权局）",
@@ -4232,20 +4243,20 @@ window.NAV_DATA = {
         {
           "name": "百度网盘-全部文件",
           "url": "https://pan.baidu.com/disk/home#/all?vmode=list&path=%2F%E6%88%91%E7%9A%84%E8%B5%84%E6%BA%90%2F2020%E4%B8%AD%E7%BA%A7%2F%E8%B5%A0%E9%80%81%E8%B5%84%E6%96%99%E5%8C%85%EF%BC%88%E4%B8%AD%E7%BA%A7%E5%AE%9E%E5%8A%A1%EF%BC%89",
+          "icon": "data/icons/pan.baidu.com.ico",
           "tags": [
             "YD"
           ],
-          "keywords": "baidu",
-          "icon": "data/icons/pan.baidu.com.ico"
+          "keywords": "baidu"
         },
         {
           "name": "私募基金管理人综合查询 - 中国基金业协会",
           "url": "http://gs.amac.org.cn/amac-infodisc/res/pof/manager/index.html",
+          "icon": "data/icons/gs.amac.org.cn.ico",
           "tags": [
             "html"
           ],
-          "keywords": "gs",
-          "icon": "data/icons/gs.amac.org.cn.ico"
+          "keywords": "gs"
         },
         {
           "name": "累计预扣法下怎么算个税？两个例子就搞懂",
@@ -4305,7 +4316,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "pbccrc"
+          "keywords": "pbccrc",
+          "icon": "data/icons/pbccrc.org.cn.png"
         },
         {
           "name": "中国工商银行中国网站",
@@ -4322,7 +4334,8 @@ window.NAV_DATA = {
           "tags": [
             "YD"
           ],
-          "keywords": "qichacha"
+          "keywords": "qichacha",
+          "icon": "data/icons/qichacha.com.png"
         },
         {
           "name": "全国会计专业技术资格考试",
@@ -4620,11 +4633,11 @@ window.NAV_DATA = {
         {
           "name": "程序化交易二三事",
           "url": "https://zhuanlan.zhihu.com/iQuant",
+          "icon": "data/icons/zhuanlan.zhihu.com.png",
           "tags": [
             "社交"
           ],
-          "keywords": "zhihu",
-          "icon": "data/icons/zhuanlan.zhihu.com.png"
+          "keywords": "zhihu"
         }
       ]
     },
